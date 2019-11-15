@@ -1,0 +1,170 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+    \[
+        f(z) = \frac{1}{2\pi i}\int\limits_{\partial R(z_0,r_1',r_2')} \frac{f(\xi)}{\xi - z}dz = \frac{1}{2\pi i}\oint\limits_{\partial K(z_0,r_2')}\frac{f(\xi)}{\xi - z}d\xi - \frac{1}{2\pi i}\oint\limits_{\partial K(z_0,r_1')}\frac{f(\xi)}{\xi-z}d\xi
+    .\]
+\begin{enumerate}
+    \item Jeżeli $z\in K(z_0,r_2')$ i $\xi\in\partial K(z_0,r_2')$
+\[
+    \left| \frac{z-z_0}{\xi-z_0} \right| < 1
+.\]
+\[
+    \frac{1}{\xi - z} = \frac{1}{\xi - z_0 + z_0 - z} = \frac{1}{\xi - z_0}\cdot \frac{1}{1+ \frac{z_0-z}{\xi - z_0}}
+\]
+i wówczas
+\[
+    \frac{1}{2\pi i}\int\limits_{\partial K(z_0, r_2')}\frac{f(\xi)}{\xi - z} = \sum_{n=0}^{\infty} a_n (z-z_0)^n,\quad a_n = \frac{1}{2 \pi i}\int\limits_{\partial K(z_0,r_2')}\frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi
+.\]
+    \item Jeżeli $|z-z_0| > r_1'$, to mamy, że dla $\xi\in\partial K(z_0,r_1')$
+        \[
+            \left| \frac{\xi - z_0}{z-z_0} \right| < 1
+        .\]
+    \[
+        \frac{1}{\xi - z} = \frac{1}{\xi - z_0 + z_0 - z} = \frac{1}{z_0 - z} \cdot \frac{1}{1 + \frac{\xi - z_0}{z_0 - z}} = \frac{1}{z_0 - z}\cdot \frac{1}{1 - \frac{\xi - z_0}{z - z_0}} = \frac{1}{z_0 - z}\sum_{n=0}^{\infty} \frac{(\xi - z_0)^n}{1} \cdot \frac{1}{(z-z_0)^n} = -\sum_{n=0}^{\infty} (\xi - z_0)^n \cdot \frac{1}{(z-z_0)^{n+1}} = -\sum_{n=1}^{\infty} \frac{(\xi - z_0)^{n-1}}{(z-z_0)^n}
+    .\]
+Zatem
+\[
+    -\frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')} \frac{f(\xi)}{\xi - z}d\xi = \sum_{n=1}^{\infty} \left( \frac{1}{2\pi i }\int\limits_{\partial K(z_0,r_1')}f(\xi) (\xi - z_0)^{n-1}d\xi \right) \frac{1}{(z-z_0)^n} = \sum_{n=1}^{\infty} d_n \cdot \frac{1}{(z-z_0)^n}
+,\]
+\[
+    d_n = \frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')}f(\xi)(\xi - z_0)^{n-1}d\xi
+,\]
+czyli
+\[
+    f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n + \sum_{n=1}^{\infty} d_n \cdot \frac{1}{(z-z_0)^n}
+.\]
+\end{enumerate}
+\textbf{Obserwacja:} Gdyby $f$ była holomorficzna na pierścieniu $R(z_0,r_1,\infty)$, to jak wyglądało by rozwinięcie $f(z)$?\\
+Zauważmy, że \[
+    a_n = \frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_2')}\frac{f(\xi)}{(\xi - z_0)^{n+1}} = \frac{1}{2\pi i}\int_0^{2\pi}\frac{r_2'ie^{i\varphi}f(z_0+r_2'e^{i\varphi})d\varphi}{(r_2'e^{i\varphi})^{n+1}}
+.\]
+Zatem
+\[
+    |a_n| \le |\frac{1}{2 \pi i}| \cdot \frac{1}{(r_2')^n}\cdot \max\limits_{0 \le \varphi \le 2\pi} \left| f(z_0+r_2'e^{i\varphi}) \right| \cdot 2\pi
+,\]
+ale jeżeli $f$ ograniczona poza kołem $K(z_0,r_1')$, to znaczy, że
+\[
+    \underset{r_2' > r_1'}{\forall} \left| f(z_0+r_2'e^{i\varphi}) \right| < M
+.\]
+Czyli
+\[
+    |a_n| \le \frac{1}{2\pi} \cdot 2\pi \cdot M \cdot \frac{1}{(r_2')^n} \underset{r_2'\to \infty}{\longrightarrow} 0
+,\]
+więc
+\[
+    f(z) = \sum_{n=1}^{\infty} d_n \frac{1}{(z-z_0)^n}
+.\]
+\textbf{Obserwacja:} Gdyby $f$ była holomorficzna na $R(z_0,0,r_2)$, to jak wyglądałoby rozwinięcie?\\
+Wiemy, że
+\[
+    d_n = \frac{1}{2\pi i}\int\limits_{ \partial K(z_0,r_1')} f(\xi)(\xi - z_0)^{n-1}d\xi = \frac{1}{2\pi i}\int_{0}^{2\pi} r_1'ie^{i\varphi}f(z_0+r_1'e^{i\varphi})(r_1'e^{i\varphi})^{n-1}d\varphi
+.\]
+\[
+    |d_n| \le \left| \frac{1}{2\pi i} \right| \cdot r_1^{n} \cdot  \max \underset{\underset{M}{\exists}: |f(z)| < M, z\in K(z_0,r_1)}{\left| f(z_0 + r_1'e^{i\varphi}) \right| }|2\pi|
+.\]
+Czyli dla $z\in K(z_0,r_2)$, $f$ - holomorficzna na $K(z_0,r_2)$
+\[
+    f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n,\quad a_n = \frac{1}{2\pi i} \int\limits_{\partial K(z_0,r_2')} \frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi
+.\]
+\begin{pytanie}
+    Jak rozwinięcie ma się do rozwinięcia Taylora? Tzn. jak ma się $a_n$ do $\frac{f^n(z_0)}{n!}$?
+\end{pytanie}
+\textbf{Koniec obserwacji, wracamy do dowodu}
+
+\begin{pytanie}
+    Czy wzory na $a_n$ i $d_n$ można uprościć?
+\end{pytanie}
+\textbf{Przypomnienie:} jeżeli $f$ - holomorficzna na $\Omega$, to
+\[
+\int_{\partial \Omega} f = 0 = \int_{\partial \Omega_1}f - \int_{\partial \Omega_2}f
+.\]
+(minus przez orientację) Czyli
+\[
+\int_{\partial \Omega_1}f = \int_{\partial \Omega_2}f
+.\]
+Zauważmy, że $f(z)$ - holomorficzne na $R(z_0,r_1,r_2)$, a funkcja $\frac{1}{(z-z_0)^n}$ - też jest holomorficzna na $R(z_0,r_1,r_2)$, to wtedy \[
+    \frac{f(z)}{(z-z_0)^{n+1}}
+\]
+ - też jest holomorficzna na $R(z_0,r_1,r_2)$, czyli
+ \[
+     \int\limits_{\partial K(z_0,r_2')} \frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi = \int\limits_{\partial K(z_0,r)} \frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi \quad\underset{r_1 < r < r_2}{\forall}
+ .\]
+ To samo możemy powiedzieć o $d_n$
+  \[
+      \int\limits_{\partial K(z_0,r_1')} f(\xi)(z-z_0)^{n-1} d\xi = \int\limits_{\partial K(z_0,r)} f(\xi)(\xi - z_0)^{n-1}d\xi,\quad \underset{r_1<r<r_2}{\forall}
+ .\]
+ Możemy zatem podać zwartą postać wzoru
+ \[
+     f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n + \sum_{n=1}^{\infty} d_n \frac{1}{(z-z_0)^n}
+ .\]
+ O taką:
+ \[
+     f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n + \sum_{n=-1}^{\infty} d_{-n}(z-z_0)^n
+ ,\]
+ ale $d_n = \frac{1}{2\pi i}\int\limits_{\partial K(z_0,r)} \frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi$.
+
+ Zatem
+ \[
+     f(z) = \sum_{n=-\infty}^{\infty} c_n (z-z_0)^n, \quad c_n = \frac{1}{2\pi i} \int\limits_{\partial K(z_0,r)} \frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi, \quad r_1<r<r_2 \quad\Box
+ \]
+
+ \begin{tw}
+     Niech $C$ - krzywa na $\mathbb{C}$ (zamknięta lub nie) i niech $f(z)$ - ciągła na $C$. Wówczas funkcja
+     \[
+         \varphi(z) = \int_C \frac{f(\xi)}{(\xi - z)^p}d\xi
+     \]
+     jest holomorficzna na $\mathbb{C}-C$ dla $p\in \mathbb{Z}$ i
+     \[
+         \varphi'(z) = p\int_C \frac{f(\xi)}{(\xi - z)^{p+1}}d\xi
+     .\]
+ \end{tw}
+ \begin{proof}
+     Niech $z_0\in\mathbb{C}$ i $z_0\not\in C$. Chcemy pokazać, że
+     \begin{equation}
+         \label{eqn:w11-1}
+         \frac{\varphi(z) - \varphi(z_0)}{z-z_0} = \varphi'(z_0) \underset{z \to z_0}{\longrightarrow} 0 \tag{*}
+     \end{equation}
+ Zatem
+ \begin{equation}
+     \label{eqn:w11-2}
+     \eqref{eqn:w11-1} = \int_C \frac{d\xi f(\xi)}{(z-z_0)}\left[ \frac{1}{(\xi - z)^p} - \frac{1}{(z-z_0)^p} \right] - p\int_C \frac{f(\xi) d\xi}{(\xi - z_0)^{p+1}} = \int_C d\xi f(\xi) \left[ \underbrace{\frac{\frac{1}{(\xi - z)^p} - \frac{1}{(\xi - z_0)^p}}{z-z_0}}_{(\Delta)} - \frac{p}{(\xi - z_0)^{p+1}} \right] \tag{$\Delta\Delta$}
+ \end{equation}
+
+ Ale $(\Delta)$ - iloraz różnicowy funkcji \[
+     g(z) = \frac{1}{(\xi - z)^p}
+ .\]
+ \[
+     (\Delta) = \frac{g(z) - g(z_0)}{z-z_0}
+ .\]
+ Wiemy, że $g(z)$ - holomorficzna dla $z\not\in C$, czyli
+      \[
+          g'(z) = -\frac{p(-1)}{(\xi - z)^{p+1}}
+     ,\]
+ czyli
+     \[
+         (\Delta) = \frac{p}{(\xi - z)^{p+1}} + \text{ mała rzędu wyższego, niż }(z-z_0)
+     .\]
+ Zatem
+     \[
+         \eqref{eqn:w11-2} = \int_C d\xi f(\xi) \left[ \frac{p}{(\xi - z)^{p+1}} + \text{ mała rzędu wyższego niż }(z-z_0) - \frac{p}{(\xi - z)^{p+1}} \right]
+     .\]
+ \[
+     |\eqref{eqn:w11-2}| \le |\max\limits_{\xi in C} f(\xi)|\left| \text{długość }C\right|\cdot  |z-z_0| \underset{z\to z_0}{\longrightarrow} 0
+ .\]
+ \end{proof}
+ \textbf{Wniosek:} dla krzywej zamkniętej wiemy, że
+ \[
+     f(z) = \frac{1}{2\pi i}\int\limits_C \frac{f(\xi)}{\xi - z}d\xi
+ .\]
+ zatem
+ \[
+     f'(z) = \frac{1}{2\pi i}\int\limits_C \frac{f(\xi)}{(\xi - z)^2}d\xi
+ .\]
+ Wiemy, że $f'(z)$ - też jest holomorficzna (bo wzór na $\varphi$ z $p = 2$)
+
+\end{document}

@@ -121,6 +121,82 @@ wiemy, że
     \int_{\partial V}\vec{A}\cdot \vec{n} ds = \int_V div \vec{A} \quad dV
 .\]
 
+\subsection{Analiza Zespolona}
+(podobno bardzo przyjemny dział analizy)\\
+(rys 8-2)
+
+Można się zastanowić nad taką funkcją:
+\[
+f : \mathbb{R}\to \mathbb{C}
+,\]
+\[
+    f(t) = e^{iat};\quad a > 0
+,\]
+(kółko)
+\[
+    f(t) = e^{bt}e^{iat};\quad a, b > 0
+.\]
+(spiralka)
+\begin{definicja}
+    Niech $\mathcal{O}\subset\mathbb{C}$, $\mathcal{O}$ - otwarty.
+    $f : \mathcal{O}\to \mathbb{C}$. \\
+    Mówimy, że $f$ jest holomorficzna na $\mathcal{O}$ jeżeli $\underset{z\in \mathcal{O}}{\forall}$ istnieje granica
+    \[
+        \lim_{h \to 0}\frac{f(z+h) - f(z)}{h} \overset{\text{def}}{=} f'(z)
+    ,\]
+gdzie $f'(z)$ jest funkcją ciągłą.
+\end{definicja}
+\textbf{Uwaga:} jeżeli nie zostanie to podkreślone, to wszystkie niezbędne struktury przenosimy z $\mathbb{R}^2$.\\
+\textbf{Uwaga:} dowolną funkcję z $\mathbb{C}$ możemy zapisać jako $f(z) = P(x,y) + Q(x,y)\cdot i$, gdzie $z = x + iy$ a $P(x,y): \mathbb{R}^2\to \mathbb{R}^1$, $Q(x,y) : \mathbb{R}^2 \to \mathbb{R}^1$
+\begin{przyklad}
+    $f(z) = \cos x + i \sin(xy)$, $z = x + iy$
+\end{przyklad}
+
+\begin{pytanie}
+    Co to znaczy różniczkowalność?
+\end{pytanie}
+ma istnieć granica (dla $h\in \mathbb{R}$):
+\[
+    \lim_{h \to 0} \frac{f(z+h) - f(z)}{h} = \lim_{h \to 0} \frac{P(x+h, y) + iQ(x + h, y) - P(x,y) - iQ(x,y)}{h} = \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x}
+.\]
+Ale jeżeli np. $h = it$, to wtedy
+ \[
+     \lim_{h \to 0}\frac{f(z+h) - f(z)}{h} = \lim_{t \to 0}\frac{P(x, y+t) - P(x,y)}{it} + i \frac{Q(x, y+t) - Q(x,y)}{it} = \frac{1}{i} \frac{\partial P}{\partial y} + \frac{\partial Q}{\partial y} = \frac{\partial Q}{\partial y} - i \frac{\partial P}{\partial y}
+.\]
+Czyli jeżeli $f$ - holomorficzna, to znaczy, że (wzory Cauchy-Riemanna)
+\begin{align*}
+    \frac{\partial P}{\partial x} &= \frac{\partial Q}{\partial y}\\
+    \frac{\partial Q}{\partial y} &= - \frac{\partial P}{\partial x}
+.\end{align*}
+\begin{przyklad}
+    (jak mogła by wyglądać funkcja różniczkowalna?)
+    \[
+        f(z) = \underbrace{x}_{P(x,y)} - i\underbrace{y}_{Q(x,y)}
+    .\]
+Czy $f$ jest różniczkowalna?
+\[
+\frac{\partial P}{\partial x} = 1,\quad \frac{\partial P}{\partial y} = 0,\quad \frac{\partial Q}{\partial x}  = 0,\quad \frac{\partial Q}{\partial y} = -1
+,\]
+czyli coś nie gra, bo jak to ma nie być różniczkowalne
+\end{przyklad}
+\begin{przyklad}
+    \[
+        \alpha = Q(x,y)dx + P(x,y)dy
+    ,\]
+gdzie $P$, $Q$ są takie, że $f(z) = P(x,y) + iQ(x,y)$ jest holomorficzna.
+\[
+    d\alpha = \frac{\partial Q}{\partial y} dy\land dx + \frac{\partial P}{\partial x} dx\land dy = \left( \frac{\partial P}{\partial x} - \frac{\partial Q}{\partial y}  \right) dx\land dy = 0
+.\]
+\end{przyklad}
+\begin{pytanie}
+    Niech $f(z) = P(x,y) + iQ(x,y)$, f - holomorficzna. Co ciekawego można powiedzieć o zbiorach
+    \[
+        P_c = \left\{ (x,y)\in \mathbb{R}^2,\quad P(x,y) = c\in\mathbb{R} \right\}
+    .\]
+    \[
+        Q_d = \left\{ (x,y)\in \mathbb{R}^2,\quad Q(x,y) = d\in \mathbb{R} \right\}
+    .\]
+\end{pytanie}
 
 
 \end{document}
