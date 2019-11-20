@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.28)  28 OCT 2019 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.11.16)  20 NOV 2019 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2018-12-01>
+LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -81,22 +81,24 @@ Package ifluatex Info: LuaTeX not detected.
 ))))
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-04-06 L3 programming layer (loader) 
+Package: expl3 2019-10-28 L3 programming layer (loader) 
 
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-04-06 L3 programming layer (code)
+Package: expl3 2019-10-28 L3 programming layer (code)
 \c_max_int=\count91
 \l_tmpa_int=\count92
 \l_tmpb_int=\count93
 \g_tmpa_int=\count94
 \g_tmpb_int=\count95
-\g__kernel_prg_map_int=\count96
-\c__ior_term_ior=\count97
-\c_log_iow=\count98
-\l_iow_line_count_int=\count99
-\l__iow_line_target_int=\count100
-\l__iow_one_indent_int=\count101
-\l__iow_indent_int=\count102
+\l__seq_internal_a_int=\count96
+\l__seq_internal_b_int=\count97
+\g__kernel_prg_map_int=\count98
+\c__ior_term_noprompt_ior=\count99
+\c_log_iow=\count100
+\l_iow_line_count_int=\count101
+\l__iow_line_target_int=\count102
+\l__iow_one_indent_int=\count103
+\l__iow_indent_int=\count104
 \c_zero_dim=\dimen111
 \c_max_dim=\dimen112
 \l_tmpa_dim=\dimen113
@@ -115,78 +117,80 @@ Package: expl3 2019-04-06 L3 programming layer (code)
 \l_tmpb_muskip=\muskip13
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count103
-\l__intarray_loop_int=\count104
+\l_keys_choice_int=\count105
+\l__intarray_loop_int=\count106
 \c__intarray_sp_dim=\dimen117
-\g__intarray_font_int=\count105
-\c__fp_leading_shift_int=\count106
-\c__fp_middle_shift_int=\count107
-\c__fp_trailing_shift_int=\count108
-\c__fp_big_leading_shift_int=\count109
-\c__fp_big_middle_shift_int=\count110
-\c__fp_big_trailing_shift_int=\count111
-\c__fp_Bigg_leading_shift_int=\count112
-\c__fp_Bigg_middle_shift_int=\count113
-\c__fp_Bigg_trailing_shift_int=\count114
-\c__kernel_randint_max_int=\count115
-\g__fp_array_int=\count116
-\l__fp_array_loop_int=\count117
-\l__sort_length_int=\count118
-\l__sort_min_int=\count119
-\l__sort_top_int=\count120
-\l__sort_max_int=\count121
-\l__sort_true_max_int=\count122
-\l__sort_block_int=\count123
-\l__sort_begin_int=\count124
-\l__sort_end_int=\count125
-\l__sort_A_int=\count126
-\l__sort_B_int=\count127
-\l__sort_C_int=\count128
-\l__tl_analysis_normal_int=\count129
-\l__tl_analysis_index_int=\count130
-\l__tl_analysis_nesting_int=\count131
-\l__tl_analysis_type_int=\count132
-\l__regex_internal_a_int=\count133
-\l__regex_internal_b_int=\count134
-\l__regex_internal_c_int=\count135
-\l__regex_balance_int=\count136
-\l__regex_group_level_int=\count137
-\l__regex_mode_int=\count138
-\c__regex_cs_in_class_mode_int=\count139
-\c__regex_cs_mode_int=\count140
-\l__regex_catcodes_int=\count141
-\l__regex_default_catcodes_int=\count142
-\c__regex_catcode_D_int=\count143
-\c__regex_catcode_S_int=\count144
-\c__regex_catcode_L_int=\count145
-\c__regex_catcode_O_int=\count146
-\c__regex_catcode_A_int=\count147
-\c__regex_all_catcodes_int=\count148
-\l__regex_show_lines_int=\count149
-\l__regex_min_state_int=\count150
-\l__regex_max_state_int=\count151
-\l__regex_left_state_int=\count152
-\l__regex_right_state_int=\count153
-\l__regex_capturing_group_int=\count154
-\l__regex_min_pos_int=\count155
-\l__regex_max_pos_int=\count156
-\l__regex_curr_pos_int=\count157
-\l__regex_start_pos_int=\count158
-\l__regex_success_pos_int=\count159
-\l__regex_curr_char_int=\count160
-\l__regex_curr_catcode_int=\count161
-\l__regex_last_char_int=\count162
-\l__regex_case_changed_char_int=\count163
-\l__regex_curr_state_int=\count164
-\l__regex_step_int=\count165
-\l__regex_min_active_int=\count166
-\l__regex_max_active_int=\count167
-\l__regex_replacement_csnames_int=\count168
-\l__regex_match_count_int=\count169
-\l__regex_min_submatch_int=\count170
-\l__regex_submatch_int=\count171
-\l__regex_zeroth_submatch_int=\count172
-\g__regex_trace_regex_int=\count173
+\g__intarray_font_int=\count107
+\c__fp_leading_shift_int=\count108
+\c__fp_middle_shift_int=\count109
+\c__fp_trailing_shift_int=\count110
+\c__fp_big_leading_shift_int=\count111
+\c__fp_big_middle_shift_int=\count112
+\c__fp_big_trailing_shift_int=\count113
+\c__fp_Bigg_leading_shift_int=\count114
+\c__fp_Bigg_middle_shift_int=\count115
+\c__fp_Bigg_trailing_shift_int=\count116
+\c__kernel_randint_max_int=\count117
+\g__fp_array_int=\count118
+\l__fp_array_loop_int=\count119
+\l__sort_length_int=\count120
+\l__sort_min_int=\count121
+\l__sort_top_int=\count122
+\l__sort_max_int=\count123
+\l__sort_true_max_int=\count124
+\l__sort_block_int=\count125
+\l__sort_begin_int=\count126
+\l__sort_end_int=\count127
+\l__sort_A_int=\count128
+\l__sort_B_int=\count129
+\l__sort_C_int=\count130
+\l__str_internal_int=\count131
+\c__str_replacement_char_int=\count132
+\l__tl_analysis_normal_int=\count133
+\l__tl_analysis_index_int=\count134
+\l__tl_analysis_nesting_int=\count135
+\l__tl_analysis_type_int=\count136
+\l__regex_internal_a_int=\count137
+\l__regex_internal_b_int=\count138
+\l__regex_internal_c_int=\count139
+\l__regex_balance_int=\count140
+\l__regex_group_level_int=\count141
+\l__regex_mode_int=\count142
+\c__regex_cs_in_class_mode_int=\count143
+\c__regex_cs_mode_int=\count144
+\l__regex_catcodes_int=\count145
+\l__regex_default_catcodes_int=\count146
+\c__regex_catcode_D_int=\count147
+\c__regex_catcode_S_int=\count148
+\c__regex_catcode_L_int=\count149
+\c__regex_catcode_O_int=\count150
+\c__regex_catcode_A_int=\count151
+\c__regex_all_catcodes_int=\count152
+\l__regex_show_lines_int=\count153
+\l__regex_min_state_int=\count154
+\l__regex_max_state_int=\count155
+\l__regex_left_state_int=\count156
+\l__regex_right_state_int=\count157
+\l__regex_capturing_group_int=\count158
+\l__regex_min_pos_int=\count159
+\l__regex_max_pos_int=\count160
+\l__regex_curr_pos_int=\count161
+\l__regex_start_pos_int=\count162
+\l__regex_success_pos_int=\count163
+\l__regex_curr_char_int=\count164
+\l__regex_curr_catcode_int=\count165
+\l__regex_last_char_int=\count166
+\l__regex_case_changed_char_int=\count167
+\l__regex_curr_state_int=\count168
+\l__regex_step_int=\count169
+\l__regex_min_active_int=\count170
+\l__regex_max_active_int=\count171
+\l__regex_replacement_csnames_int=\count172
+\l__regex_match_count_int=\count173
+\l__regex_min_submatch_int=\count174
+\l__regex_submatch_int=\count175
+\l__regex_zeroth_submatch_int=\count176
+\g__regex_trace_regex_int=\count177
 \c_empty_box=\box27
 \l_tmpa_box=\box28
 \l_tmpb_box=\box29
@@ -230,24 +234,25 @@ Package: expl3 2019-04-06 L3 programming layer (code)
 \l__coffin_display_offset_dim=\dimen140
 \l__coffin_display_x_dim=\dimen141
 \l__coffin_display_y_dim=\dimen142
-\g__file_internal_ior=\read1
-\l__seq_internal_a_int=\count174
-\l__seq_internal_b_int=\count175
-\c__deprecation_minus_one=\count176
-)
-(/usr/share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2019-04-06 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count177
+\g__char_data_ior=\read1
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3deprecation.def
+File: l3deprecation.def 2019-04-06 v L3 Deprecated functions
 ))
-Package: xparse 2019-03-05 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count178
-\g__xparse_grabber_int=\count179
-\l__xparse_m_args_int=\count180
-\l__xparse_v_nesting_int=\count181
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2019-04-06 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count178
+\l__pdf_internal_box=\box45
+))
+Package: xparse 2019-10-11 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count179
+\g__xparse_grabber_int=\count180
+\l__xparse_m_args_int=\count181
+\l__xparse_v_nesting_int=\count182
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count182
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count183
 )
 (/usr/share/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
 Package: zref-abspage 2018/11/21 v2.27 Module abspage for zref (HO)
@@ -259,7 +264,7 @@ Package: zref-base 2018/11/21 v2.27 Module base for zref (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 )
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -276,7 +281,7 @@ Package zref Info: New property: page on input line 761.
 (/usr/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-\c@abspage=\count183
+\c@abspage=\count184
 Package zref Info: New property: abspage on input line 62.
 )
 (/usr/share/texmf-dist/tex/latex/needspace/needspace.sty
@@ -294,7 +299,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \mdf@templength=\skip49
-\c@mdf@globalstyle@cnt=\count184
+\c@mdf@globalstyle@cnt=\count185
 \mdf@skipabove@length=\skip50
 \mdf@skipbelow@length=\skip51
 \mdf@leftmargin@length=\skip52
@@ -338,11 +343,11 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 (/usr/share/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box45
-\mdf@footnotebox=\box46
-\mdf@splitbox@one=\box47
-\mdf@splitbox@two=\box48
-\mdf@splitbox@save=\box49
+\mdf@frametitlebox=\box46
+\mdf@footnotebox=\box47
+\mdf@splitbox@one=\box48
+\mdf@splitbox@two=\box49
+\mdf@splitbox@save=\box50
 \mdfsplitboxwidth=\skip89
 \mdfsplitboxtotalwidth=\skip90
 \mdfsplitboxheight=\skip91
@@ -370,35 +375,32 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@horizontalspaceofbox=\skip113
 \mdfsubtitleheight=\skip114
 \mdfsubsubtitleheight=\skip115
-\c@mdfcountframes=\count185
+\c@mdfcountframes=\count186
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count186
-\c@mdf@env@i=\count187
-\c@mdf@env@ii=\count188
-\c@mdf@zref@counter=\count189
+\mdf@envdepth=\count187
+\c@mdf@env@i=\count188
+\c@mdf@env@ii=\count189
+\c@mdf@zref@counter=\count190
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/usr/share/texmf-dist/tex/latex/subfiles/subfiles.sty
-Package: subfiles 2018/07/31 Federico Garcia, Gernot Salzer
+Package: subfiles 2019/10/25 v1.4 Multi-file projects (package)
 
-(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks18
-\verbatim@line=\toks19
-\verbatim@in@stream=\read2
+(/usr/share/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
 ))
 (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen143
 \captionmargin@=\dimen144
@@ -408,17 +410,17 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen148
 \caption@hangindent=\dimen149
 )
-\c@caption@flags=\count190
-\c@ContinuedFloat=\count191
+\c@caption@flags=\count191
+\c@ContinuedFloat=\count192
 )
-\c@subfigure=\count192
-\c@subtable=\count193
+\c@subfigure=\count193
+\c@subtable=\count194
 )
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -426,7 +428,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 )
 \Gin@req@height=\dimen150
 \Gin@req@width=\dimen151
@@ -434,13 +436,13 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen152
 \WF@size=\dimen153
-\c@WF@wrappedlines=\count194
-\WF@box=\box50
-\WF@everypar=\toks20
+\c@WF@wrappedlines=\count195
+\WF@box=\box51
+\WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
+Package: amsmath 2019/04/01 v2.17c AMS math features
 \@mathmargin=\skip116
 
 For additional information on amsmath, use the `?' option.
@@ -449,7 +451,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
+\@emptytoks=\toks19
 \ex@=\dimen154
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -459,48 +461,49 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count195
-LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count196
-\leftroot@=\count197
-LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count198
-\DOTSCASE@=\count199
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\inf@bad=\count196
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count197
+\leftroot@=\count198
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count199
+\DOTSCASE@=\count266
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 \big@size=\dimen156
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count266
-\c@MaxMatrixCols=\count267
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count267
+\c@MaxMatrixCols=\count268
 \dotsspace@=\muskip16
-\c@parentequation=\count268
-\dspbrk@lvl=\count269
-\tag@help=\toks22
-\row@=\count270
-\column@=\count271
-\maxfields@=\count272
-\andhelp@=\toks23
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
+\tag@help=\toks20
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
+\andhelp@=\toks21
 \eqnshift@=\dimen157
 \alignsep@=\dimen158
 \tagshift@=\dimen159
 \tagwidth@=\dimen160
 \totwidth@=\dimen161
 \lineht@=\dimen162
-\@envbody=\toks24
+\@envbody=\toks22
 \multlinegap=\skip117
 \multlinetaggap=\skip118
-\mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
@@ -509,15 +512,15 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks26
-\thm@bodyfont=\toks27
-\thm@headfont=\toks28
-\thm@notefont=\toks29
-\thm@headpunct=\toks30
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
 \thm@preskip=\skip119
 \thm@postskip=\skip120
 \thm@headsep=\skip121
-\dth@everypar=\toks31
+\dth@everypar=\toks29
 )
 (/usr/share/texmf-dist/tex/latex/polski/polski.sty
 Package: polski 2017/05/04 v1.3.4 Polish language package
@@ -529,8 +532,8 @@ File: ot4enc.def 2018/08/11 v2.0j Standard LaTeX file
 Now handling font encoding OT4 ...
 ... no UTF-8 mapping file for font encoding OT4
 )
-LaTeX Font Info:    Try loading font information for OT4+cmr on input line 360.
-
+LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 3
+60.
 
 (/usr/share/texmf-dist/tex/latex/polski/ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
@@ -567,23 +570,20 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 360.
 )
-(/usr/share/texmf-dist/tex/latex/import/import.sty
-Package: import 2009/03/23  v 5.1
-)
 (/usr/share/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count273
-\calc@Bcount=\count274
+\calc@Acount=\count274
+\calc@Bcount=\count275
 \calc@Adimen=\dimen163
 \calc@Bdimen=\dimen164
 \calc@Askip=\skip122
 \calc@Bskip=\skip123
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count275
+\calc@Ccount=\count276
 \calc@Cskip=\skip124
 )
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -593,7 +593,7 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 (/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+Package: pdfpages 2019/09/21 v0.5n Insert pages of external PDF documents (AM)
 
 (/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
@@ -602,24 +602,24 @@ Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 \AM@pageheight=\dimen166
 
 (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2019/09/21 v0.5n Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box53
-\AM@global@opts=\toks32
-\AM@toc@title=\toks33
-\c@AM@survey=\count276
-\AM@templatesizebox=\box54
+\AM@pagebox=\box54
+\AM@global@opts=\toks30
+\AM@toc@title=\toks31
+\c@AM@survey=\count277
+\AM@templatesizebox=\box55
 )
 (/usr/share/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2018/11/18 v1.3 Transparency via pdfTeX's color stack (HO)
 
 )
-\c@tw=\count277
-\c@stw=\count278
-\c@definicja=\count279
-\c@pytanie=\count280
-\c@przyklad=\count281
-\c@uwaga=\count282
+\c@tw=\count278
+\c@stw=\count279
+\c@definicja=\count280
+\c@pytanie=\count281
+\c@przyklad=\count282
+\c@uwaga=\count283
  (./main.aux)
 \openout1 = `main.aux'.
 
@@ -672,20 +672,20 @@ LaTeX Font Info:    ... okay on input line 40.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box55
+\AtBeginShipoutBox=\box56
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count283
+\scratchcounter=\count284
 \scratchdimen=\dimen167
-\scratchbox=\box56
-\nofMPsegments=\count284
-\nofMParguments=\count285
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count286
+\scratchbox=\box57
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count287
 \MPscratchDim=\dimen168
-\MPnumerator=\count287
-\makeMPintoPDFobject=\count288
-\everyMPtoPDFconversion=\toks35
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks33
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -715,19 +715,20 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Try loading font information for OML+plm on input line 41.
+LaTeX Font Info:    Trying to load font information for OML+plm on input line 4
+1.
 
 (/usr/share/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 41.
-
+LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
+41.
 
 (/usr/share/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 41.
-
+LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
+41.
 
 (/usr/share/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
@@ -738,27 +739,29 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <8> on input line 41.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <6> on input line 41.
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tex/w1.tex
-<"img/"fig1-1.png, id=9, 963.6pt x 813.0375pt>
-File: "img/"fig1-1.png Graphic file (type png)
-<use "img/"fig1-1.png>
-Package pdftex.def Info: "img/"fig1-1.png  used on input line 10.
+<img/fig1-1.png, id=9, 963.6pt x 813.0375pt>
+File: img/fig1-1.png Graphic file (type png)
+<use img/fig1-1.png>
+Package pdftex.def Info: img/fig1-1.png  used on input line 10.
 (pdftex.def)             Requested size: 234.15141pt x 197.56454pt.
-<"img/"fig1-2.png, id=11, 780.66656pt x 546.54187pt>
-File: "img/"fig1-2.png Graphic file (type png)
-<use "img/"fig1-2.png>
-Package pdftex.def Info: "img/"fig1-2.png  used on input line 11.
+<img/fig1-2.png, id=11, 780.66656pt x 546.54187pt>
+File: img/fig1-2.png Graphic file (type png)
+<use img/fig1-2.png>
+Package pdftex.def Info: img/fig1-2.png  used on input line 11.
 (pdftex.def)             Requested size: 234.15141pt x 163.92212pt.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10> on input line 15.
@@ -766,32 +769,32 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <7> on input line 15.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <5> on input line 15.
-<"img/"fig1-3.png, id=12, 755.82375pt x 552.56438pt>
-File: "img/"fig1-3.png Graphic file (type png)
-<use "img/"fig1-3.png>
-Package pdftex.def Info: "img/"fig1-3.png  used on input line 21.
+<img/fig1-3.png, id=12, 755.82375pt x 552.56438pt>
+File: img/fig1-3.png Graphic file (type png)
+<use img/fig1-3.png>
+Package pdftex.def Info: img/fig1-3.png  used on input line 21.
 (pdftex.def)             Requested size: 175.61801pt x 128.38557pt.
  [2 <./img/fig1-1.png> <./img/fig1-2.png> <./img/fig1-3.png>]
-<"img/"fig1-4.png, id=25, 545.78906pt x 539.01375pt>
-File: "img/"fig1-4.png Graphic file (type png)
-<use "img/"fig1-4.png>
-Package pdftex.def Info: "img/"fig1-4.png  used on input line 71.
+<img/fig1-4.png, id=25, 545.78906pt x 539.01375pt>
+File: img/fig1-4.png Graphic file (type png)
+<use img/fig1-4.png>
+Package pdftex.def Info: img/fig1-4.png  used on input line 71.
 (pdftex.def)             Requested size: 175.61801pt x 173.43375pt.
  [3 <./img/fig1-4.png>]
-<"img/"fig1-5.png, id=33, 929.72343pt x 802.49812pt>
-File: "img/"fig1-5.png Graphic file (type png)
-<use "img/"fig1-5.png>
-Package pdftex.def Info: "img/"fig1-5.png  used on input line 99.
+<img/fig1-5.png, id=33, 929.72343pt x 802.49812pt>
+File: img/fig1-5.png Graphic file (type png)
+<use img/fig1-5.png>
+Package pdftex.def Info: img/fig1-5.png  used on input line 99.
 (pdftex.def)             Requested size: 175.61801pt x 151.58232pt.
-<"img/"fig1-6.png, id=34, 648.92438pt x 762.59906pt>
-File: "img/"fig1-6.png Graphic file (type png)
-<use "img/"fig1-6.png>
-Package pdftex.def Info: "img/"fig1-6.png  used on input line 105.
+<img/fig1-6.png, id=34, 648.92438pt x 762.59906pt>
+File: img/fig1-6.png Graphic file (type png)
+<use img/fig1-6.png>
+Package pdftex.def Info: img/fig1-6.png  used on input line 105.
 (pdftex.def)             Requested size: 175.61801pt x 206.38158pt.
-<"img/"fig1-7.png, id=35, 843.90282pt x 764.10469pt>
-File: "img/"fig1-7.png Graphic file (type png)
-<use "img/"fig1-7.png>
-Package pdftex.def Info: "img/"fig1-7.png  used on input line 111.
+<img/fig1-7.png, id=35, 843.90282pt x 764.10469pt>
+File: img/fig1-7.png Graphic file (type png)
+<use img/fig1-7.png>
+Package pdftex.def Info: img/fig1-7.png  used on input line 111.
 (pdftex.def)             Requested size: 292.69373pt x 265.01552pt.
 
 
@@ -802,41 +805,41 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 117.
 Package mdframed Info: Not enough space on this page on input line 126.
-<"img/"fig1-8.png, id=41, 770.12718pt x 320.69812pt>
-File: "img/"fig1-8.png Graphic file (type png)
-<use "img/"fig1-8.png>
-Package pdftex.def Info: "img/"fig1-8.png  used on input line 129.
+<img/fig1-8.png, id=41, 770.12718pt x 320.69812pt>
+File: img/fig1-8.png Graphic file (type png)
+<use img/fig1-8.png>
+Package pdftex.def Info: img/fig1-8.png  used on input line 129.
 (pdftex.def)             Requested size: 175.61801pt x 73.12775pt.
  [5 <./img/fig1-7.png> <./img/fig1-8.png>]
-<"img/"fig1-9.png, id=49, 916.92563pt x 612.03656pt>
-File: "img/"fig1-9.png Graphic file (type png)
-<use "img/"fig1-9.png>
-Package pdftex.def Info: "img/"fig1-9.png  used on input line 165.
+<img/fig1-9.png, id=49, 916.92563pt x 612.03656pt>
+File: img/fig1-9.png Graphic file (type png)
+<use img/fig1-9.png>
+Package pdftex.def Info: img/fig1-9.png  used on input line 165.
 (pdftex.def)             Requested size: 292.69373pt x 195.37007pt.
 ) [6 <./img/fig1-9.png>] (./tex/w2.tex
-<"img/"fig2-1.png, id=54, 847.66687pt x 312.41719pt>
-File: "img/"fig2-1.png Graphic file (type png)
-<use "img/"fig2-1.png>
-Package pdftex.def Info: "img/"fig2-1.png  used on input line 24.
+<img/fig2-1.png, id=54, 847.66687pt x 312.41719pt>
+File: img/fig2-1.png Graphic file (type png)
+<use img/fig2-1.png>
+Package pdftex.def Info: img/fig2-1.png  used on input line 24.
 (pdftex.def)             Requested size: 234.15141pt x 86.29874pt.
-<"img/"fig2-2.png, id=55, 579.66562pt x 593.96906pt>
-File: "img/"fig2-2.png Graphic file (type png)
-<use "img/"fig2-2.png>
-Package pdftex.def Info: "img/"fig2-2.png  used on input line 32.
+<img/fig2-2.png, id=55, 579.66562pt x 593.96906pt>
+File: img/fig2-2.png Graphic file (type png)
+<use img/fig2-2.png>
+Package pdftex.def Info: img/fig2-2.png  used on input line 32.
 (pdftex.def)             Requested size: 175.61801pt x 179.95035pt.
-<"img/"fig2-3.png, id=56, 817.55438pt x 61.73062pt>
-File: "img/"fig2-3.png Graphic file (type png)
-<use "img/"fig2-3.png>
-Package pdftex.def Info: "img/"fig2-3.png  used on input line 61.
+<img/fig2-3.png, id=56, 817.55438pt x 61.73062pt>
+File: img/fig2-3.png Graphic file (type png)
+<use img/fig2-3.png>
+Package pdftex.def Info: img/fig2-3.png  used on input line 61.
 (pdftex.def)             Requested size: 292.69373pt x 22.10054pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<"img/"fig2-4.png, id=57, 755.82375pt x 632.3625pt>
-File: "img/"fig2-4.png Graphic file (type png)
-<use "img/"fig2-4.png>
-Package pdftex.def Info: "img/"fig2-4.png  used on input line 72.
+<img/fig2-4.png, id=57, 755.82375pt x 632.3625pt>
+File: img/fig2-4.png Graphic file (type png)
+<use img/fig2-4.png>
+Package pdftex.def Info: img/fig2-4.png  used on input line 72.
 (pdftex.def)             Requested size: 234.15141pt x 195.9049pt.
 [7 <./img/fig2-1.png> <./img/fig2-2.png>]
 Package mdframed Info: mdframed detected package amsthm 
@@ -849,10 +852,10 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 86.
  [8 <./img/fig2-3.png> <./img/fig2-4.png>]
-<"img/"fig2-6.png, id=70, 664.73344pt x 524.71031pt>
-File: "img/"fig2-6.png Graphic file (type png)
-<use "img/"fig2-6.png>
-Package pdftex.def Info: "img/"fig2-6.png  used on input line 125.
+<img/fig2-6.png, id=70, 664.73344pt x 524.71031pt>
+File: img/fig2-6.png Graphic file (type png)
+<use img/fig2-6.png>
+Package pdftex.def Info: img/fig2-6.png  used on input line 125.
 (pdftex.def)             Requested size: 234.15141pt x 184.8283pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -864,20 +867,20 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 136.
 ) [9 <./img/fig2-6.png>] (./tex/w3.tex
-<"img/"fig3-1.png, id=76, 1906.87407pt x 994.46532pt>
-File: "img/"fig3-1.png Graphic file (type png)
-<use "img/"fig3-1.png>
-Package pdftex.def Info: "img/"fig3-1.png  used on input line 12.
+<img/fig3-1.png, id=76, 1906.87407pt x 994.46532pt>
+File: img/fig3-1.png Graphic file (type png)
+<use img/fig3-1.png>
+Package pdftex.def Info: img/fig3-1.png  used on input line 12.
 (pdftex.def)             Requested size: 234.15141pt x 122.10757pt.
-<"img/"fig3-2.png, id=77, 1079.53313pt x 1123.94907pt>
-File: "img/"fig3-2.png Graphic file (type png)
-<use "img/"fig3-2.png>
-Package pdftex.def Info: "img/"fig3-2.png  used on input line 49.
+<img/fig3-2.png, id=77, 1079.53313pt x 1123.94907pt>
+File: img/fig3-2.png Graphic file (type png)
+<use img/fig3-2.png>
+Package pdftex.def Info: img/fig3-2.png  used on input line 49.
 (pdftex.def)             Requested size: 204.88918pt x 213.31244pt.
-<"img/"fig3-3.png, id=78, 1806.75pt x 752.0597pt>
-File: "img/"fig3-3.png Graphic file (type png)
-<use "img/"fig3-3.png>
-Package pdftex.def Info: "img/"fig3-3.png  used on input line 55.
+<img/fig3-3.png, id=78, 1806.75pt x 752.0597pt>
+File: img/fig3-3.png Graphic file (type png)
+<use img/fig3-3.png>
+Package pdftex.def Info: img/fig3-3.png  used on input line 55.
 (pdftex.def)             Requested size: 351.23604pt x 146.19777pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--60
@@ -892,21 +895,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
-<"img/"fig3-4.png, id=84, 1918.91907pt x 1570.36688pt>
-File: "img/"fig3-4.png Graphic file (type png)
-<use "img/"fig3-4.png>
-Package pdftex.def Info: "img/"fig3-4.png  used on input line 116.
+<img/fig3-4.png, id=84, 1918.91907pt x 1570.36688pt>
+File: img/fig3-4.png Graphic file (type png)
+<use img/fig3-4.png>
+Package pdftex.def Info: img/fig3-4.png  used on input line 116.
 (pdftex.def)             Requested size: 263.42256pt x 215.5607pt.
 [11 <./img/fig3-3.png>]
-<"img/"fig3-5.png, id=89, 1175.14032pt x 1171.37625pt>
-File: "img/"fig3-5.png Graphic file (type png)
-<use "img/"fig3-5.png>
-Package pdftex.def Info: "img/"fig3-5.png  used on input line 122.
+<img/fig3-5.png, id=89, 1175.14032pt x 1171.37625pt>
+File: img/fig3-5.png Graphic file (type png)
+<use img/fig3-5.png>
+Package pdftex.def Info: img/fig3-5.png  used on input line 122.
 (pdftex.def)             Requested size: 204.88918pt x 204.22534pt.
-<"img/"fig3-6.png, id=90, 2159.81906pt x 1632.0975pt>
-File: "img/"fig3-6.png Graphic file (type png)
-<use "img/"fig3-6.png>
-Package pdftex.def Info: "img/"fig3-6.png  used on input line 129.
+<img/fig3-6.png, id=90, 2159.81906pt x 1632.0975pt>
+File: img/fig3-6.png Graphic file (type png)
+<use img/fig3-6.png>
+Package pdftex.def Info: img/fig3-6.png  used on input line 129.
 (pdftex.def)             Requested size: 234.15141pt x 176.91638pt.
 
 
@@ -977,38 +980,166 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-) [23] (./tex/w8.tex [24]) [25] (./main.aux) ) 
+) [23] (./tex/w8.tex [24]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 140.
+ [25]) [26] (./tex/w9.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 28.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 69.
+Package mdframed Info: Not enough space on this page on input line 71.
+[27]
+Package mdframed Info: Not enough space on this page on input line 71.
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 116.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 122.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 127.
+
+[28]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 175.
+) [29] (./tex/w10.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+ [30]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 114.
+ [31]) [32] (./tex/w11.tex
+Overfull \hbox (84.26321pt too wide) detected at line 29
+[] \OT4/cmr/m/n/10 = [] = [] \OMS/plsy/m/n/10 ^^A [] \OT4/cmr/m/n/10 = [] \OMS/
+plsy/m/n/10 ^^A [] \OT4/cmr/m/n/10 = [] [] [] \OMS/plsy/m/n/10 ^^A [] \OT4/cmr/
+m/n/10 = \OMS/plsy/m/n/10 ^^@ []\OT4/cmr/m/n/10 (\OML/plm/m/it/10 ^^X \OMS/plsy
+/m/n/10 ^^@ \OML/plm/m/it/10 z[]\OT4/cmr/m/n/10 )[] \OMS/plsy/m/n/10 ^^A [] \OT
+4/cmr/m/n/10 = \OMS/plsy/m/n/10 ^^@ [] []\OML/plm/m/it/10 :
+ []
+
+[33]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 116.
+
+
+LaTeX Warning: Reference `eqn:w11-1' on page 34 undefined on input line 135.
+
+[34]
+
+LaTeX Warning: Reference `eqn:w11-2' on page 35 undefined on input line 154.
+
+
+LaTeX Warning: Reference `eqn:w11-2' on page 35 undefined on input line 157.
+
+) [35] (./tex/w12.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 37.
+
+
+LaTeX Warning: Reference `eqn: w12-1' on page 36 undefined on input line 56.
+
+[36]
+<img/fig12-1.png, id=179, 578.16pt x 339.2675pt>
+File: img/fig12-1.png Graphic file (type png)
+<use img/fig12-1.png>
+Package pdftex.def Info: img/fig12-1.png  used on input line 84.
+(pdftex.def)             Requested size: 292.69373pt x 171.75064pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
+<img/fig12-2.png, id=180, 578.16pt x 578.16pt>
+File: img/fig12-2.png Graphic file (type png)
+<use img/fig12-2.png>
+Package pdftex.def Info: img/fig12-2.png  used on input line 125.
+(pdftex.def)             Requested size: 175.61801pt x 175.61072pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 129.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 139.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 139.
+[37 <./img/fig12-1.png (PNG copy)>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 151.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 154.
+) [38 <./img/fig12-2.png (PNG copy)>]
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16127 strings out of 492623
- 288252 string characters out of 6135669
- 355881 words of memory out of 5000000
- 19806 multiletter control sequences out of 15000+600000
+ 17102 strings out of 492167
+ 304681 string characters out of 6131557
+ 378900 words of memory out of 5000000
+ 21239 multiletter control sequences out of 15000+600000
  547090 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,16n,65p,828b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/
-dvips/pl/plrm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/shar
-e/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texmf-dist/fonts/enc/dvips
-/pl/plit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/usr/share/tex
-mf-dist/fonts/enc/dvips/pl/plme.enc}</usr/share/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/pl/plbx7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/
-share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/
-type1/public/pl/plmi5.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi7.pf
-b></usr/share/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/share/texmf-dist
-/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/p
-lr12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/tex
-mf-dist/fonts/type1/public/pl/plr5.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texmf-dist/fonts/type
-1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti7.pfb>
-Output written on main.pdf (25 pages, 1220760 bytes).
+ 52i,21n,71p,828b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texmf-dist/fon
+ts/enc/dvips/pl/plrm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/u
+sr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texmf-dist/fonts/en
+c/dvips/pl/plsc.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plme.enc}</usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/p
+lbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/t
+exmf-dist/fonts/type1/public/pl/plbx7.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/pl/plex10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></us
+r/share/texmf-dist/fonts/type1/public/pl/plmi5.pfb></usr/share/texmf-dist/fonts
+/type1/public/pl/plmi7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi8.p
+fb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/pl/plr12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/
+plr17.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr5.pfb></usr/share/tex
+mf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy5.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti7.pfb>
+
+Output written on main.pdf (38 pages, 1336680 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+ 266 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
