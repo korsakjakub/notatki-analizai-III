@@ -6,7 +6,7 @@
 
 \begin{document}
     \subsection{Ostatnio}
-    Była rozmaitość $M$ z wymiarem $\dim M = n$, krzywą
+    Była rozmaitość $M$ z wymiarem $\dim M = n$, krzywa
     \[
         L : \left\{ [a,b]\ni t \to \varphi(t)\in \mathbb{R}^n \right\}
     ,\]
@@ -18,7 +18,7 @@ Wyszło nam dla $\omega = ydx$,
  \[
 \int_{C_1}\omega = 2,\quad \int_{C_2}\omega = -2
 .\]
-(rys 1)
+(rys 9)
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{fig2-1}
@@ -26,7 +26,7 @@ Wyszło nam dla $\omega = ydx$,
     \label{fig:fig2-1}
 \end{figure}
 \begin{przyklad}
-    (rys 2)
+    (rys 10)
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.3\textwidth]{fig2-2}
@@ -51,11 +51,11 @@ Trzeba te krzywe sparametryzować:
 .\]
 \begin{align*}
     \int_L\omega &= \int_{L_1}\omega + \int_{L_2}\omega + \int_{L_3}\omega + \int_{L_4}\omega =\\
-    &= \int_a^c\left<\varphi_1^\star\omega, \frac{\partial }{\partial x}  \right>dx + \int_b^d\left<\varphi_2^\star \omega, \frac{\partial }{\partial y}  \right>dy + \int_a^c\left<\varphi^\star_3, -\frac{\partial }{\partial x}  \right>dx + \int_b^d\left<\varphi_4^\star \omega, -\frac{\partial }{\partial y}  \right> =\\
+    &= \int_a^c\left<\varphi_1^\star\omega, \frac{\partial }{\partial x}  \right>dx + \int_b^d\left<\varphi_2^\star \omega, \frac{\partial }{\partial y}  \right>dy + \int_a^c\left<\varphi^\star_3\omega, -\frac{\partial }{\partial x}  \right>dx + \int_b^d\left<\varphi_4^\star \omega, -\frac{\partial }{\partial y}  \right> =\\
     &= \int_a^c A(x,b)dx + \int_b^d B(c,y)dy + (-1)\cdot \int_a^cA(x,d)dx + (-1)\cdot \int_b^dB(a,y)dy
 .\end{align*}
 \end{przyklad}
-(rys 3)\\
+(rys 11)\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig2-3}
@@ -66,7 +66,7 @@ dla $\dim M = \mathbb{R}^1$. Niech $\varphi : T_pM \to T_pM$, $\varphi(v) = a\cd
 $a > 0$ - nie zmienia orientacji (kierunku)\\
 $a < 0$ - zmienia kierunek wektora.
 
-(rys 4)
+(rys 12)
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{fig2-4}
@@ -86,7 +86,8 @@ $a < 0$ - zmienia kierunek wektora.
 
 \pagebreak
 \begin{definicja}
-    Niech $M$ - rozmaitość zorientowana, $\dim M = n$ i $S = \left\{ [a,b]\times[c,d]\ni (t_1,t_2) \to \varphi(t_1,t_2)\in M \right\}$ - powierzchnia sparametryzowana, $\Lambda^2M\ni\omega$ - dwuforma. Wówczas
+    Niech $M$ - rozmaitość zorientowana, $\dim M = n$ i \\
+    $S = \left\{ [a,b]\times[c,d]\ni (t_1,t_2) \to \varphi(t_1,t_2)\in M \right\}$ - powierzchnia sparametryzowana, $\Lambda^2M\ni\omega$ - dwuforma. Wówczas
     \[
         \int_S \omega \overset{\text{def}}{=} \int_a^b\int_c^d \left<\varphi^\star\omega, \underbrace{\pm \frac{\partial }{\partial t_1} , \pm \frac{\partial }{\partial t_2}}_\text{zgodne z orientacją}\right>dt_1dt_2
     .\]
@@ -114,7 +115,7 @@ Czyli \[
 to kiedyś będzie twierdzenie Stokesa
 \end{przyklad}
 \begin{przyklad}
-    niech $S = S_1\cup S_1$, gdzie
+    niech (sytuacja jak na rys 13) $S = S_1\cup S_2$, gdzie
     \[
         S_1 = \left\{ (x,y,z)\in \mathbb{R}^3, x^2 + y^2 + z^2 = 1, z\ge 0 \right\},\quad S_2 = \left\{ (x,y,z)\in \mathbb{R}^3, x^2+y^2 \le 1, z = 0 \right\}
     ,\]
