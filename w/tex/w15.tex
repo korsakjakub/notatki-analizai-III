@@ -162,7 +162,7 @@ to znaczy, że funkcja $g(z) = \frac{1}{f(z) - c}$ jest ograniczona i holomorfic
 \[
     g(z) = a_0 + a_1(z-a) + a_2(z-a)^2 + \ldots
 .\]
-\begin{enumerate}[i)]
+\begin{enumerate}[\textit{i})]
     \item Jeżeli $a_0 \neq 0$, to znaczy, że $g(a) \neq 0$, czyli
          \[
              0 \neq a_0 = \frac{1}{f(a) - c}
@@ -175,14 +175,28 @@ to znaczy, że funkcja $g(z) = \frac{1}{f(z) - c}$ jest ograniczona i holomorfic
         \[
             f(z) = \sum_{k = 0}^{\infty} d_k(z-a)^k + \sum_{k = 1}^{\infty} \frac{e_k}{(z-a)^k}
         .\]
-    Jeżeli $a_0 = a_1 = a_2 = \ldots = a_n =  0$, to znaczy, że
+\item Jeżeli $a_0 = a_1 = a_2 = \ldots = a_n =  0$, to znaczy, że
         \[
-            g(z) = (z-a)^n\left( c_0 + \underbrace{c_1(z-a) + c_2(z-a)^2 + \ldots }_{g_1(z)}\right)
+            g(z) = (z-a)^n\left( c_0 + \underbrace{c_1(z-a) + c_2(z-a)^2 + \ldots }_{\varphi(z)}\right),\quad c_0 \neq 0
         .\]
-    Zauważmy, że $g_1(z)$ jest holomorficzna i $g_1(a) \neq 0$, możemy więc rozwinąć $\frac{1}{g_1(z)}$ w $K(a,r)$
+    Zauważmy, że $\varphi(z)$ jest holomorficzna i $\varphi(a) \neq 0$, możemy więc rozwinąć $\frac{1}{\varphi(z)}$ w $K(a,r)$, bo $\frac{1}{\varphi(z)}$ - też jest holomorficzna na $K(a,r)$
         \[
-            \frac{1}{g_1(z)} = f_0 + f_1(z-a) + f_2(z-a)^2 + \ldots
+            \frac{1}{\varphi(z)} = d_0 + d_1(z-a) + d_2(z-a)^2 + \ldots
         .\]
+    Zatem
+        \[
+            \frac{1}{f(z) - c} = g(z) = (z-a)^n\varphi(z)
+        ,\]
+    czyli
+        \[
+            f(z) - c = \frac{1}{(z-a)^n}\cdot \frac{1}{\varphi(z)} = \frac{1}{(z-a)^n}\cdot \left( d_0 + d_1(z-a) + d_2(z-a)^2 + \ldots \right)
+        ,\]
+    czyli
+        \[
+            f(z) = c + \frac{d_0}{(z-a)^n} + \frac{d_1}{(z-a)^{n-1}} + \frac{d_2}{(z-a)^{n-2}} + \ldots
+        \]
+        i sprzeczność, bo wtedy wiemy, że $f(z)$ miałaby w $z = a$ biegun $n$-tego rzędu, a $f(z)$ ma w $z = a$ punkt istotnie osobliwy.
+
 \end{enumerate}
 
 \end{proof}
