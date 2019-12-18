@@ -16,7 +16,8 @@ dla $I^n\subset\mathbb{R}^n$, $\omega\in \Lambda^{n-1}(M)$, $\omega = f(x^1, \ld
 
 \begin{align*}
     &\int_{I(j,\alpha)}\left<f(x) d\tilde x, \frac{\partial }{\partial x^1}, \ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n} \right> = \\
-    &= \begin{cases}0&j\neq i\\ \int_{I(i,\alpha)}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots x^n)d\tilde x = \int_0^1 dx^1 \ldots \int_0^1 dx^{i-1} \int_0^1 dx^{i+1} \ldots \int_0^1 dx^n f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n) \overset{(\star)}{=}& w p.p. \end{cases}\\
+    &= \delta_{ij} \int_{I(i,\alpha)}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots x^n)d\tilde x =\\
+    &= \int_0^1 dx^1 \ldots \int_0^1 dx^{i-1} \int_0^1 dx^{i+1} \ldots \int_0^1 dx^n f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n) \overset{(\star)}{=}\\
         &\overset{(\star)}{=} \int_0^1dx^1\ldots\int_0^1dx^n f(x^1,\ldots, x^{i-1},\alpha, x^{i+1}, \ldots, x^n) = \int_{I^n}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n)
 .\end{align*}
 Przechodzimy do sumy
@@ -100,9 +101,11 @@ Czyli mamy
 \int_{\partial K}\alpha = \int_0^{2\pi}d\theta = 2\pi
 .\]
 Ale z drugiej strony dla
-    \[
-        d\alpha = \left[ \left( -\frac{1}{x^2+y^2} + \frac{2y\cdot y}{(x^2+y^2)^2} \right) dy\land dx + \left( \frac{1}{x^2+y^2} - \frac{2x^2}{(x^2+y^2)^2} \right) dx\land dy \right] = \left( \frac{2}{x^2 + y^2} - \frac{2}{x^2+y^2} \right) dx\land dy = 0
-    \] wyjdzie, że twierdzenie Stokesa się złamało.
+    \begin{align*}
+        d\alpha &= \left[ \left( -\frac{1}{x^2+y^2} + \frac{2y\cdot y}{(x^2+y^2)^2} \right) dy\land dx + \left( \frac{1}{x^2+y^2} - \frac{2x^2}{(x^2+y^2)^2} \right) dx\land dy \right] = \\
+        &= \left( \frac{2}{x^2 + y^2} - \frac{2}{x^2+y^2} \right) dx\land dy = 0
+    .\end{align*}
+     wyjdzie, że twierdzenie Stokesa się złamało.
 \end{przyklad}
 Wiemy, że
 \[
@@ -116,6 +119,7 @@ Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
 \[
     \int_{\gamma}\alpha = \int_{\gamma}d\eta = \eta(B) - \eta(A)
 .\]
+\pagebreak
 \begin{definicja}
     Niech $M$ - rozmaitość, $\dim M = n$,\\
     \[
@@ -129,7 +133,7 @@ Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
     \end{enumerate}
     Operację $i_v$ nazywamy iloczynem zewnętrznym i oznaczamy poprzez
     \[
-        i_v(\omega) \overset{\text{ozn}}{=} v (odwrocone L) \omega
+        i_v(\omega) \overset{\text{ozn}}{=} v \lrcorner \omega
     .\]
 \end{definicja}
 \textbf{Obserwacja:} $i_v(i_v\omega) = 0 $ (w domu)
@@ -139,7 +143,7 @@ Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
     \omega = dx\land dy + dz \land dx
     .\]
 \[
-    v (odwrocone L) \omega = \left<dx, v \right> \land dy + (-1)^1 dx\left<dy,v \right> + \left<dz, v \right>\land dx + (-1)^1 dz\land \left<dx, v \right>
+    v \lrcorner \omega = \left<dx, v \right> \land dy + (-1)^1 dx\left<dy,v \right> + \left<dz, v \right>\land dx + (-1)^1 dz\land \left<dx, v \right>
 .\]
 \end{przyklad}
 \begin{przyklad}
@@ -150,7 +154,7 @@ Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
 j = e \frac{\partial }{\partial t} + ev^x \frac{\partial }{\partial x}  + ev^y \frac{\partial }{\partial y} + ev^z \frac{\partial }{\partial z}
 .\]
 \[
-    j (odwrocone L) F = ?
+    j \lrcorner  F = ?
 .\]
 \end{przyklad}
 \end{document}

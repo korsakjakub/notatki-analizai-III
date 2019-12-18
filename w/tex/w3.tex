@@ -164,8 +164,9 @@ który nazwiemy brzegiem zorientowanym kostki $I^n$.
         .\]
     Obliczmy
     \begin{align*}
-        \int_{\partial I^n}\omega &= \sum_{j=1}^n\sum_{\alpha = 0,1}(-1)^{j+\alpha} \int_{I^n(j,\alpha)}\left<f(x^1,\ldots,x^n)dx^1\land\ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n, \frac{\partial }{\partial x^1} ,\ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n}\right>\\
-        &dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n = \\
-        &= \begin{cases}0&i \neq j\\ \sum_{j=1}^n \sum_{\alpha = 0,1}(-1)^{j+\alpha}\int_{I^n_{j,\alpha}}f(x^1,\ldots,x^n)dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n\end{cases} & w p.p.
+        \int_{\partial I^n}\omega &= \sum_{j=1}^n\sum_{\alpha = 0,1}(-1)^{j+\alpha} \int_{I^n(j,\alpha)}\Bigg<f(x^1,\ldots,x^n)dx^1\land\ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n,\\
+        &\frac{\partial }{\partial x^1} ,\ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n}\Bigg>
+        dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n = \\
+        &= \delta_{ij}\sum_{j=1}^n \sum_{\alpha = 0,1}(-1)^{j+\alpha}\int_{I^n_{j,\alpha}}f(x^1,\ldots,x^n)dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n
     .\end{align*}
 \end{document}

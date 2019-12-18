@@ -24,9 +24,11 @@ i wówczas
         \[
             \left| \frac{\xi - z_0}{z-z_0} \right| < 1
         .\]
-    \[
-        \frac{1}{\xi - z} = \frac{1}{\xi - z_0 + z_0 - z} = \frac{1}{z_0 - z} \cdot \frac{1}{1 + \frac{\xi - z_0}{z_0 - z}} = \frac{1}{z_0 - z}\cdot \frac{1}{1 - \frac{\xi - z_0}{z - z_0}} = \frac{1}{z_0 - z}\sum_{n=0}^{\infty} \frac{(\xi - z_0)^n}{1} \cdot \frac{1}{(z-z_0)^n} = -\sum_{n=0}^{\infty} (\xi - z_0)^n \cdot \frac{1}{(z-z_0)^{n+1}} = -\sum_{n=1}^{\infty} \frac{(\xi - z_0)^{n-1}}{(z-z_0)^n}
-    .\]
+    \begin{align*}
+        \frac{1}{\xi - z} &= \frac{1}{\xi - z_0 + z_0 - z} = \frac{1}{z_0 - z} \cdot \frac{1}{1 + \frac{\xi - z_0}{z_0 - z}} = \frac{1}{z_0 - z}\cdot \frac{1}{1 - \frac{\xi - z_0}{z - z_0}} =\\
+        &= \frac{1}{z_0 - z}\sum_{n=0}^{\infty} \frac{(\xi - z_0)^n}{1} \cdot \frac{1}{(z-z_0)^n} = -\sum_{n=0}^{\infty} (\xi - z_0)^n \cdot \frac{1}{(z-z_0)^{n+1}} =\\
+        &= -\sum_{n=1}^{\infty} \frac{(\xi - z_0)^{n-1}}{(z-z_0)^n}
+    .\end{align*}
 Zatem
 \[
     -\frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')} \frac{f(\xi)}{\xi - z}d\xi = \sum_{n=1}^{\infty} \left( \frac{1}{2\pi i }\int\limits_{\partial K(z_0,r_1')}f(\xi) (\xi - z_0)^{n-1}d\xi \right) \frac{1}{(z-z_0)^n} = \sum_{n=1}^{\infty} d_n \cdot \frac{1}{(z-z_0)^n}
