@@ -26,6 +26,8 @@ jest sumą krotności wszystkich zer plus sumą krotności wszystkich biegunów,
         \underset{z_j}{\Res}\quad \frac{f'}{f} = -n
     .\]
 \end{proof}
+
+\pagebreak
 \begin{tw}
     (Rouche)\\
     Niech $A\subset\Omega$, $\Omega$ - otwarty i spójny, $f,g$ - holomorficzne na $\Omega$ i taka, że
@@ -80,9 +82,10 @@ Zatem
     \frac{1}{\pi}\sum_{n=-\infty}^{+\infty} f(n) = \underset{z = a}{\Res} \quad \frac{\ctg(\pi z)}{a^2 - z^2} + \underset{z = -a}{\Res} \quad \frac{\ctg(\pi z)}{a^2 -z^2}
 .\]
 Ale
-\[
-    \underset{z = a}{\Res} \quad \frac{1}{a^2 - z^2}\ctg(\pi z) = \Res \frac{1}{(a-z)(a+z)} \ctg(\pi z) = \lim\limits_{z\to a} \frac{z-a}{(a-z)(a+z)}\ctg(\pi z) = -\frac{\ctg(\pi a)}{2a}
-.\]
+\begin{align*}
+    \underset{z = a}{\Res} \quad \frac{1}{a^2 - z^2}\ctg(\pi z) &= \Res \frac{1}{(a-z)(a+z)} \ctg(\pi z) =\\
+    &=\lim\limits_{z\to a} \frac{z-a}{(a-z)(a+z)}\ctg(\pi z) = -\frac{\ctg(\pi a)}{2a}
+.\end{align*}
 Analogicznie $\frac{1}{a^2 - z^2}\ctg(\pi z) = \frac{\ctg(-\pi a)}{2a}$. Zatem
 \[
     \sum_{n=-\infty}^{+\infty} \frac{1}{a^2-n^2} = - \frac{\ctg(\pi a)}{a}

@@ -166,9 +166,10 @@ Wstawmy $z = e^{ix}$
              1&|x|\le a\\ 0 & |x| > a
          \end{cases}
      .\]
- \[
-     \hat{f}(x) = \int\limits_{-\infty}^{+\infty}f(t)e^{-i 2\pi t x}dt = \int\limits_{-a}^{+a}e^{-i 2\pi tx}dt = \left.-\frac{1}{2\pi i x}e^{-i 2 \pi t x}\right|_{-a}^{a} = -\frac{1}{2\pi i x}\left[ e^{-i 2 \pi a x} - e^{i 2 \pi a x} \right] = \frac{\sin(2\pi a x)}{\pi x}
- .\]
+ \begin{align*}
+     \hat{f}(x) &= \int\limits_{-\infty}^{+\infty}f(t)e^{-i 2\pi t x}dt = \int\limits_{-a}^{+a}e^{-i 2\pi tx}dt = \left.-\frac{1}{2\pi i x}e^{-i 2 \pi t x}\right|_{-a}^{a} =\\
+     &= -\frac{1}{2\pi i x}\left[ e^{-i 2 \pi a x} - e^{i 2 \pi a x} \right] = \frac{\sin(2\pi a x)}{\pi x}
+ .\end{align*}
  Czyli jak na rys. \ref{fig:w20-2}
  \end{przyklad}
  \begin{figure}[h]

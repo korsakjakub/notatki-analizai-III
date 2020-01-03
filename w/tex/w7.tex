@@ -32,9 +32,11 @@ i zdefiniował objętość tak:
     A = \mathbf{v}_1 \cdot (\mathbf{v}_2 \times \mathbf{v}_3) = \begin{bmatrix} v_1^1&v_1^2&v_1^3\\ &\ldots&\\ &\ldots &\end{bmatrix}
 .\]
 Teraz
-\[
-    \left( \det A \right)^2 = \left( \det A \right) \left( \det A \right) = \det(A)\det(A^T) = \det(A^TA) = \begin{bmatrix} -&v_1&-\\ -&v_2&-\\ -&v_3&- \end{bmatrix}\begin{bmatrix} &&\\ v^1&v^2&v^3\\ && \end{bmatrix} = G(v_1,v_2,v_3)
-.\]
+\begin{align*}
+    \left( \det A \right)^2 &= \left( \det A \right) \left( \det A \right) = \det(A)\det(A^T) =\\
+    &= \det(A^TA) = \begin{bmatrix} -&v_1&-\\ -&v_2&-\\ -&v_3&- \end{bmatrix}\begin{bmatrix} &&\\ v^1&v^2&v^3\\ && \end{bmatrix} =\\
+        &=G(v_1,v_2,v_3)
+.\end{align*}
 \begin{definicja}
     Niech $M$ - rozmaitość i $\gamma$ krzywa na $M$.
     \[
@@ -153,15 +155,15 @@ Niech $S\subset M$, $\dim M = 3$, $\dim S = 2$.
 .\]
 \begin{pytanie}
     Niech $\alpha = A^\sharp$, czym jest $\int_SdA^\sharp$?\\
-    \[
-        dA^\sharp = \underbrace{\left(\left( g_{33}A^3\sqrt{g^{33}}  \right) _{,2} -\left( g_{22}A^2\sqrt{g^{22}}  \right)_{,3}  \right)}_{D_1} dx^2\land dx^3 + \underbrace{\left( \left( g_{11}A^1\sqrt{g^{11}}  \right) _{,3} - \left( g_{33}A^3\sqrt{g^{33}}  \right) _{,1} \right)}_{D_2} dx^3\land dx^1 + \underbrace{\left( \ldots \right)}_{D_3} dx^1\land dx^2
-    .\]
-\[
-\int_S dA^\sharp = \int \left<D^1dx^2\land dx^3, \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right> + \left<D^2dx^3\land dx^1, \frac{\partial }{\partial x^3} , \frac{\partial }{\partial x^1}  \right> + \left<D^3dx^1\land dx^2, \frac{\partial }{\partial x^1} , \frac{\partial }{\partial x^2}  \right>
-.\]
-\[
-    \int\left<D^1dx^2\land dx^3, \frac{\frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3} }{\left\Vert \frac{\partial }{\partial x^2}, \frac{\partial }{\partial x^3}  \right\Vert } \right> \underbrace{\left\Vert \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right\Vert dx^2dx^3}_{ds} + \ldots
-.\]
+    \begin{align*}
+        dA^\sharp &= \underbrace{\left(\left( g_{33}A^3\sqrt{g^{33}}  \right) _{,2} -\left( g_{22}A^2\sqrt{g^{22}}  \right)_{,3}  \right)}_{D_1} dx^2\land dx^3 +\\
+        &+\underbrace{\left( \left( g_{11}A^1\sqrt{g^{11}}  \right) _{,3} - \left( g_{33}A^3\sqrt{g^{33}}  \right) _{,1} \right)}_{D_2} dx^3\land dx^1 + \underbrace{\left( \ldots \right)}_{D_3} dx^1\land dx^2
+    .\end{align*}
+\begin{align*}
+    \int_S dA^\sharp &= \int \left<D^1dx^2\land dx^3, \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right> + \left<D^2dx^3\land dx^1, \frac{\partial }{\partial x^3} , \frac{\partial }{\partial x^1}  \right> +\\
+    &+ \left<D^3dx^1\land dx^2, \frac{\partial }{\partial x^1} , \frac{\partial }{\partial x^2}  \right> =\\
+    &= \int\left<D^1dx^2\land dx^3, \frac{\frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3} }{\left\Vert \frac{\partial }{\partial x^2}, \frac{\partial }{\partial x^3}  \right\Vert } \right> \underbrace{\left\Vert \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right\Vert dx^2dx^3}_{ds} + \ldots
+.\end{align*}
 Pamiętamy, czym była $rot(A) = \left( \star dA^\sharp \right) ^\flat = \int\left( rot(A) \right) \mathbf{n}ds$
 \end{pytanie}
 \end{document}

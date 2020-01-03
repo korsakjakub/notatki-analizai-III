@@ -30,9 +30,10 @@ i wówczas
         &= -\sum_{n=1}^{\infty} \frac{(\xi - z_0)^{n-1}}{(z-z_0)^n}
     .\end{align*}
 Zatem
-\[
-    -\frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')} \frac{f(\xi)}{\xi - z}d\xi = \sum_{n=1}^{\infty} \left( \frac{1}{2\pi i }\int\limits_{\partial K(z_0,r_1')}f(\xi) (\xi - z_0)^{n-1}d\xi \right) \frac{1}{(z-z_0)^n} = \sum_{n=1}^{\infty} d_n \cdot \frac{1}{(z-z_0)^n}
-,\]
+\begin{align*}
+    -\frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')} \frac{f(\xi)}{\xi - z}d\xi &= \sum_{n=1}^{\infty} \left( \frac{1}{2\pi i }\int\limits_{\partial K(z_0,r_1')}f(\xi) (\xi - z_0)^{n-1}d\xi \right) \frac{1}{(z-z_0)^n} =\\
+    &= \sum_{n=1}^{\infty} d_n \cdot \frac{1}{(z-z_0)^n}
+,\end{align*}
 \[
     d_n = \frac{1}{2\pi i}\int\limits_{\partial K(z_0,r_1')}f(\xi)(\xi - z_0)^{n-1}d\xi
 ,\]
@@ -132,10 +133,11 @@ Zauważmy, że $f(z)$ - holomorficzne na $R(z_0,r_1,r_2)$, a funkcja $\frac{1}{(
          \frac{\varphi(z) - \varphi(z_0)}{z-z_0} = \varphi'(z_0) \underset{z \to z_0}{\longrightarrow} 0 \tag{*}
      \end{equation}
  Zatem
- \begin{equation}
+ \begin{align}
      \label{eqn:w11-2}
-     \eqref{eqn:w11-1} = \int_C \frac{d\xi f(\xi)}{(z-z_0)}\left[ \frac{1}{(\xi - z)^p} - \frac{1}{(z-z_0)^p} \right] - p\int_C \frac{f(\xi) d\xi}{(\xi - z_0)^{p+1}} = \int_C d\xi f(\xi) \left[ \underbrace{\frac{\frac{1}{(\xi - z)^p} - \frac{1}{(\xi - z_0)^p}}{z-z_0}}_{(\Delta)} - \frac{p}{(\xi - z_0)^{p+1}} \right] \tag{$\Delta\Delta$}
- \end{equation}
+     \eqref{eqn:w11-1} &= \int_C \frac{d\xi f(\xi)}{(z-z_0)}\left[ \frac{1}{(\xi - z)^p} - \frac{1}{(z-z_0)^p} \right] - p\int_C \frac{f(\xi) d\xi}{(\xi - z_0)^{p+1}} = \\
+     &= \int_C d\xi f(\xi) \left[ \underbrace{\frac{\frac{1}{(\xi - z)^p} - \frac{1}{(\xi - z_0)^p}}{z-z_0}}_{(\Delta)} - \frac{p}{(\xi - z_0)^{p+1}} \right] \tag{$\Delta\Delta$}
+ .\end{align}
 
  Ale $(\Delta)$ - iloraz różnicowy funkcji \[
      g(z) = \frac{1}{(\xi - z)^p}

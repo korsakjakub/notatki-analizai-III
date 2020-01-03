@@ -25,9 +25,10 @@
         .\]
     (Absolutnie nieoczywiste lol. Uzasadnienie później)\\
         Wówczas możemy oszacować $f'$
-        \[
-            |f'(\xi)| \le \left|\frac{1}{2\pi i}\right| \max\limits_{z\in \partial K(\xi,r)}\left| \frac{f(z)}{(z-\xi)^2}\right|\cdot \left| \text{długość okręgu } K(\xi,r) \right| = \frac{1}{2\pi}\cdot \frac{M}{\left| \left(\xi + re^{i\varphi} - \xi\right)^2 \right| } \left| 2\pi r \right| = \frac{1}{2\pi} \frac{M}{r^2} 2\pi r = \frac{M}{r} \quad\underset{r>0}{\forall}
-        .\]
+        \begin{align*}
+            |f'(\xi)| &\le \left|\frac{1}{2\pi i}\right| \max\limits_{z\in \partial K(\xi,r)}\left| \frac{f(z)}{(z-\xi)^2}\right|\cdot \left| \text{długość okręgu } K(\xi,r) \right| =\\
+            &= \frac{1}{2\pi}\cdot \frac{M}{\left| \left(\xi + re^{i\varphi} - \xi\right)^2 \right| } \left| 2\pi r \right| = \frac{1}{2\pi} \frac{M}{r^2} 2\pi r = \frac{M}{r} \quad\underset{r>0}{\forall}
+        .\end{align*}
     Czyli
         \[
             \underset{r>0}{\forall} \left| f'(\xi) \right| < \frac{M}{r} \underset{r\to\infty}{\longrightarrow} 0
@@ -67,13 +68,17 @@ Jeżeli
 \[
 \left| z+2i \right| < 3
 ,\]
-to \[
-    \frac{1}{z-i} = \frac{1}{z + 2i - 3i} = \frac{1}{-3i}\cdot \frac{1}{1-\frac{z+2i}{3i}} = -\frac{1}{3i}\sum_{n=0}^{\infty} \left( \frac{z+2i}{3i} \right) ^{n} = - \sum_{n=0}^{\infty} \frac{1}{(3i)^{n+1}}\left( z+2i \right)^n
-.\]
+to
+\begin{align*}
+    \frac{1}{z-i} &= \frac{1}{z + 2i - 3i} = \frac{1}{-3i}\cdot \frac{1}{1-\frac{z+2i}{3i}} =\\
+    &= -\frac{1}{3i}\sum_{n=0}^{\infty} \left( \frac{z+2i}{3i} \right) ^{n} = - \sum_{n=0}^{\infty} \frac{1}{(3i)^{n+1}}\left( z+2i \right)^n
+.\end{align*}
 Jeżeli $|z+2i| > 1$, to
-\[
-    \frac{1}{z+1} = \frac{1}{z + 2i - i} = \frac{1}{z+2i}\cdot \frac{1}{1- \frac{i}{z+2i}} = \frac{1}{z+2i} \cdot \sum_{n=0}^{\infty} \left( \frac{i}{z+2i} \right) ^n = \sum_{n=0}^{\infty} \frac{(i)^n}{(z+2i)^{n+1}} = \sum_{n=1}^{\infty} \frac{(i)^{n-1}}{(z+2i)^n}
-.\]
+\begin{align*}
+    \frac{1}{z+1} &= \frac{1}{z + 2i - i} = \frac{1}{z+2i}\cdot \frac{1}{1- \frac{i}{z+2i}} =\\
+    &= \frac{1}{z+2i} \cdot \sum_{n=0}^{\infty} \left( \frac{i}{z+2i} \right) ^n = \sum_{n=0}^{\infty} \frac{(i)^n}{(z+2i)^{n+1}} =\\
+    &=\sum_{n=1}^{\infty} \frac{(i)^{n-1}}{(z+2i)^n}
+.\end{align*}
 Zatem
 \[
     \frac{z+1}{z^2 + 1} = \frac{1+i}{2} \cdot \sum_{n=1}^{\infty} \frac{(i)^{n-1}}{(z+2i)^n} + \frac{i-1}{2} \sum_{n=0}^{\infty} \frac{1}{(3i)^n}(z+2i)^n = \sum_{n=-\infty}^{\infty} d_k (z+2i)^k
@@ -103,9 +108,10 @@ gdzie
     d_k = -\frac{1+i}{2}\cdot \frac{1}{(i)^{n+1}} - \frac{1-i}{2}\cdot \frac{1}{(3i)^{n+1}}
 .\]
 dla $|z+2i| > 3$
-\[
-    \frac{1}{z-i} = \frac{1}{z+2i-3i} = \frac{1}{z+2i}\cdot \frac{1}{1 - \frac{3i}{z+2i}} = \frac{1}{z+2i}\cdot \sum_{n=0}^{\infty} (3i)^n\cdot \frac{1}{(z+2i)^n} = \sum_{n=0}^{\infty} \frac{(3i)^n}{(z+2i)^{n+1}} = \sum_{n=1}^{\infty} \frac{(3i)^{n-1}}{(z+2i)^n}
-.\]
+\begin{align*}
+    \frac{1}{z-i} &= \frac{1}{z+2i-3i} = \frac{1}{z+2i}\cdot \frac{1}{1 - \frac{3i}{z+2i}} =\\
+    &= \frac{1}{z+2i}\cdot \sum_{n=0}^{\infty} (3i)^n\cdot \frac{1}{(z+2i)^n} = \sum_{n=0}^{\infty} \frac{(3i)^n}{(z+2i)^{n+1}} = \sum_{n=1}^{\infty} \frac{(3i)^{n-1}}{(z+2i)^n}
+.\end{align*}
 I wtedy dla $z\in R(-2i,3,+\infty)$, jest
 \[
     \frac{z+1}{z^2+1} = \frac{1+i}{2} \cdot \sum_{n=1}^{\infty} \frac{(i)^n}{(z+2i)^n} + \frac{1-i}{2}\cdot \sum_{n=1}^{\infty} \frac{(3i)^{n-1}}{(z+2i)^n} = \sum_{k=-1}^{-\infty} d_k (z+2i)^k
@@ -142,9 +148,10 @@ a dla $\xi \in \partial K (z_0,r_1')$ i $z\in K(z_0,r_1')$
     \left|\frac{z-z_0}{\xi-z_0}\right| < 1
 .\]
 więc
-\[
-    \frac{1}{\xi - z_0 + z_0 - z} = \frac{1}{\xi - z_0}\cdot \frac{1}{1 + \frac{z_0 - z}{\xi - z_0}} = \frac{1}{\xi - z_0}\cdot \frac{1}{1 - \frac{z-z_0}{\xi - z_0}} = \frac{1}{\xi - z_0}\cdot \sum_{n=0}^{\infty} \left(\frac{z-z_0}{\xi - z_0}\right)^n = \sum_{n=0}^{\infty} \frac{1}{(\xi - z_0)^{n+1}}\cdot (z-z_0)^n
-.\]
+\begin{align*}
+    \frac{1}{\xi - z_0 + z_0 - z} &= \frac{1}{\xi - z_0}\cdot \frac{1}{1 + \frac{z_0 - z}{\xi - z_0}} = \frac{1}{\xi - z_0}\cdot \frac{1}{1 - \frac{z-z_0}{\xi - z_0}} =\\
+    &=\frac{1}{\xi - z_0}\cdot \sum_{n=0}^{\infty} \left(\frac{z-z_0}{\xi - z_0}\right)^n = \sum_{n=0}^{\infty} \frac{1}{(\xi - z_0)^{n+1}}\cdot (z-z_0)^n
+.\end{align*}
 więc
 \[
     \frac{1}{2 \pi i}\int\limits_{\partial K(z_0,r_1')}\frac{f(\xi)}{\xi - z}d\xi = \frac{1}{2\pi i} \sum_{n=0}^{\infty}\quad \int\limits_{\partial K(z_0,r_1')}\frac{f(\xi)}{(\xi - z_0)^{n+1}}d\xi (z-z_0)^n

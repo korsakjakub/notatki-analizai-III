@@ -75,17 +75,19 @@ czym jest $\int_{\partial V}\star A^\sharp$?
     \star(dx^{3})\sqrt{g}g^{33}  dx^{1}\land dx^{2}
 ,\]
 \textbf{Odpowiedź:}
-\[
-\star A^\sharp = A^1g_{11}\sqrt{g^{11}} \sqrt{g} g^{11}dx^{2} \land dx^{3} + A^2 g_{22}\sqrt{g^{22}} \sqrt{g} g^{22} dx^{3} \land dx^{1} + A^3 g_{33}\sqrt{g^{33}} \sqrt{g} g^{33}dx^{1} \land dx^{2}
-,\]
+\begin{align*}
+    \star A^\sharp &= A^1g_{11}\sqrt{g^{11}} \sqrt{g} g^{11}dx^{2} \land dx^{3} + A^2 g_{22}\sqrt{g^{22}} \sqrt{g} g^{22} dx^{3} \land dx^{1} +\\
+    &+A^3 g_{33}\sqrt{g^{33}} \sqrt{g} g^{33}dx^{1} \land dx^{2}
+,\end{align*}
 następuje cudowne skrócenie i jest
 \[
 A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} \land dx^{3}  + A^2 \sqrt{g_{11}g_{33}} \quad dx^{3} \land dx^{1} + A^3 \sqrt{g_{11}g_{22}} \quad dx^{1} \land dx^{2}
 .\]
 Całka z tego interesu:
-\[
-\int_{\partial V}\star A^\sharp = \int A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} dx^{3} + \int A^2 \sqrt{g_{11}g_{33}}\quad dx^{3} dx^{1} + \int A^3 \sqrt{g_{11}g_{22}} \quad dx^{1}  dx^{2}
-,\]
+\begin{align*}
+    \int_{\partial V}\star A^\sharp &= \int A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} dx^{3} + \int A^2 \sqrt{g_{11}g_{33}}\quad dx^{3} dx^{1} + \\
+&+ \int A^3 \sqrt{g_{11}g_{22}} \quad dx^{1}  dx^{2}
+,\end{align*}
 ale
 \[
     \vec{A}\cdot \vec{n}\cdot ds = A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} dx^{3}
@@ -97,9 +99,11 @@ Czyli ostatecznie
 \begin{pytanie}
 Jak wygląda $\int_Vd\star A^\sharp$?
 \end{pytanie}
-\[
-    \int_{V}d\star A^\sharp = \int_{V} \left< \left( A^1\sqrt{g_{22}g_{33}} \right)_{,1} + \left( A^2\sqrt{g_{11}g_{33}}  \right) _{,2} + \left( A^3\sqrt{g_{11}g_{22}}  \right) _{,3}, dx^{1} \land dx^{2} \land dx^{3} , \frac{\partial }{\partial x^1} , \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3} \right> dx^{1} dx^{2} dx^{3}
-.\]
+\begin{align*}
+    \int_{V}d\star A^\sharp &=\\
+    &= \int_{V} \Bigg< \left( A^1\sqrt{g_{22}g_{33}} \right)_{,1} + \left( A^2\sqrt{g_{11}g_{33}}  \right) _{,2} +\\
+    &+ \left( A^3\sqrt{g_{11}g_{22}}  \right) _{,3}, dx^{1} \land dx^{2} \land dx^{3} , \frac{\partial }{\partial x^1} , \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3} \Bigg> dx^{1} dx^{2} dx^{3}
+.\end{align*}
 Dywergencja to było coś takiego:
 \[
     div \vec{A} = \star d\left( \star A^\sharp \right)
@@ -156,13 +160,15 @@ gdzie $f'(z)$ jest funkcją ciągłą.
     Co to znaczy różniczkowalność?
 \end{pytanie}
 ma istnieć granica (dla $h\in \mathbb{R}$):
-\[
-    \lim_{h \to 0} \frac{f(z+h) - f(z)}{h} = \lim_{h \to 0} \frac{P(x+h, y) + iQ(x + h, y) - P(x,y) - iQ(x,y)}{h} = \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x}
-.\]
+\begin{align*}
+    \lim_{h \to 0} \frac{f(z+h) - f(z)}{h} &= \lim_{h \to 0} \frac{P(x+h, y) + iQ(x + h, y) - P(x,y) - iQ(x,y)}{h} =\\
+    &= \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x}
+.\end{align*}
 Ale jeżeli np. $h = it$, to wtedy
- \[
-     \lim_{h \to 0}\frac{f(z+h) - f(z)}{h} = \lim_{t \to 0}\frac{P(x, y+t) - P(x,y)}{it} + i \frac{Q(x, y+t) - Q(x,y)}{it} = \frac{1}{i} \frac{\partial P}{\partial y} + \frac{\partial Q}{\partial y} = \frac{\partial Q}{\partial y} - i \frac{\partial P}{\partial y}
-.\]
+\begin{align*}
+    \lim_{h \to 0}\frac{f(z+h) - f(z)}{h} &= \lim_{t \to 0}\frac{P(x, y+t) - P(x,y)}{it} + i \frac{Q(x, y+t) - Q(x,y)}{it} =\\
+    &= \frac{1}{i} \frac{\partial P}{\partial y} + \frac{\partial Q}{\partial y} = \frac{\partial Q}{\partial y} - i \frac{\partial P}{\partial y}
+.\end{align*}
 Czyli jeżeli $f$ - holomorficzna, to znaczy, że (wzory Cauchy-Riemanna)
 \begin{align*}
     \frac{\partial P}{\partial x} &= \frac{\partial Q}{\partial y}\\

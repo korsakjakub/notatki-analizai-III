@@ -91,13 +91,12 @@ Zatem
 .\]
 \textbf{Obserwacja: }Niech $f$ - klasy $L_1$, wówczas $\frac{d}{dx} \left( \mathcal{F}f \right) (x) = -2\pi i \mathcal{F}(xf)$
 \begin{proof}
-    \[
-        \frac{d}{dx}\left( \mathcal{F}f \right) (x) = \lim_{h \to 0}\frac{(\mathcal{F}f)(x+h) - (\mathcal{F}f)(x)}{h} = \lim_{h \to 0}\frac{1}{h}\int\limits_{-\infty}^{+\infty}\left( f(k)e^{-2\pi i k(x+h)} - f(k)e^{-2\pi i kx} \right)dk =
-    \]
-    \begin{equation}
+    \begin{align*}
+        \frac{d}{dx}\left( \mathcal{F}f \right) (x) &= \lim_{h \to 0}\frac{(\mathcal{F}f)(x+h) - (\mathcal{F}f)(x)}{h} =\\
+        &= \lim_{h \to 0}\frac{1}{h}\int\limits_{-\infty}^{+\infty}\left( f(k)e^{-2\pi i k(x+h)} - f(k)e^{-2\pi i kx} \right)dk =\\
         \label{eqn:eq21-1}
-        = \lim_{h \to 0}\int\limits_{-\infty}^{+\infty}f(k)e^{-2\pi i k x}\left( \frac{e^{-2\pi i k h} - 1}{h} \right) dt\tag{$\star$}
-    \end{equation}
+        &= \lim_{h \to 0}\int\limits_{-\infty}^{+\infty}f(k)e^{-2\pi i k x}\left( \frac{e^{-2\pi i k h} - 1}{h} \right) dt\tag{$\star$}
+    .\end{align*}
 Ale
 \[
     \lim_{h \to 0}\frac{e^{-2\pi i k h} - 1}{h} \overset{\text{H}}{=} \lim_{h \to 0} \frac{-2\pi i ke^{-2\pi i kh}}{1} = -2\pi i k
@@ -121,13 +120,13 @@ Zatem dalej mamy
         \lim_{\varepsilon \to 0^+} \int\limits_{-\infty}^{+\infty}f(k)\int\limits_{-\infty}^{+\infty}e^{-2\pi i kx}e^{-\varepsilon|x|}dx
     .\]
 Policzmy
-\[
-    \int\limits_{-\infty}^{+\infty}e^{-2\pi i kx}e^{-\varepsilon|x|}dx = \int\limits_{0}^{+\infty}e^{-2\pi i kx}e^{-\varepsilon|x|}dx + \int\limits_{-\infty}^{0}e^{-2\pi i kx}e^{\varepsilon|x|}dx =
-\]
-\begin{equation}
+\begin{align*}
+    \int\limits_{-\infty}^{+\infty}e^{-2\pi i kx}e^{-\varepsilon|x|}dx &= \int\limits_{0}^{+\infty}e^{-2\pi i kx}e^{-\varepsilon|x|}dx + \int\limits_{-\infty}^{0}e^{-2\pi i kx}e^{\varepsilon|x|}dx =\\
+    &=
     \label{eqn:eq21-2}
-    \int\limits_{0}^{+\infty}e^{(-2\pi i k - \varepsilon)x}dx + \int\limits_{-\infty}^{0}e^{(-2\pi ik + \varepsilon)x}dx = \frac{1}{-2\pi i k -\varepsilon}\left.e^{(-2\pi i k - \varepsilon)x}\right|_{0}^{+\infty} + \frac{1}{-2\pi i k + \varepsilon}\left.e^{-2\pi ik + \varepsilon}\right|_{-\infty}^0 \tag{$\star\star$}
-\end{equation}
+    \int\limits_{0}^{+\infty}e^{(-2\pi i k - \varepsilon)x}dx + \int\limits_{-\infty}^{0}e^{(-2\pi ik + \varepsilon)x}dx =\\
+    &= \frac{1}{-2\pi i k -\varepsilon}\left.e^{(-2\pi i k - \varepsilon)x}\right|_{0}^{+\infty} + \frac{1}{-2\pi i k + \varepsilon}\left.e^{-2\pi ik + \varepsilon}\right|_{-\infty}^0 \tag{$\star\star$}
+.\end{align*}
 Ale $e^{-2\pi i kx} \cdot e^{-\varepsilon x}\underset{x\to +\infty}{\longrightarrow} 0$
 \[
     \eqref{eqn:eq21-2} = \frac{-1}{-2\pi i k - \varepsilon} + \frac{1}{-2 \pi i k + \varepsilon} = \frac{1}{\varepsilon + 2 \pi i k} + \frac{1}{\varepsilon - 2\pi i k} = \frac{2 \varepsilon}{\varepsilon^2 + (2\pi k)^2}
@@ -139,16 +138,16 @@ Zatem
 \[
     I = \lim_{\varepsilon \to 0} \frac{1}{2\pi}\int\limits_{-\infty}^{+\infty}f\left( \frac{\varepsilon L}{2\pi} \right) \frac{2 \varepsilon}{\varepsilon^2 + (\varepsilon L)^2} \cdot \varepsilon \cdot dL = \lim_{\varepsilon \to 0}\frac{1}{2\pi}\int\limits_{-\infty}^{+\infty}f\left( \frac{\varepsilon L}{2\pi} \right) \frac{2 \varepsilon^2 dL}{\varepsilon^2(1+\varepsilon)}
 .\]
-\[
-    I = \lim_{\varepsilon \to 0}\frac{2}{2\pi }\int\limits_{-\infty}^{+\infty}f\left( \frac{2\varepsilon L}{2\pi } \right) \frac{1}{1 + L^2}dL = \frac{2}{2\pi}\int\limits_{-\infty}^{+\infty}f(0)\frac{dL}{1+L^2} = \frac{2 f(0)}{2\pi }\left( arctg(L)\right)_{-\infty}^{+\infty} = \frac{f(0)}{\pi} \left[ \frac{\pi}{2} + \frac{\pi}{2} \right] = \frac{f(0)}{\pi} \cdot \pi = f(0)\quad \Box
-.\]
+\begin{align*}
+    I &= \lim_{\varepsilon \to 0}\frac{2}{2\pi }\int\limits_{-\infty}^{+\infty}f\left( \frac{2\varepsilon L}{2\pi } \right) \frac{1}{1 + L^2}dL = \frac{2}{2\pi}\int\limits_{-\infty}^{+\infty}f(0)\frac{dL}{1+L^2} = \frac{2 f(0)}{2\pi }\left( arctg(L)\right)_{-\infty}^{+\infty} =\\
+    &= \frac{f(0)}{\pi} \left[ \frac{\pi}{2} + \frac{\pi}{2} \right] = \frac{f(0)}{\pi} \cdot \pi = f(0)\quad \Box
+.\end{align*}
 Niech $f_L(x) = f(x+L)$. Wtedy
- \[
-     \mathcal{F}\left( f_L(x) \right) = \int\limits_{-\infty}^{+\infty}f_L(k) e^{-2\pi i k x}dk = \int\limits_{-\infty}^{+\infty}f(L+k)e^{-2\pi ikx}dk =
-\]
-\[
-    = \int\limits_{-\infty}^{+\infty}f(k') e^{-2\pi i x(k' - L)}dk' = \int\limits_{-\infty}^{+\infty}e^{2\pi ix L}f(k')e^{-2\pi ixk'}dk' = e^{2\pi ixL}\left( \mathcal{F}f \right)
-.\]
+\begin{align*}
+    \mathcal{F}\left( f_L(x) \right) &= \int\limits_{-\infty}^{+\infty}f_L(k) e^{-2\pi i k x}dk = \int\limits_{-\infty}^{+\infty}f(L+k)e^{-2\pi ikx}dk =\\
+    &= \int\limits_{-\infty}^{+\infty}f(k') e^{-2\pi i x(k' - L)}dk' = \int\limits_{-\infty}^{+\infty}e^{2\pi ix L}f(k')e^{-2\pi ixk'}dk' =\\
+    &= e^{2\pi ixL}\left( \mathcal{F}f \right)
+.\end{align*}
 Policzmy całkę $\int_{-\infty}^{+\infty}(\mathcal{F}f_L)(x)$. Wiemy, że
 \[
     f_L(0) = \int\limits_{-\infty}^{+\infty}\mathcal{F}f_L = \int\limits_{-\infty}^{+\infty}e^{2\pi i L}\mathcal{F}f

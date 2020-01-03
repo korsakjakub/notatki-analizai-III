@@ -13,7 +13,6 @@
     \end{align*}
     jest fajne?
     \begin{przyklad}
-        (fig 9-1)\\
         \[
             \nabla P = \left[ \frac{\partial P}{\partial x} , \frac{\partial P}{\partial y}  \right]
         ,\]
@@ -70,22 +69,24 @@ to możemy zrobić takie coś:
         Niech $f: \mathcal{O}\subset\mathbb{C}\to U\subset\mathbb{C}$, $f$ - holomorficzna na $\mathcal{O}$, a $g: U \to \mathbb{C}$ - holomorficzna na $U$. Wówczas $g\circ f$ - holomorficzna na $\mathcal{O}$.
     \end{stw}
     \begin{proof}
-        \[
-            \left( g\circ f \right) ' = g'(f) f' = \begin{bmatrix} a& -b\\ b&a \end{bmatrix} \cdot \begin{bmatrix} a_1& -b_1\\ b_1& a_1 \end{bmatrix} = \begin{bmatrix} a a_1 - b b_1 & -ab_1 -a_1b\\ a_1b + ab_1 & -bb_1 + aa_1\end{bmatrix} = \begin{bmatrix} aa_1 - bb_1& -\left( a_1b + ab_1 \right) \\ a_1b + ab_1 & aa_1 - bb_1 \end{bmatrix}
-        ,\]
+        \begin{align*}
+            \left( g\circ f \right) ' &= g'(f) f' = \begin{bmatrix} a& -b\\ b&a \end{bmatrix} \cdot \begin{bmatrix} a_1& -b_1\\ b_1& a_1 \end{bmatrix} =\\
+                &= \begin{bmatrix} a a_1 - b b_1 & -ab_1 -a_1b\\ a_1b + ab_1 & -bb_1 + aa_1\end{bmatrix} =\\
+                    &= \begin{bmatrix} aa_1 - bb_1& -\left( a_1b + ab_1 \right) \\ a_1b + ab_1 & aa_1 - bb_1 \end{bmatrix}
+        ,\end{align*}
     a tak wygląda macierz pochodnej $f$ - holomorficznej (traktowanej jako funkcja z $\mathbb{R}^2\to \mathbb{R}^2$).
     \end{proof}
     \subsection{Oznaczenia}
-    (fig 9-3)\\
     niech $M\subset\mathbb{R}^2$, $\left<dx, dy \right> = T_p^* M$. Wprowadźmy
     \begin{align*}
         dz &= dx + idy\\
         d\overline{z} &= dx - idy
     .\end{align*}
     Jeżeli $f(x,y): \mathbb{R}^2\to \mathbb{R}^1$, to
-    \[
-        df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy = \frac{1}{2} \frac{\partial f}{\partial x} \left( dz + d\overline{z} \right) + \frac{1}{2i} \frac{\partial f}{\partial y} \left( dz - d\overline{z} \right) = \left( \frac{1}{2}\frac{\partial f}{\partial x} + \frac{1}{2i}\frac{\partial f}{\partial y}  \right) dz + \underbrace{\left( \frac{1}{2}\frac{\partial f}{\partial x} - \frac{1}{2i}\frac{\partial f}{\partial y}  \right)}_{\frac{\partial f}{\partial \overline{z}} }d\overline{z}
-    .\]
+    \begin{align*}
+        df &= \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy = \frac{1}{2} \frac{\partial f}{\partial x} \left( dz + d\overline{z} \right) + \frac{1}{2i} \frac{\partial f}{\partial y} \left( dz - d\overline{z} \right) =\\
+        &= \left( \frac{1}{2}\frac{\partial f}{\partial x} + \frac{1}{2i}\frac{\partial f}{\partial y}  \right) dz + \underbrace{\left( \frac{1}{2}\frac{\partial f}{\partial x} - \frac{1}{2i}\frac{\partial f}{\partial y}  \right)}_{\frac{\partial f}{\partial \overline{z}} }d\overline{z}
+    .\end{align*}
 \textbf{Obserwacja:} niech $f(z) = P(x,y) + i Q(x,y)$, wówczas
 \begin{align*}
     \frac{\partial f}{\partial x} = \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x} \\ \frac{\partial f}{\partial y} = \frac{\partial P}{\partial y} + i \frac{\partial Q}{\partial y}
@@ -107,7 +108,6 @@ czyli
     .\] Czyli $g$ - nie jest holomorficzna
 \end{przyklad}
 \begin{przyklad}
-    (fig 9-4)\\
     Obliczmy całkę:
     \[
         \int_{\partial K(0,r)} \frac{dz}{z} = \begin{vmatrix} z = re^{i\theta}\\ dz = rie^{i\theta}d\theta \end{vmatrix} = \int_0^{2\pi} \frac{rie^{i\theta}d\theta}{re^{i\theta}} = i \int_0^{2\pi}d\theta = 2\pi i
@@ -130,13 +130,11 @@ czyli
     f(\xi) = \frac{1}{2\pi i} \int_{\partial \Omega}\frac{f(z)}{z - \xi} dz
 .\]
 Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $\xi = 0$ i $f(z) = 1$
-(fig 9-5)
  \begin{proof}
      niech
      \[
          g(z) = \frac{f(z)}{z - \xi}
      .\]
- (fig 9-6)\\
      zatem wiemy, że
      \[
          \int_{\partial \Omega_\epsilon}g(z) = \int_{\Omega} d g(z)

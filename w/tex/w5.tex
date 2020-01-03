@@ -33,7 +33,6 @@ To wypluje na wyjściu równania ruchu
 \end{przyklad}
 \subsection{Rozmaitość z brzegiem}
 \textbf{Obserwacja:}\\
-(rys 5-1)
 Niech $I = [0,1[\subset\mathbb{R}$, (metryka $d(x,y) = |x-y|$) czy $I$ jest otwarty w $\mathbb{R}$? \textit{chyba nie}.\\
 Niech $I = [0,1[\subset[0,2]$, czy $I$ jest otwarty w $[0,2]$? \textit{chyba tak}.
 \[
@@ -61,12 +60,11 @@ Mówimy wówczas tak:
 \begin{definicja}
     Niech $U\subset \tilde U$, $\tilde U$ - otwarty w $\mathbb{R}^m$, $U$ - otwarty w $\mathbb{R}^m_+$. $\varphi$ jest klasy $\mathcal{C}^r$ na $U$, jeżeli istnieje $\tilde \varphi$ klasy $\mathcal{C}^r$ na $\tilde U$ i $\tilde \varphi|_U = \varphi$.
 \end{definicja}
-(rys 5-3)
 \begin{pytanie}
     Czym jest $\partial S$, jeżeli $S$ - okrąg?
 \end{pytanie}
 Odp. $\partial S = \{\phi\}$.\\
-Jeszcze takie uzasadnienie: (rys 5-4)
+Jeszcze takie uzasadnienie:
 \[
     \text{sześcian} \overset{\partial}{\to} \text{boki sześcianu} \overset{\partial}{\to} \text{rogi sześcianu}
 ,\]
@@ -76,24 +74,24 @@ Jeszcze takie uzasadnienie: (rys 5-4)
 \textbf{Obserwacja:}\\
 Zbiór $\partial M$ wraz z mapami $\varphi_\alpha|_{\partial M}$ i otoczeniami obciętymi do $\mathcal{O}|_{\partial M}$ jest rozmaitością o wymiarze $m-1$, jeżeli $\dim M = m$.\\
 
+\pagebreak
 \begin{definicja}
-Niech  $p\in \partial M$, $\left<f_1,\ldots,f_{m-1} \right>$ - baza $ T_p\partial M$, wybierzmy orientację na $M$ (rys 5-5).\\
+Niech  $p\in \partial M$, $\left<f_1,\ldots,f_{m-1} \right>$ - baza $ T_p\partial M$, wybierzmy orientację na $M$.\\
 Niech $\sigma$ - krzywa na $M$ taka, że
 \[
     \varphi_\alpha\sigma =  \left( 0,\ldots,0,t \right) \in\mathbb{R}^m_+
 ,\]
 niech $\overline{n} = \left[ \sigma \right] $. Mówimy, że orientacja $\partial M$ jest zgodna z orientacją $M$, jeżeli orientacja $\left<\overline{n}, f_1,\ldots,f_{m-1} \right>$ jest zgodna z orientacją $M$.
 \end{definicja}
-(rys 5-6)
+
 Niech $M$ - rozmaitość, $U\subset M$, $\dim M = n$, $\omega\in \Lambda^kM$,  $\varphi_1: U_1\to T$ - parametryzacja $T$ oraz $\varphi_2: U_2\to T$ - parametryzacja $T$. Z własności funkcji  $\varphi_1$ i $\varphi_2$ wiemy, że
 \[
 \underset{h}{\exists} h: \mathbb{R}^n \supset U_2\to U_1\subset\mathbb{R}^n \implies \varphi_2 = \varphi_1\circ h
 .\]
 Wówczas
 \[
-    \int_{T}\omega = \int_{U_1}\varphi_1^\star \omega = \int_{U_2}h^\star\left( \varphi_1^\star\omega \right) \underset{(\Delta)}{\overset{\text{?}}{=}} \int_{U_2}(\varphi_1\circ h)^\star\omega = \int_{U_2}\varphi_2^\star\omega
+    \int_{T}\omega = \int_{U_1}\varphi_1^\star \omega = \int_{U_2}h^\star\left( \varphi_1^\star\omega \right) \overset{\text{?}}{=} \int_{U_2}(\varphi_1\circ h)^\star\omega = \int_{U_2}\varphi_2^\star\omega
 .\]
-    $(\Delta)$ - (rys 5-7)
     \[
         \left<(kL)^\star\omega, v \right> = \left<\omega, (kL)_\star v \right> = \left<k^\star \omega, L_\star v \right> = \left<L^\star k^\star \omega, v \right>
     ,\]

@@ -53,9 +53,10 @@ otrzymujemy
 $x = x^1 \frac{\partial }{\partial x^1} + x^2 \frac{\partial }{\partial x^2} + \ldots + x^n \frac{\partial }{\partial x^n}$ spełnia warunek $Td + dT = id$.
  \begin{przyklad}
      $\omega \in \Lambda^1(M)$, $\dim M = 3$, $\omega = xdx + ydy + zdz$. Wówczas, gdy ($\overline{x} = x \frac{\partial }{\partial x} + y \frac{\partial }{\partial y} + z \frac{\partial }{\partial z}$ ) jest
-     \[
-         T(\omega) = \int_0^1 t^{1-1} \left<\underbrace{(xt)dx + (yt)dy + (zt)dz}_{\omega(tx)},\quad \overline{x} \right>dt = \int_0^1t^0\left( tx^2 + ty^2 + tz^2 \right) dt = \frac{1}{2}\left( x^2 + y^2 + z^2 \right) = \eta
-         .\]
+     \begin{align*}
+         T(\omega) &= \int_0^1 t^{1-1} \left<\underbrace{(xt)dx + (yt)dy + (zt)dz}_{\omega(tx)},\quad \overline{x} \right>dt = \\
+         &= \int_0^1t^0\left( tx^2 + ty^2 + tz^2 \right) dt = \frac{1}{2}\left( x^2 + y^2 + z^2 \right) = \eta.
+     \end{align*}
      Zauważamy, że $d\eta = \omega$ i działa (dla takiego radialnego pola wektorowego znaleźliśmy potencjał).(rys 6-2)
 \end{przyklad}
 \begin{przyklad}
@@ -64,7 +65,7 @@ $x = x^1 \frac{\partial }{\partial x^1} + x^2 \frac{\partial }{\partial x^2} + \
     \begin{align*}
         T\omega &= \int_0^1t^{2-1} x \lrcorner \left( xt dx\land dy + yt dy\land dz + zt dx\land dz \right) dt = \\
         &= \int_0^1 t^1\left( xtx dy - xt ydx + yt ydz - ytzdy + ztxdz - ztzdx \right)dt = \\
-        &= \frac{1}{3}\left( x^2dy - xydx + y^2dz - yzdy + zxdz - z^2dx \right) = \eta\\
+        &= \frac{1}{3}\left( x^2dy - xydx + y^2dz - yzdy + zxdz - z^2dx \right) = \eta
     .\end{align*}
 \end{przyklad}
 Niech

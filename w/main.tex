@@ -1,6 +1,6 @@
-\documentclass[a5]{article}
+\documentclass[b5paper]{memoir}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
+%\usepackage[margin=1in]{geometry}
 \usepackage{mdframed}
 \usepackage{subfiles}
 \usepackage{subcaption}
@@ -16,6 +16,30 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[RO, LE]{\thepage}
+\fancyhead[C]{Analiza III}
+\let\LaTeXStandardTableOfContents\tableofcontents
+
+\renewcommand{\tableofcontents}{%
+\begingroup%
+\renewcommand{\bfseries}{\relax}%
+\LaTeXStandardTableOfContents%
+\endgroup%
+}%
+
+\chapterstyle{dash}
+
+
+\titleformat{\chapter}[block]
+  {\normalfont\LARGE}{Wykład \thechapter.}{1em}{\Large}
+\titlespacing*{\chapter}{0pt}{-19pt}{32pt}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{0.8\columnwidth}
@@ -38,74 +62,61 @@
 
 \DeclareMathOperator{\Res}{Res}
 
-\title{Wykłady z Analizy III}
+\title{\Huge \textbf{Wykłady z Analizy III}}
 \author{Jakub Korsak}
-\date{}
+\date{X 2019 - II 2020}
 \begin{document}
-\maketitle
 
+\frontmatter
+\maketitle
 \pagebreak
-\section{Wykład (04.10.2019)}
+\tableofcontents
+
+\chapter{Wstęp}
+Niniejszy dokument zawiera moje notatki z wykładu Analiza III wygłoszonego przez dr Marcina Kościeleckiego na Wydziale Fizyki UW w semestrze zimowym roku akademickiego 2019/2020.
+\mainmatter
+
+\chapter{04.10.2019, \textit{przypomnienie i całka z jednoformy}}
 \subfile{tex/w1.tex}
-\pagebreak
-\section{Wykład (07.10.2019)}
+\chapter{07.10.2019, \textit{całka po kostce, rozmaitości zorientowane i prawie twierdzenie Stokesa}}
 \subfile{tex/w2.tex}
-\pagebreak
-\section{Wykład (11.10.2019)}
+\chapter{11.10.2019, \textit{wstęga Moebiusa i dowód twierdzenia Stokesa (1/2)}}
 \subfile{tex/w3.tex}
-\pagebreak
-\section{Wykład (14.10.2019)}
+\chapter{14.10.2019, \textit{dowód twierdzenia Stokesa (2/2), agitacja na temat lematu Poincare i iloczyn wewnętrzny}}
 \subfile{tex/w4.tex}
-\pagebreak
-\section{Wykład (18.10.2019)}
+\chapter{18.10.2019, \textit{brzeg rozmaitości i dalsza agitacja lematu Poincare}}
 \subfile{tex/w5.tex}
-\pagebreak
-\section{Wykład (21.10.2019)}
+\chapter{21.10.2019, \textit{dowód lematu Poincare, przykłady}}
 \subfile{tex/w6.tex}
-\pagebreak
-\section{Wykład (25.10.2019)}
+\chapter{25.10.2019, \textit{domkniętość i zupełność formy, długość krzywej i zastosowania twierdzenia Stokesa}}
 \subfile{tex/w7.tex}
-\pagebreak
-\section{Wykład (28.10.2019)}
+\chapter{28.10.2019, \textit{zastosowania twierdzenia Stokesa, holomorficzność funkcji i wzory Cauchy-Riemanna}}
 \subfile{tex/w8.tex}
-\pagebreak
-\section{Wykład (04.11.2019)}
+\chapter{04.11.2019, \textit{warunek Cauchy-Riemanna, wzór Cauchy i twierdzenie Liouville (1/2)}}
 \subfile{tex/w9.tex}
-\pagebreak
-\section{Wykład (08.11.2019)}
+\chapter{08.11.2019, \textit{twierdzenie Liouville (2/2), Zasadnicze Twierdzenie Algebry i początek Szeregów Laurenta}}
 \subfile{tex/w10.tex}
-\pagebreak
-\section{Wykład (15.11.2019)}
+\chapter{15.11.2019, \textit{zabawa z Szeregiem Laurenta, związki z szeregiem Taylora}}
 \subfile{tex/w11.tex}
-\pagebreak
-\section{Wykład (22.11.2019)}
+\chapter{22.11.2019, \textit{przedłużenie analityczne funkcji punkty osobliwe i bieguny}}
 \subfile{tex/w12.tex}
-\pagebreak
-\section{Wykład (18.11.2019)}
+\chapter{18.11.2019, \textit{punkt izolowany, osobliwość istotna, twierdzenie o residuach}}
 \subfile{tex/w13.tex}
-\pagebreak
-\section{Wykład (25.11.2019)}
+\chapter{25.11.2019, \textit{fajność residuów i Transformata Legendre geometrycznie}}
 \subfile{tex/w14.tex}
-\pagebreak
-\section{Wykład (29.11.2019)}
+\chapter{29.11.2019, \textit{Lemat Jordana, funkcja wokół punktu istotnie osobliwego i twierdzenie Weierstrass}}
 \subfile{tex/w15.tex}
-\pagebreak
-\section{Wykład (02.12.2019)}
+\chapter{02.12.2019, \textit{sumowanie szeregów}}
 \subfile{tex/w16.tex}
-\pagebreak
-\section{Wykład (06.12.2019)}
+\chapter{06.12.2019, \textit{twierdzenie Rouche, Zasadnicze Twierdzenie Algebry v2.0, sumowanie szeregów v2.0, residuum w $+\infty$ (1/3)}}
 \subfile{tex/w17.tex}
-\pagebreak
-\section{Wykład (09.12.2019)}
+\chapter{09.12.2019, \textit{przygotowanie do twierdzenia Kasner-Arnold, krzywizna, odwzorowania konforemne, residuum w $+\infty$ (2/3)}}
 \subfile{tex/w18.tex}
-\pagebreak
-\section{Wykład (13.12.2019)}
+\chapter{13.12.2019, \textit{twierdzenie Kasner-Arnold}}
 \subfile{tex/w19.tex}
-\pagebreak
-\section{Wykład (16.12.2019)}
+\chapter{16.12.2019, \textit{residuum w $+\infty$ (3/3) + super twierdzenie, transformata Fouriera}}
 \subfile{tex/w20.tex}
-\pagebreak
-\section{Wykład (20.12.2019)}
+\chapter{20.12.2019, \textit{własności transformaty Fouriera i transformata odwrotna}}
 \subfile{tex/w21.tex}
 
 \end{document}

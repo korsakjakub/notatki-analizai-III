@@ -8,7 +8,7 @@
     \subsection{Sumowanie szeregów}
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{w16-1}
+        \includegraphics[width=0.5\textwidth]{w16-1}
         \caption{Kontur $\Gamma$}
         \label{fig:w16-1}
     \end{figure}
@@ -27,6 +27,8 @@
             \lim\limits_{N\to\infty}\int\limits_{\Gamma}f(z) \ctg(\pi z)dz = 0
         .\]
     \end{stw}
+
+    \pagebreak
     \begin{proof}
         Oszacujemy $\ctg(\pi z)$.\\
         Dla  $z\in \Gamma$
@@ -51,9 +53,10 @@
                     \lim\limits_{x\to +\infty} \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} = \lim\limits_{x\to + \infty} \frac{e^x(1+e^{-2x})}{e^{x}(1-e^{-2x})} = 1
                 .\]
             Zatem
-            \[
-                \left|\eqref{eqn: delta}\right| \le \frac{2\left| e^{i\pi(N + \frac{1}{2})}\cdot e^{\pi N} \right|}{\left| e^{i\pi(N + \frac{1}{2})} \cdot e^{\pi(N+\frac{1}{2})} - e^{i \pi(N + \frac{1}{2})}\cdot e^{\pi(N + \frac{1}{2})} \right| } \le \frac{2 \left| e^{i\pi(N + \frac{1}{2})} \right|}{\left| e^{i \pi(N + \frac{1}{2})} \cdot e^{-2\pi(N + \frac{1}{2})} + e^{i\pi(N + \frac{1}{2})} \right| } < \text{const}
-            .\]
+            \begin{align*}
+                \left|\eqref{eqn: delta}\right| &\le \frac{2\left| e^{i\pi(N + \frac{1}{2})}\cdot e^{\pi N} \right|}{\left| e^{i\pi(N + \frac{1}{2})} \cdot e^{\pi(N+\frac{1}{2})} - e^{i \pi(N + \frac{1}{2})}\cdot e^{\pi(N + \frac{1}{2})} \right| } \le\\
+                &\le \frac{2 \left| e^{i\pi(N + \frac{1}{2})} \right|}{\left| e^{i \pi(N + \frac{1}{2})} \cdot e^{-2\pi(N + \frac{1}{2})} + e^{i\pi(N + \frac{1}{2})} \right| } < \text{const}
+            .\end{align*}
     \item Analogicznie pokażemy, że $\ctg(\pi z)$ jest ograniczony dla $z\in \Gamma_4, \Gamma_1, \Gamma_3$. Zatem
         \[
             \left| \int\limits_{\Gamma}f(z)\ctg(\pi z)dz \right| \le \left| \underset{z\in\Gamma}{\max}f(z)  \right| \cdot \left| 8N + 4 \right| \cdot \text{const} \underset{N > M}{\le} \frac{\text{const}}{N^2} (8N + 4) \cdot \text{const} \underset{N \to + \infty}{\longrightarrow}  0
@@ -134,9 +137,10 @@ Niech $z_1\in D$, $f$ ma w $z = z_1$ biegun $n$ - tego rzędu. Oznacza to, że
     f(z) = \frac{a_{-n}}{(z-z_1)^n} + \frac{a_{-(n-1)}}{(z-z_1)^{n-1}} + \ldots
 .\]
 Wówczas
-\[
-    \frac{f'(z)}{f(z)} = \frac{\frac{-na_{-n}}{(z-z_1)^{n+1}} + \frac{-(n-1)a_{-(n-1)}}{(z-z_1)^n} + \ldots }{\frac{a_{-n}}{(z-z_1)^n} + \frac{a_{-(n-1)}}{(z-z_1)^{n-1}} + \ldots} = \frac{1}{(z-z_1)}\frac{\left[ -na_{-n} + -(n-1)a_{-(n-1)}(z-z_1) + \ldots \right] }{\left[ a_{-n} + a_{-(n-1)}(z-z_1) + \ldots \right] }
-.\]
+\begin{align*}
+    \frac{f'(z)}{f(z)} &= \frac{\frac{-na_{-n}}{(z-z_1)^{n+1}} + \frac{-(n-1)a_{-(n-1)}}{(z-z_1)^n} + \ldots }{\frac{a_{-n}}{(z-z_1)^n} + \frac{a_{-(n-1)}}{(z-z_1)^{n-1}} + \ldots} =\\
+    &= \frac{1}{(z-z_1)}\frac{\left[ -na_{-n} + -(n-1)a_{-(n-1)}(z-z_1) + \ldots \right] }{\left[ a_{-n} + a_{-(n-1)}(z-z_1) + \ldots \right] }
+.\end{align*}
 \[
     \lim\limits_{z\to z_n}\frac{f'}{f} (z-z_1) = -n
 .\]
