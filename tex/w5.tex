@@ -16,25 +16,30 @@
     .\]
 Niech $M$ - rozmaitość, $\dim M = 2$. Co oznacza napis
 \[
-x\lrcorner\, \omega = dH?
+X\lrcorner\, \omega = dH?
 \]
+\begin{align*}
+    X \lrcorner \omega &= \dot{x}\left(\partial_x \lrcorner (dx\land dp)\right) + \dot{p}\left(\partial_p \lrcorner (dx\land dp)\right) =\\
+    &= \dot{x}\left(\left<\partial_x, dx \right>\land dp + dx\land \left<\partial_x, dp \right>\right) +\\
+    &+ \dot{p}\left(\left<\partial_p, dx \right>\land dp + dx\land\left<\partial_p, dp \right>\right) = \\
+    &= \dot{x}dp - \dot{p}dx = dH = \frac{p}{m}dp + kx dx
+.\end{align*}
+
+Czyli ostatecznie
 \[
-    \left<dx, x(t)\frac{\partial }{\partial x} + p(t)\frac{\partial }{\partial p} \right>dp - \left<dp, \dot{x}(t)\frac{\partial }{\partial x} + \dot{p}(t)\frac{\partial }{\partial p}  \right>dx = dH
-,\]
-a teraz coś takiego:
-\[
-    x(t)dp - p(t)dx = \frac{p^2}{m}dp + kx^2dx
+    \dot{x}dp - \dot{p}dx = \frac{p^2}{m}dp + kx^2dx
 .\]
 To wypluje na wyjściu równania ruchu
-\begin{align*}
-    \frac{dx}{dt} &= \frac{p}{m},\quad \dot{p}(t) = -kx\\
-    m \frac{dx}{dt} &= p, \quad \frac{dp}{dt} = -kx
-.\end{align*}
+\[
+m \frac{dx}{dt} = p,\quad \frac{dp}{dt} = -kx
+.\]
 \end{przyklad}
 \subsection{Rozmaitość z brzegiem}
 \textbf{Obserwacja:}\\
-Niech $I = [0,1[\subset\mathbb{R}$, (metryka $d(x,y) = |x-y|$) czy $I$ jest otwarty w $\mathbb{R}$? \textit{chyba nie}.\\
-Niech $I = [0,1[\subset[0,2]$, czy $I$ jest otwarty w $[0,2]$? \textit{chyba tak}.
+Niech $I = [0,1[\subset\mathbb{R}$, (metryka $d(x,y) = |x-y|$) czy $I$ jest otwarty w $\mathbb{R}$? \\
+\textit{chyba nie}.\\
+Niech $I = [0,1[\subset[0,2]$, czy $I$ jest otwarty w $[0,2]$? \\
+\textit{chyba tak}.
 \[
     B(0,1) = \left\{ x\in [0,2],\quad d(0,x) < 1 \right\} = [0,1[
 .\]
@@ -84,7 +89,13 @@ Niech $\sigma$ - krzywa na $M$ taka, że
 niech $\overline{n} = \left[ \sigma \right] $. Mówimy, że orientacja $\partial M$ jest zgodna z orientacją $M$, jeżeli orientacja $\left<\overline{n}, f_1,\ldots,f_{m-1} \right>$ jest zgodna z orientacją $M$.
 \end{definicja}
 
-Niech $M$ - rozmaitość, $U\subset M$, $\dim M = n$, $\omega\in \Lambda^kM$,  $\varphi_1: U_1\to T$ - parametryzacja $T$ oraz $\varphi_2: U_2\to T$ - parametryzacja $T$. Z własności funkcji  $\varphi_1$ i $\varphi_2$ wiemy, że
+\begin{stw}
+    Całka z formy po rozmaitości nie zależy od wyboru parametryzacji.
+\end{stw}
+\begin{proof}
+Niech $M$ - rozmaitość, $U\subset M$, $\dim M = n$, $\omega\in \Lambda^kM$,\\
+    $\varphi_1: U_1\to T$ - parametryzacja $T$ oraz \\
+    $\varphi_2: U_2\to T$ - parametryzacja $T$. Z własności funkcji  $\varphi_1$ i $\varphi_2$ wiemy, że
 \[
 \underset{h}{\exists} h: \mathbb{R}^n \supset U_2\to U_1\subset\mathbb{R}^n \implies \varphi_2 = \varphi_1\circ h
 .\]
@@ -100,10 +111,17 @@ ale jeżeli $v = \left[ \sigma(t) \right]$, $v = \frac{d}{dt}\overline{\sigma}$ 
     (kL)_\star v = \frac{d}{dt}\left( k\left( L\left( \overline{\sigma}(t) \right)  \right)  \right) = k'(L'\cdot \sigma'(t)) = k_\star L_\star v
 .\]
 \textbf{Wniosek:} całka z formy po rozmaitości nie zależy od wyboru parametryzacji
+\end{proof}
+
+\pagebreak
 \subsection{Lemat Poincare}
 Mieliśmy $\omega = \frac{ydx}{x^2+y^2} - \frac{xdy}{x^2+y^2}$, wiemy, że $d\omega = 0$.
-\textbf{Pytanie:} czy istnieje $\eta$ taka, że $\omega = d\eta$? Wówczas wiemy, że $d\omega = d(d\eta) = 0$.\\
- \textbf{Obserwacja:}
+
+\begin{pytanie}
+    czy istnieje $\eta$ taka, że $\omega = d\eta$?
+\end{pytanie}
+Wówczas wiemy, że $d\omega = d(d\eta) = 0$.\\
+\textbf{Obserwacja:}
  \[
      \eta = arctg \frac{x}{y},\quad d\eta = \frac{1}{1+(\frac{x}{y})^2}\frac{1}{y}dx - \frac{1}{1+(\frac{x}{y})^2}\frac{x}{y^2}dy = \omega
  \]

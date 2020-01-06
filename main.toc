@@ -13,7 +13,7 @@
 \contentsline {subsection}{Końcówka dowodu (Stokesa na kostce)}{21}% 
 \contentsline {chapter}{\chapternumberline {5}18.10.2019, \textit {brzeg rozmaitości i dalsza agitacja lematu Poincare}}{27}% 
 \contentsline {subsection}{Rozmaitość z brzegiem}{27}% 
-\contentsline {subsection}{Lemat Poincare}{29}% 
+\contentsline {subsection}{Lemat Poincare}{30}% 
 \contentsline {chapter}{\chapternumberline {6}21.10.2019, \textit {dowód lematu Poincare, przykłady}}{31}% 
 \contentsline {chapter}{\chapternumberline {7}25.10.2019, \textit {domkniętość i zupełność formy, długość krzywej i zastosowania twierdzenia Stokesa}}{35}% 
 \contentsline {subsection}{Zastosowania twierdzenia Stokesa (przypomnienie)}{35}% 

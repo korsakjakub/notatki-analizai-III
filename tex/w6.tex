@@ -6,13 +6,12 @@
 
 \begin{document}
 \begin{definicja}
-    Niech $\mathcal{O}\subset\mathbb{R}^n$. Zbiór $\mathcal{O}$ nazywamy ściągalnym, jeżeli istnieje $p\in \mathcal{O}$ i odwzorowanie $h(p,x,t)$ takie, że
+    Niech $\mathcal{O}\subset\mathbb{R}^n$. Zbiór $\mathcal{O}$ nazywamy ściągalnym (gwiaździstym), jeżeli istnieje $p\in \mathcal{O}$ i odwzorowanie $h(p,x,t)$ takie, że
     \[
         \underset{x\in\mathcal{O}}{\forall}\quad \begin{matrix}h(p,x,0) = p\\ h(p,x,1) = x\end{matrix},\quad \underset{t\in[0,1]}{\forall}  h(p,x,t)\in \mathcal{O}, \quad h(p,x,t) \text{ - ciągła}
     .\]
 \end{definicja}
 \begin{tw}
-    (rys 6-1)
     (Lemat Poincare)\\
     Niech
     \[
@@ -24,7 +23,11 @@
     \[
         \underset{p\in\mathcal{O}}{\exists}\quad \underset{x\in \mathcal{O}}{\forall}\quad \begin{pmatrix}\text{zbiór punktów postaci}\\ pq_1 + xq_2: q_1+q_2 = 1, q_1,q_2 > 0\end{pmatrix}\begin{pmatrix} \text{jest zawarty w }\mathcal{O} \end{pmatrix}
     .\]
-\textbf{Obserwacja:} gdyby istniał operator $T: \Lambda^p(\mathcal{O}) \to \Lambda^{p-1}(\mathcal{O}),\quad p = 1,2,\ldots,n-1$,taki, że
+\textbf{Obserwacja:} gdyby istniał operator
+    \[
+        T: \Lambda^p(\mathcal{O}) \to \Lambda^{p-1}(\mathcal{O}),\quad p = 1,2,\ldots,n-1,
+    \]
+    taki, że
 \[
 Td + dT = id
 ,\]
@@ -57,7 +60,7 @@ $x = x^1 \frac{\partial }{\partial x^1} + x^2 \frac{\partial }{\partial x^2} + \
          T(\omega) &= \int_0^1 t^{1-1} \left<\underbrace{(xt)dx + (yt)dy + (zt)dz}_{\omega(tx)},\quad \overline{x} \right>dt = \\
          &= \int_0^1t^0\left( tx^2 + ty^2 + tz^2 \right) dt = \frac{1}{2}\left( x^2 + y^2 + z^2 \right) = \eta.
      \end{align*}
-     Zauważamy, że $d\eta = \omega$ i działa (dla takiego radialnego pola wektorowego znaleźliśmy potencjał).(rys 6-2)
+     Zauważamy, że $d\eta = \omega$ i działa (dla takiego radialnego pola wektorowego znaleźliśmy potencjał).
 \end{przyklad}
 \begin{przyklad}
     $\omega = xdx\land dy + ydy\land dz + zdx\land dz$,  $\omega\in \Lambda^2(M)$, $\dim M = 3$.
