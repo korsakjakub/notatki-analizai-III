@@ -98,8 +98,8 @@ Liczymy
 .\end{align*}
 \begin{align*}
     T\omega &= \int_0^1 t^{p-1} \left(x^1 \frac{\partial }{\partial x^1} + \ldots + x^n \frac{\partial }{\partial x^n} \right)\lrcorner \omega_{i_1,\ldots,i_p} (tx^1, \ldots, tx^n) dx^{i_1}\land \ldots\land dx^{i_p} = \\
-    &= \sum_{k = 1}^{}\int_0^1dt\quad t^{p-1} \omega_{i_1,\ldots,i_p}(tx^1,\ldots,tx^n)x^kdx^{i_1}\land \underset{\text{bez }dx^{i_k}}{\ldots}\land dx^{i_p}(-1)^{k+1} = \\
-    &= \sum_{k=1}^p \int_0^1 dt t^{p-1} \omega_{i_1,\ldots,i_p}(tx^1,\ldots,tx^n)dx^{i_1}\land \ldots\land dx^{i_p} +\\
+    &= \sum_{k = 1}^{}\int_0^1dt\quad t^{p-1} \omega_{i_1,\ldots,i_p}(tx^1,\ldots,tx^n)x^kdx^{i_1}\land \underset{\text{bez }dx^{i_k}}{\ldots}\land dx^{i_p}(-1)^{k+1}.\\
+    dT\omega &= \sum_{k=1}^p \int_0^1 dt t^{p-1} \omega_{i_1,\ldots,i_p}(tx^1,\ldots,tx^n)dx^{i_1}\land \ldots\land dx^{i_p} +\\
     &+\sum_{k=1}^p \int_0^1 dt t^{p-1} \sum_{\alpha = 1}^n \frac{\partial \omega_{i_1,\ldots,i_p}(tx^1,\ldots,tx^n)}{\partial x^\alpha}\cdot t\cdot  x^{i_k}dx^\alpha\land dx^{i_1}\land \ldots\land dx^{i_p}
 .\end{align*}
 Zatem dodajemy do siebie $Td\omega + dT\omega$ i wychodzi
