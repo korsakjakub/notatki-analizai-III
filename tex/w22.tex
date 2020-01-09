@@ -1,0 +1,256 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+    \begin{definicja}
+        Jeżeli $f$ - klasy $L^1$ na $\mathbb{R}$ i $g$ - klasy $L^1$ na $\mathbb{R}$, to wielkość
+        \[
+            h(x) = \int\limits_{-\infty}^{+\infty}f(t)g(x-t)dt = \int\limits_{-\infty}^{+\infty}g(t)f(x-t)dt
+        \]
+        nazywamy splotem (konwolucją) funkcji $f$ i $g$ i oznaczamy
+        \[
+            h(x) \overset{\text{ozn}}{=} \left( f \star g \right) (x)
+        .\]
+    bonus:
+        \[
+            \left\Vert f_1\star f_2 \right\Vert_{L^1(\mathbb{R})} \le \left\Vert f_1 \right\Vert_{L^1(\mathbb{R})} \cdot \left\Vert f_2 \right\Vert_{L^1(\mathbb{R})}
+        .\]
+    \end{definicja}
+    \begin{przyklad}
+        \begin{align*}
+            f(x) &= \sin(x)\\
+            g(x) &= e^x
+        .\end{align*}
+        \[
+            \left( f\star g \right) (x) = \int\limits_{-\infty}^{+\infty}\sin(t)e^{x-t}dt
+        .\]
+    \end{przyklad}
+    \textbf{Uwaga:} $h(x)$ też jest klasy $L_1$ na $\mathbb{R}$, bo
+    \begin{proof}
+        \begin{align*}
+            \int\limits_{-\infty}^{+\infty}\left|  h(x) \right| dx &= \int\limits_{-\infty}^{+\infty}\left| \int\limits_{-\infty}^{+\infty}dt f(t) g(x-t)dt \right| \le \\
+            &\le \int\limits_{-\infty}^{\infty} dx \int\limits_{-\infty}^{\infty} \left| f(t) \right| \left| g(x-t) \right| dt =\\
+            &=\int\limits_{-\infty}^{\infty} \left| g(x-t) \right| dx \int\limits_{-\infty}^{\infty} \left| f(x-t) \right| dt
+        .\end{align*}
+    \end{proof}
+    \begin{przyklad}
+        (np. rozkład ładunku elektrycznego)
+        \begin{align*}
+            f(\overline{x}) &= \rho(\overline{x})\\
+            g(\overline{x}) &= \frac{1}{\left\Vert \overline{x} \right\Vert }
+        .\end{align*}
+        \[
+            \left( f\star g \right) (\overline{x}) = \int d^3 \overline{x}' \frac{\rho(x')}{\left\Vert x - x' \right\Vert }
+        .\]
+    \end{przyklad}
+    \begin{przyklad}
+        (związek z Rezolwentą z drugiego semestru)
+        \[
+            x(t) = \int R(t-s)b(s)ds
+        .\]
+    \end{przyklad}
+
+    \begin{stw}
+    \[
+        \mathcal{F}\left( f\star g \right) (x) = \left( \mathcal{F}f \right) (x) \left( \mathcal{F}g \right) (x)
+    .\]
+    \end{stw}
+\begin{proof}
+    \[
+        h(x) = \int\limits_{-\infty}^{\infty} f(t)g(x-t)dt
+    .\]
+\begin{align*}
+    \hat{h}(x) &= \int\limits_{-\infty}^{\infty} h(k)e^{-2\pi i kx}dk = \\
+    &= \int\limits_{-\infty}^{\infty} dk e^{-2\pi i kx}\int\limits_{-\infty}^{\infty} dt f(t)g(k-t) = \\
+    &= \int\limits_{-\infty}^{\infty} dt f(t) \int\limits_{-\infty}^{\infty} dk g(k-t) e^{-2\pi i kx}
+    .\end{align*}
+    \begin{align*}
+    &k-t = s\\
+    &dk = ds\\
+    &k = s+t\\
+    &\implies\int\limits_{-\infty}^{\infty} dt f(t)\int\limits_{-\infty}^{\infty} ds g(s) e^{-2\pi i x(s+t)} = \\
+    &= \int\limits_{-\infty}^{\infty} dt f(t) e^{-2\pi i xt} \int\limits_{-\infty}^{\infty} ds g(s) e^{-2\pi i xs} = \\
+    &= \hat{f}(x) \hat{g}(x)
+.\end{align*}
+\textbf{Uwaga:} analogicznie,
+\[
+    \mathcal{F}^{-1}\left( f\star g \right) (x) = \left( \mathcal{F}^{-1}f \right) (x) \left( \mathcal{F}^{-1}g \right) (x)
+.\]
+\end{proof}
+\begin{pytanie}
+    Kiedy możemy wejść z granicą pod całkę?
+\end{pytanie}
+
+\pagebreak
+\begin{tw}
+    Niech
+    \begin{enumerate}
+        \item $A, B \subset \mathbb{R}$
+        \item $f: A \times B \to \mathbb{R}$
+        \item $x\in A$, $y\in B$, $f(x,y)\in \mathbb{R}$.
+    \end{enumerate}
+    Jeżeli
+    \[
+        \underset{y\in B}{\forall} \lim\limits_{x\to x_0}f(x,y) = f(x_0,y)
+    \]
+    oraz istnieje $g: B\to \mathbb{R}$, $g$ - całkowalna na $B$ oraz
+    \[
+        \underset{x\in A}{\forall}\quad \underset{y\in B}{\forall} \left| f(x,y) \right| < \left| g(y) \right|
+    ,\]
+to
+\[
+    \lim_{x \to x_0}\int\limits_{B}f(x,y)dy = \int\limits_{B}f(x_0,y)dy
+.\]
+$|g(y)|$ nazywamy \textbf{majorantą}, a ten warunek zbieżnością \textbf{zmajoryzowaną}.
+\end{tw}
+\begin{proof}
+    brak :(
+\end{proof}
+\begin{przyklad}
+    Niech
+    \begin{enumerate}
+        \item $B = ]0,\infty[$
+        \item $f(x,y) = xe^{-xy}$
+    \end{enumerate}
+    \[
+        \int\limits_{0}^{\infty} dy xe^{-xy} = x\cdot \frac{-1}{x} e^{-xy}\Bigg|_{0}^{\infty} = -e^{-xy}\Bigg|_{0}^{\infty} = 0 - (-1) = 1
+    .\]
+\[
+    \lim_{x \to 0} \int\limits_{0}^{\infty} xe^{-xy}dy = \lim_{x \to 0}1 = 1
+.\]
+\[
+    \int\limits_{0}^{\infty} \lim_{x \to 0}xe^{-xy}dy = \int\limits_{0}^{\infty} 0 dy = 0
+.\]
+Czy $f(x,y)$ jest majoryzowalna?
+\[
+    \underset{x\in A}{\forall} \quad\underset{y\in B}{\forall} \left| f(x,y) \right| < \left| g(y) \right|
+.\]
+\[
+    h(x) = xe^{-xy}h'(x) = e^{-xy} + x\left( -y e^{-xy} \right)
+.\]
+$e^{-xy}(1-xy)$ ma robi  $h'(x) = 0$, gdy $xy = 1 \implies x = \frac{1}{y}$.
+\[
+    h\left(\frac{1}{y}\right) = \frac{1}{y}e^{-\frac{1}{y}y} = \frac{1}{y}e^{-1}
+.\]
+Czy istnieje $g$ - całkowalna na $]0,\infty[$, taka, że
+\[
+    \left| \frac{1}{ey} \right| < \left| g(y) \right| ?
+\]
+\textbf{Odpowiedź:} nie.
+\end{przyklad}
+
+\subsection{Równanie przewodnictwa}
+Szukamy funkcji $U(x,y): \mathbb{R}\times [0,\infty[ \to \mathbb{R}$, takiej, że
+\begin{enumerate}
+    \item $\frac{\partial U}{\partial t} = a^2 \frac{\partial^2 U}{\partial x^2}$, dla $t > 0$
+    \item $U(x,0) = f(x)$
+    \item $f(x): \mathbb{R}\to \mathbb{R}$.
+\end{enumerate}
+Załóżmy, że istnieją funkcje $\tilde U(\omega, t)$ i $\tilde f(\omega)$ takie, że
+\begin{itemize}
+    \item $U(x,t) = \int\limits_{-\infty}^{\infty}\tilde U(\omega, t)e^{-2\pi i \omega x}d\omega$
+    \item $ f(x) = \int\limits_{-\infty}^{\infty} \tilde f(\omega)e^{-2\pi i \omega x}$, czyli $f(x) = \mathcal{F}\left( \tilde f \right) (x)$
+.\end{itemize}
+Podstawiamy
+\[
+    \frac{\partial U}{\partial t} = \int\limits_{-\infty}^{\infty} d\omega \frac{\partial \tilde U}{\partial t}  e^{-2\pi i \omega x}
+,\]
+\[
+    \frac{\partial^2 U}{\partial x^2} = \int\limits_{-\infty}^{\infty} d\omega \left( -2 \pi i \omega \right)^2 \tilde U (\omega, t)e^{-2\pi i \omega x}
+\]
+do naszego równania przewodnictwa i mamy
+\[
+    \underset{x\in ]-\infty, +\infty[}{\forall} \int\limits_{-\infty}^{\infty} d\omega e^{-2 \pi i a x}\left( \frac{\partial \tilde U}{\partial t} - a^2\left( -2\pi i \omega \right)^2 \tilde U(\omega, t)\right) = 0
+.\]
+To oznacza, że skoro rozwiązanie ma być dla całej szyny, to wyrażenie podcałkowe ma być równe $0$. Czyli
+\[
+    \frac{\partial \tilde U}{\partial t}  = -(2\pi i a \omega)^2 \tilde U(\omega, t) \implies \tilde U(\omega, t) = C(\omega) e^{-\left( 2 \pi a \omega \right)^2 t}
+.\]
+Równanie jest rozwiązane, ale trzeba dopracować szczegóły. Znajdźmy $C(\omega)$
+\begin{align*}
+    \tilde U(\omega, 0) &= C(\omega)\\
+    \tilde U(x,0) &= \int\limits_{-\infty}^{\infty} d\omega \tilde U (\omega, 0)e^{-2 \pi i \omega x} = \int\limits_{-\infty}^{\infty} d\omega C(\omega) e^{-2\pi i x}
+.\end{align*}
+Z drugiej strony, $\tilde U(x,0) = f(x) = \int\limits_{-\infty}^{\infty} \tilde f(\omega)e^{-2\pi i\omega x}d\omega$.
+Stąd $C(\omega) = \tilde f(\omega)$. Ostatecznie
+\[
+    \tilde U(\omega, t) = \tilde f(\omega) e^{-(2\pi a)^2\omega^2 t}
+.\]
+Nasze $U(x,t)$ jest transformatą Fouriera tego napisu względem zmiennej $\omega$ (\textbf{nie czasu!}).
+ \[
+     U(x,t) = \mathcal{F}\left( \tilde U(\omega, t) \right)
+.\]
+
+Wiemy, że
+\[
+    \tilde f = \mathcal{F}^{-1}(f).
+\]
+Niech
+\[
+    \tilde g(\omega, t) = e^{-(2\pi a)^2 \cdot t \cdot \omega^2}.
+\]
+Znajdźmy funkcję $g$ taką, że
+\[
+    \tilde g = \mathcal{F}^{-1}(g)
+.\]
+Chcemy wyznaczyć $U(x,t)$ bez konieczności liczenia $\tilde f$ i $\tilde g$, czyli w języku $f$ i $g$. Policzmy najpierw $g$.
+\[
+    g = \mathcal{F}(\tilde g)
+.\]
+My już kiedyś policzyliśmy
+\begin{equation}
+    \label{eqn:w22-1}
+    \int\limits_{-\infty}^{\infty} e^{ixt}e^{-at^2}dt = \sqrt{\frac{\pi}{a}} e^{-\frac{x^2}{4a}},\quad a > 0\tag{$\Delta$}
+\end{equation}
+Czyli
+\[
+    g = \int\limits_{-\infty}^{\infty} d\omega e^{-\left( 2\pi a \right)^2 t \omega^2}e^{-2\pi i \omega x}
+.\]
+Przekładamy tę całkę \eqref{eqn:w22-1} na nasze literki
+\[
+    \eqref{eqn:w22-1} = \int\limits_{-\infty}^{\infty} d\omega e^{i \spadesuit\omega}e^{-\clubsuit \omega^2} = \sqrt{\frac{\pi}{\clubsuit}}e^{-\frac{(\spadesuit)^2}{4\clubsuit}}\quad \clubsuit > 0
+.\]
+Czyli mamy $g$
+\[
+    g = \sqrt{\frac{\pi}{(2\pi a)^2 \cdot t}}e^{\frac{-(-2\pi x)^2}{4(2\pi a)^2t}}
+.\]
+Wiemy, że
+\begin{itemize}
+    \item $\tilde f = \mathcal{F}^{-1}(f)$
+    \item $\tilde g = \mathcal{F}^{-1}(g)$
+    \item $U(x,t) = \mathcal{F}(\tilde f \cdot \tilde g)$.
+\end{itemize}
+Jeżeli $\alpha, \beta$ - funkcje klasy $L_1$, to
+\[
+    \mathcal{F}^{-1}(\alpha\star\beta) = \mathcal{F}^{-1}(\alpha)\mathcal{F}^{-1}(\beta)
+.\]
+Teraz obustronnie fourierujemy
+\[
+    \mathcal{F}\left( \mathcal{F}^{-1}(\alpha\star \beta) \right) = \mathcal{F}\left( \mathcal{F}^{-1}(\alpha)\cdot \mathcal{F}^{-1}(\beta) \right)
+.\]
+Czyli
+\[
+    \alpha\star \beta = \mathcal{F}\left( \mathcal{F}^{-1}(\alpha)\cdot \mathcal{F}^{-1}(\beta) \right)
+.\]
+Jeżeli
+\begin{itemize}
+    \item $\mathcal{F}^{-1}(\alpha) = \tilde f$
+    \item $\alpha = \mathcal{F}(\tilde f) = f$
+    \item $\mathcal{F}^{-1}(\beta) = \tilde g$
+    \item $\beta = \mathcal{F}(\tilde g) = g$,
+\end{itemize}
+to
+\begin{align*}
+    U(x,t) &= \mathcal{F}(\tilde f\cdot \tilde g) = f\star g =\\
+    &= \int\limits_{-\infty}^{\infty} f(s)g(x-s)ds
+.\end{align*}
+\[
+    U(x,t) = \sqrt{\frac{\pi}{(2\pi a)^2t}} \int\limits_{-\infty}^{\infty} ds f(s)\cdot e^{- \frac{(2\pi)^2\cdot (x-s)^2}{(2\pi)^2\cdot 4a^2t}} = \frac{1}{4 \pi a^2 t}\int\limits_{-\infty}^{\infty} ds f(s) e^{-\frac{(x-s)^2}{4a^2 t}}
+.\]
+
+
+
+\end{document}

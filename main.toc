@@ -54,3 +54,5 @@
 \contentsline {chapter}{\chapternumberline {21}20.12.2019, \textit {własności transformaty Fouriera i transformata odwrotna}}{119}% 
 \contentsline {subsection}{Własności (transformaty Fouriera)}{119}% 
 \contentsline {subsection}{Transformata odwrotna}{122}% 
+\contentsline {chapter}{\chapternumberline {22}09.01.2020, \textit {Splot, wchodzenie z granicą pod całkę i równanie przewodnictwa}}{125}% 
+\contentsline {subsection}{Równanie przewodnictwa}{129}% 
