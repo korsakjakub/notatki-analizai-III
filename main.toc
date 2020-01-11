@@ -56,3 +56,5 @@
 \contentsline {subsection}{Transformata odwrotna}{122}% 
 \contentsline {chapter}{\chapternumberline {22}09.01.2020, \textit {Splot, wchodzenie z granicą pod całkę i równanie przewodnictwa}}{125}% 
 \contentsline {subsection}{Równanie przewodnictwa}{129}% 
+\contentsline {chapter}{\chapternumberline {23}10.01.2020, \textit {Iloczyn skalarny, unitarność transformaty Fouriera, nierówność Heisenberga}}{133}% 
+\contentsline {subsection}{Przypomnienie}{133}% 

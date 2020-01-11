@@ -1,0 +1,153 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+    \subsection{Przypomnienie}
+    Niech $V$ - przestrzeń funkcji nad $\mathbb{R}$ o wartościach w $\mathbb{C}$. Odwzorowanie
+    \[
+        V\times V\to \mathbb{C}
+    \]
+    nazywamy iloczynem skalarnym, jeżeli:
+    \begin{enumerate}
+        \item $\underset{x\in V}{\forall} \left<x | x \right> \ge 0$, $\left<x | x \right> = 0 \iff x = 0$
+        \item $\underset{x,y\in V}{\forall} \quad \underset{\lambda\in \mathbb{C}}{\forall} \left<\lambda x | y \right> = \lambda \left<x|y \right>$
+        \item $\underset{x,y\in V}{\forall} \left<x|y \right> = \overline{\left<y|x \right>}$
+        \item $\underset{x,y,z\in V}{\forall} \left<x+y|z \right> = \left<x|z \right> + \left<y|z \right>$
+    \end{enumerate}
+    \textbf{Uwaga:}
+    \begin{enumerate}[a)]
+        \item $\left<x | \lambda y \right> = \overline{\left< \lambda y | x \right>} = \overline{\lambda} \overline{\left<y|x \right>} = \overline{\lambda}\left<x|y \right>$
+        \item Niech $f, g\in V$ - klasy $L_2(\mathbb{R})$, wówczas $\left<f|g \right> = \int\limits_{-\infty}^{\infty} f(x)\overline{g(x)}dx $ spełnia warunki 1-4
+            \[
+                \left<f|f \right> = \int f \overline{f} = \int |f|^2
+            .\]
+    \item Nierówność Schwarza:
+        \[
+            \underset{u,w\in V}{\forall} \left\Vert u \right\Vert^2 \left\Vert w \right\Vert^2 \ge \left|\left<u|w \right>\right|^2
+        .\]
+    (moduł z prawej strony, bo to zespolone jest, a kwadraty, żeby uniknąć pierwiastków)
+    \end{enumerate}
+    \begin{tw}
+        (Wzór Plancherela, Parsevala)\\
+        Niech $f$ - klasy $L_2$, wówczas
+        \[
+            \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx = \int\limits_{-\infty}^{\infty} \left| \left( \mathcal{F}f \right) (\lambda) \right| ^2 d \lambda
+        .\]
+    \end{tw}
+    \begin{proof}
+        W naszym języku ten warunek to
+        \[
+            \left<f|f \right> = \left<\mathcal{F}f | \mathcal{F}f \right>
+        .\]
+    Czy $\mathcal{F}$ jest operatorem unitarnym?\\
+        Prawa strona:
+        \begin{align*}
+            \int\limits_{-\infty}^{\infty} \left|\left(\mathcal{F}f\right)(\lambda)\right|^2d\lambda &= \int\limits_{-\infty}^{\infty} d\lambda \left( \mathcal{F}f \right) (\lambda)\cdot \overline{(\mathcal{F}f)(\lambda)} =\\
+            &=\int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda} \cdot \overline{\int\limits_{-\infty}^{\infty} ds f(s) e^{-2\pi i s \lambda}} = \\
+            &= \int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda}\int\limits_{-\infty}^{\infty} ds \overline{f(s)}e^{2\pi i s \lambda} = \\
+            &= \int\limits_{-\infty}^{\infty} ds \overline{f(s)}\int\limits_{-\infty}^{\infty} d\lambda (\mathcal{F}f)(\lambda)e^{2\pi i s \lambda} = \\
+            &= \int\limits_{-\infty}^{\infty} ds \overline{f(s)} \mathcal{F}^{-1}(\mathcal{F}f)(s) = \int\limits_{-\infty}^{\infty} ds \overline{f(s)} f(s) = \\
+            &= \int\limits_{-\infty}^{\infty} ds \left| f(s) \right| ^2
+        .\end{align*}
+    \end{proof}
+    \begin{stw}
+        Niech $f$ - klasy $L_2$, wówczas zachodzi nierówność Heisenberga
+        \[
+            \frac{\int\limits_{-\infty}^{\infty} x^2 \left| f(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \lambda^2 \left| \widehat{f(\lambda)} \right| ^2 d\lambda}{\int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \left| \widehat{f(\lambda)} \right| ^2 d\lambda } \ge \frac{1}{16\pi^2}
+        .\]
+    \end{stw}
+    \textbf{Przypomnienie:} jeżeli $\left| \psi(x) \right| ^2$ jest gęstością prawdopodobieństwa, to
+    \[
+        \int\limits_{-\infty}^{\infty} \left| \psi(x) \right| ^2 dx = 1,\quad x_{\text{śr}} = \int\limits_{-\infty}^{\infty}  x \left| \psi(x) \right| ^2 dx
+    .\]
+\[
+    \sigma^2 = \int\limits_{-\infty}^{\infty} (x-x_{\text{śr}})^2 \left| \psi(x) \right| ^2 dx
+.\]
+Dla $x_{\text{śr}} = 0$, mamy $\int\limits_{-\infty}^{\infty} x^2 \left| \psi(x) \right| ^2 dx $
+\begin{proof}
+    (Heisenberg)\\
+    Załóżmy, że $x_{\text{śr}} = \int x \left| f(x) \right|^2 dx = 0$, przypadek ogólny omówimy później. Pamiętamy, że
+    \begin{enumerate}
+        \item $\widehat{f'(\lambda)} = 2\pi i \lambda \widehat{f(\lambda)}$, czyli $\lambda \widehat{f(\lambda)} = \frac{1}{2\pi i }\widehat{f'(\lambda)}$
+        \item Jeżeli $z_1, z_2\in \mathbb{C}$, to
+             \[
+                 z_1\overline{z_2} + \overline{z_1}z_2 = 2 \Re(z_1\overline{z_2})
+            .\]
+        \begin{align*}
+            z_1 &= x_1 + iy_1,\quad z_2 = x_2 + iy_2\\
+            &(x_1 + iy_1)(x_2 - iy_2) + (x_1 - iy_1)(x_2 + iy_2) = \\
+            &= 2(x_1x_2 + y_1y_2) = 2 \Re (z_1\overline{z_2})
+        .\end{align*}
+    \item Jeżeli $z\in \mathbb{C}$, to
+         \[
+             |z| \ge \left| \Re(z) \right|
+        .\]
+\item $\underset{u,v\in V}{\forall} \left\Vert u \right\Vert ^2 \left\Vert v \right\Vert ^2 \ge \left| \left<u|v \right> \right| ^2$
+    \end{enumerate}
+    Mamy
+    \[
+        \int\limits_{-\infty}^{\infty} x^2 \left| f(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \lambda^2 \left| \widehat{f(\lambda)} \right| ^2 d\lambda \ge \int\limits_{-\infty}^{\infty} \left| xf(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \left| \lambda \widehat{f(\lambda)} \right| ^2 d\lambda=
+    .\]
+\[
+    = \int\limits_{-\infty}^{\infty} \left| xf(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \left| \frac{1}{2\pi i}\widehat{f'(\lambda)} \right| ^2 d\lambda = \frac{1}{(2\pi)^2}\int\limits_{-\infty}^{\infty} \left| xf(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \left| \widehat{f'(\lambda)} \right| ^2 d\lambda=
+.\]
+\[
+    =\frac{1}{(2\pi)^2}\int\limits_{-\infty}^{\infty} \left| xf(x) \right| ^2dx \int\limits_{-\infty}^{\infty} \underset{\text{Plancherel}}{\left| f'(\lambda) \right| ^2} d\lambda
+.\]
+Jeżeli $xf(x)$ nazwiemy $u$, to cała pierwsza całka, to $\left<u|u \right> = \left\Vert u \right\Vert ^2$. Dalej, druga całka to $\left\Vert v \right\Vert ^2$. Stąd
+\[
+    \frac{1}{(2\pi)^2}\left\Vert u \right\Vert ^2 \left\Vert v \right\Vert ^2 \ge \frac{1}{(2\pi)^2}\underset{\left| \left<u|v \right> \right|^2 }{\left| \int\limits_{-\infty}^{\infty} x f(x) \overline{f'(x)}dx  \right| ^2} \underset{(3)}{\ge} \frac{1}{(2\pi)^2}\left| \int\limits_{-\infty}^{\infty} \Re \left( \underset{z_1}{xf(x)}\underset{z_2}{\overline{f'(x)}} \right) dx  \right| ^2 \underset{(2)}{=}
+\]
+    \[
+        =\frac{1}{(2\pi)^2}\left|\frac{1}{2} \int\limits_{-\infty}^{\infty} xf(x) \overline{f'(x)} + \overline{xf(x)} f'(x) dx\right|^2 = \frac{1}{16\pi^2} \left| \int\limits_{-\infty}^{\infty} x \frac{d}{dx}\left( f(x)\overline{f(x)} \right)dx\right|^2 =
+.\]
+\[
+    \underset{\text{przez części}}{=} \frac{1}{16\pi^2}\left| x\left| f(x) \right| ^2 \Big|_{-\infty}^{+\infty} - \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx \right|^2=
+.\]
+Wiemy, że $\int\limits_{-\infty}^{\infty}   x^2 \left| f(x) \right| ^2$ istnieje, więc
+\[
+    x\left| f(x) \right| ^2 \Big|_{-\infty}^{+\infty} = 0
+.\]
+\[
+    = \frac{1}{16\pi^2}\left| -\int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2dx  \right| ^2 = \frac{1}{16\pi^2} \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2dx \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx =
+.\]
+\[
+    = \frac{1}{16\pi^2}\int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx \int\limits_{-\infty}^{\infty} \left| \underset{\text{Plancherel}}{\widehat{f(x)}} \right|^2 d\lambda
+.\]
+\end{proof}
+Co się dzieje w przypadku ogólnym? Zauważmy, że
+\[
+    \widehat{f(x+L)} = e^{2\pi ixL}\widehat{f(x)}
+.\]
+Wówczas,
+\[
+    \int\limits_{-\infty}^{\infty} \left( \lambda - \lambda_{\text{śr}} \right)^2 \left| \widehat{f(\lambda)} \right|^2 d\lambda \underset{t = \lambda - \lambda_{\text{śr}}}{\Longrightarrow} \int\limits_{-\infty}^{\infty}  t^2 \left| \widehat{f(t + \lambda_{\text{śr}})} \right|dt =
+.\]
+\[
+    = \int\limits_{-\infty}^{\infty} t^2 \left| e^{2\pi i t \lambda_{\text{śr}}} \widehat{f(t)}\right|^2 dt = \int\limits_{-\infty}^{\infty}  t^2 \left| \widehat{f(t)} \right|^2 dt
+.\]
+Analogicznie,
+\begin{align*}
+    \int\limits_{-\infty}^{\infty} \left( x-x_{\text{śr}} \right) ^2 \left| f(x) \right| ^2 dx &= \int\limits_{-\infty}^{\infty} \left( x - x_{\text{śr}} \right) ^2 \left| \mathcal{F}^{-1}\left( \widehat{f(x)} \right)  \right| dx =\\
+    &= \underset{\text{jakieś przejścia}}{\ldots} = \int\limits_{-\infty}^{\infty}  s^2 \left| f(s) \right| ^2 ds
+.\end{align*}
+\begin{pytanie}
+    A ile wynosi $\mathcal{F}(1)$?
+\end{pytanie}
+Warunek $A = 0$ można postawić bardziej naturalnie:
+ \[
+    \underset{\varepsilon > 0}{\forall} \left| A \right|  < \varepsilon
+.\]
+Warunek $\underset{x\in \mathbb{R}}{\forall} f(x) = g(x)$, tak:
+\[
+    \int\limits_{-\infty}^{\infty} \left( f(x) - g(x) \right)dx = 0
+.\]
+Albo tak:
+\[
+    \underset{h(x)}{\forall} \int\limits_{-\infty}^{\infty} f(x)h(x)dx = \int\limits_{-\infty}^{\infty} g(x)h(x) dx
+.\]
+To nas doprowadzi do pojęcia dystrybucji, ale dopiero jutro.
+\end{document}
