@@ -58,3 +58,5 @@
 \contentsline {subsection}{Równanie przewodnictwa}{129}% 
 \contentsline {chapter}{\chapternumberline {23}10.01.2020, \textit {Iloczyn skalarny, unitarność transformaty Fouriera, nierówność Heisenberga}}{133}% 
 \contentsline {subsection}{Przypomnienie}{133}% 
+\contentsline {chapter}{\chapternumberline {24}13.01.2020, \textit {Dystrybucje - własności, delta Diraca}}{139}% 
+\contentsline {subsection}{Przypomnienie}{139}% 
