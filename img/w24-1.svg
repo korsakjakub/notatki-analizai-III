@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="w24-1.svg">
+   sodipodi:docname="w24-1.svg"
+   inkscape:export-filename="/home/jakub/Documents/notatki-analiza-III/img/w24-1.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <marker
@@ -169,9 +172,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.417193"
-     inkscape:cx="209.76066"
-     inkscape:cy="371.95657"
+     inkscape:zoom="0.59"
+     inkscape:cx="130.57928"
+     inkscape:cy="-5.0622945"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"

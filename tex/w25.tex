@@ -1,0 +1,191 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+\begin{przyklad}
+    \[
+        \ddot{x} + \omega^2 x = f(t)\quad \partial_{t^2}u + \omega^2 u = \delta(t-a)
+    .\]
+\[
+    \left<\partial_{t^2}u + \omega^2 u , \varphi \right> = \left<\delta(t-a), \varphi \right>
+.\]
+Ale to jest całka po $a$, czy po $t$?
+Dla
+\begin{align*}
+    x(t) &= \int\limits_{-\infty}^{\infty} u(t,a)f(a)da\\
+    \dot{x}(t) &= \int\limits_{-\infty}^{\infty} \partial_t u(t,a)f(a)da\\
+    \ddot{x}(t) &= \int\limits_{-\infty}^{\infty} \partial_{t^2}u(t,a)f(a)da
+.\end{align*}
+Czyli
+\[
+    \ddot{x} + \omega^2 x = \int\limits_{-\infty}^{\infty} \left( \partial_{t^2}u(t,a) + \omega^2 u(t,a) \right) f(a)da = \int\limits_{-\infty}^{\infty} \delta(t-a)f(a)da = \underset{(\star)}{-f(t)}
+.\]
+\textbf{Uwaga:} Jak pozbyć się minusa w $(\star)$?\\
+    Trzeba rozstrzygnąć problem
+        \begin{enumerate}[a)]
+            \item $\partial_{t^2}u + \omega^2 u = -\delta(t-a)$
+            \item $\partial_{t^2}u + \omega^2 u = -\delta(a-t)$
+            \item $\partial_{t^2}u + \omega^2 u = -\delta(t)$, $x(t) = (u\star f)$
+        \end{enumerate}
+    Funkcja $u$ nazywa się czasem {\color{green}funkcją Greena}.
+\end{przyklad}
+\begin{przyklad}
+    Czasem problem
+    \[
+        L \varphi = \rho(x)
+    \]
+    możemy rozwiązać problemem
+    \[
+        L u = \delta
+    .\]
+\end{przyklad}
+\begin{przyklad}
+    Wiemy, że $div(E) = \rho(x)$. Mamy też napis $E = - \nabla \varphi$.\\
+    Czyli
+    \[
+        -div(grad(\varphi)) = \rho(x)
+    .\]
+\[
+    \Delta \varphi = -\rho(x)
+.\]
+Spróbujemy poradzić sobie z minusem. Traktujemy to równanie jako dystrybucyjne.
+\[
+    \Delta u = \delta \longrightarrow \left<\Delta u, \varphi \right> = \left<\delta, \varphi \right>
+.\]
+Wtedy $\varphi = (u\star \rho)$
+\[
+    \varphi(x_0) = \left( \frac{1}{\left\Vert x \right\Vert }\star \rho \right) = \int\limits_{V}\frac{\rho(x')d^3x'}{\left\Vert x_0 - x' \right\Vert }
+.\]
+\end{przyklad}
+\subsection{\color{green}Wzór Greena}
+\begin{tw}
+Niech $U, V: \mathbb{R}^2 \to \mathbb{R}$. $U, V \subset \mathcal{C}^2(\mathbb{R}^3)$. Niech $M$ - rozmaitość, $M\subset\mathbb{R}^3$. Wówczas
+\[
+    \int\limits_M \left(u \Delta v - v \Delta u\right)dV = \int\limits_{\partial M}\left( u \frac{\partial }{\partial \eta} v - v \frac{\partial }{\partial \eta} u\right)dS
+.\]
+Gdzie $\frac{\partial }{\partial \eta} v$ - pochodna wzdłuż wektora normalnego do powierzchni $\partial M$. Czyli $\frac{\partial }{\partial \eta} v = \left( \nabla u \right)\cdot \eta$
+\end{tw}
+\begin{proof}
+    Wiemy, że jeżeli $\omega\in\Lambda^2(\mathbb{R}^3)$, to
+    \[
+        \int\limits_M d\omega = \int\limits_{\partial M}\omega
+    .\]
+Zatem, jeżeli $\omega = \star du$, to znaczy, że
+\begin{equation}
+    \label{eqn:w25-1}
+    \int\limits_M d(v\star du) = \int\limits_{\partial M}v\star du\tag{A}
+\end{equation}
+A jeżeli $\omega = u\star dv$
+\begin{equation}
+    \label{eqn:w25-2}
+     \int\limits_M d(u\star dv) = \int\limits_{\partial M}u\star dv\tag{B}
+\end{equation}
+    Odejmując (\ref{eqn:w25-2}) od (\ref{eqn:w25-1}) otrzymamy
+    \[
+        \int\limits_M du\land \star dv + u d\star dv - dv\land \star du - v d\star du = \int\limits_{\partial M}u\star dv - v\star du
+    .\]
+Zauważmy, że jeżeli $A = A_xdx + A_ydy + A_zdz$ i  $B = B_xdx + B_ydy + B_zdz$, to
+ \[
+    \star A = A_xdy\land dz + A_y dz\land dx + A_z dx\land dy
+.\]
+\[
+    \star B = B_xdy\land dz + B_y dz\land dx + B_z dx\land dy
+.\]
+Zatem
+\[
+    A\land \star B = \left( A_xB_x + A_yB_y + A_zB_z \right) dx\land dy\land dz
+.\]
+\[
+    B\land \star A = \left( B_xA_x + B_yA_y + B_zA_z \right) dx\land dy\land dz
+.\]
+Oznacza to, że
+\[
+    du\land \star dv - dv\land\star du = 0
+.\]
+Zatem
+\[
+    \int\limits_M ud\star dv - vd\star du = \int\limits_M u\Delta v - v \Delta u = \int\limits_{\partial M} u\star dv - v\star du
+.\]
+Zauważmy, że jeżeli $v(x,y,z): \mathbb{R}^3\to \mathbb{R}^1$,
+\begin{align*}
+    dv &= v_xdx + v_ydy + v_zdz\\
+    \star dv &= v_xdy\land dz + v_ydz\land dx + v_zdy\land dx
+.\end{align*}
+Weźmy sobie kostkę z $\mathbb{R}^3$. Wtedy
+\[
+    \int\limits_{\partial M}\star dv = \sum_{i=1}^{6} \int \left<\star dv, \frac{\partial }{\partial x^k} , \frac{\partial }{\partial x^l}  \right> = \int\limits_{\partial M}\left( \nabla v \right) n dS
+.\]
+Zatem, przechodząc od form do całek po funkcjach, otrzymujemy
+\[
+    \int\limits_M\left( u\Delta v - v\Delta u \right) dV = \int\limits_{\partial M}\left( u \frac{\partial v}{\partial \eta} - v \frac{\partial u}{\partial \eta}  \right) dS
+.\]
+\end{proof}
+\begin{stw}
+    Jeżeli $r = \sqrt{x^2 + y^2 + z^2}$, to w sensie dystrybucyjnym
+    \[
+        \Delta \frac{1}{r} = \delta \longleftarrow \left<\Delta \frac{1}{r}, \varphi \right> = \left<\delta, \varphi \right>, \left<\delta, \varphi \right> = \varphi(0)
+    .\]
+\end{stw}
+\begin{proof}
+    Zauważmy, że
+    \[
+        \left<\Delta\left( \frac{1}{r} \right) , \varphi \right> = \left<\nabla\cdot \nabla\left( \frac{1}{r} \right) , \varphi \right> = -\left<\nabla\left( \frac{1}{r} \right) , \nabla \varphi \right> = \left<\frac{1}{r}, \Delta \varphi \right>
+    .\]
+Chcemy pokazać, że
+\[
+    \underset{\varphi\in D}{\forall} \left<\frac{1}{r}, \Delta \varphi \right> = \left<\delta, \varphi \right>
+.\]
+Od lewej:
+\[
+    \left<\frac{1}{r}, \Delta \varphi \right> = \int\limits_{\mathbb{R}^3}\left( \frac{1}{r}\Delta \varphi \right) dV
+.\]
+Wiemy, że $\varphi$ ma nośnik zwarty, więc zamiast po $\mathbb{R}^3$, możemy całkować po objętości $V$ (Jak $V$ ma się do nośnika $\varphi$, to zobaczymy).
+\[
+    \int\limits_{V}\left( \frac{1}{r}\Delta \varphi \right) dV = \lim_{\varepsilon \to 0}\int\limits_{V\setminus K(0,\varepsilon)}\left( \frac{1}{r}\Delta \varphi \right) dV
+.\]
+Odpalamy {\color{green} wzór Greena}
+    Niech $u = \frac{1}{r}$, $v = \varphi$, $M = V\setminus K(0,\varepsilon)$. Wtedy
+    \begin{equation}
+        \label{eqn:w25-3}
+        \int\limits_{V\setminus K(0,\varepsilon)}\left( \frac{1}{r}\Delta \varphi - \varphi\Delta \frac{1}{r} \right)dV = \int\limits_{\partial\left( V\setminus K(0,\varepsilon) \right) }\left( \frac{1}{r}\frac{\partial \varphi}{\partial \eta} - \varphi \frac{\partial }{\partial \eta} \left( \frac{1}{r} \right)  \right) dS\tag{$\clubsuit$}
+    \end{equation}
+    Zauważmy, że $\Delta \frac{1}{r}$, gdy $(x,y,z)\in V\setminus K(0,\varepsilon)$ wynosi
+    \begin{align*}
+        &\frac{\partial }{\partial x} \left( \frac{\partial }{\partial x} \frac{1}{r} \right) + \frac{\partial }{\partial y} \left( \frac{\partial }{\partial y} \frac{1}{r} \right) + \frac{\partial }{\partial z} \left( \frac{\partial }{\partial z} \frac{1}{r} \right) = \\
+        &= -\frac{1}{r^3} - \frac{1}{r^3} - \frac{1}{r^3} + \frac{3x^2}{r^5} + \frac{3 y^2}{r^5} + \frac{3z^2}{r^5}\\
+        &=  0 \\
+    .\end{align*}
+    Zatem
+    \[
+        \int\limits_{V\setminus K(0,\varepsilon)} \frac{1}{r}\Delta \varphi = \int\limits_{\partial\left( V\setminus K(0,\varepsilon) \right) }\left( \frac{1}{r}\frac{\partial \varphi}{\partial \eta} - \varphi \frac{\partial }{\partial \eta} \left( \frac{1}{r} \right)  \right)dS
+    .\]
+Ale
+\[
+    \int\limits_{\partial\left( V\setminus K(0,\varepsilon) \right) }\left(  \right) = \int\limits_{\partial V}\left( \right) + \int\limits_{\partial K(0,\varepsilon)}\left(  \right)
+.\]
+(\textbf{uważać na orientację})\
+    Wybierzemy $V$ na tyle duże, żeby nośnik $\varphi\subset V$. Oznacza to, że $\varphi(x)\Big|_{x=\partial V}= 0$ i $\frac{\partial \varphi}{\partial x} \Big|_{x=\partial V} = 0$.
+    Zatem
+    \[
+        \int\limits_{V\setminus K(0,\varepsilon)}\frac{1}{r}\Delta \varphi = - \int\limits_{\partial K(0,\varepsilon)}\left( \frac{1}{r}\frac{\partial \varphi}{\partial \eta} - \varphi \frac{\partial }{\partial \eta} \left( \frac{1}{r} \right)  \right) dS
+    .\]
+Ale znamy twierdzenie o wartości średniej
+\[
+    \int\limits_{\partial K(0,\varepsilon)}\frac{1}{r} \frac{\partial \varphi}{\partial \eta} dS = \frac{\partial \varphi}{\partial \eta} \Big|_{c} \cdot \int\limits_{\partial K(0,\varepsilon)}\frac{1}{r}dS = \frac{\partial \varphi}{\partial \eta} \Big|_c \cdot 4\pi \cdot \frac{1}{\varepsilon} \cdot \varepsilon^2 \underset{\varepsilon\to 0}{\longrightarrow} 0
+.\]
+Teraz mamy
+\begin{align*}
+    \int\limits_{\partial K(0,\varepsilon)}\varphi \frac{\partial }{\partial \eta} \left( \frac{1}{r} \right) dS &= \varphi_{(c)}\int\limits_{\partial K(0,\varepsilon)}\frac{\partial }{\partial \eta} \left( \frac{1}{r} \right) = \varphi_{(c)}\int\limits_{\partial K(0,\varepsilon)} \frac{\partial }{\partial r} \left( \frac{1}{r} \right) =\\
+    &= \varphi_{(c)}\int\limits_{\partial K(0,\varepsilon)} -\frac{1}{r^2} = -\varphi_{(c)}\cdot 4\pi \cdot \frac{1}{\varepsilon^2}\varepsilon^2 = -4\pi \varphi_{(c)} \underset{\varepsilon\to 0}{\longrightarrow} -4\pi \varphi(0)
+.\end{align*}
+\[
+    \left<\Delta \frac{1}{r}, \varphi \right> = \lim_{\varepsilon \to 0}\int\limits_{V\setminus K(0,\varepsilon)}\frac{1}{r}\Delta \varphi= -4\pi \varphi(0) = -4\pi \left<\delta, \varphi \right>
+.\]
+\[
+    \Delta\left( \frac{1}{r} \right) = -4\pi \delta
+.\]
+\end{proof}
+\end{document}

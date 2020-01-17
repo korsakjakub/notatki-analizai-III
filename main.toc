@@ -61,3 +61,5 @@
 \contentsline {chapter}{\chapternumberline {24}13.01.2020, \textit {Dystrybucje - własności, delta Diraca}}{139}% 
 \contentsline {subsection}{Dystrybucje}{139}% 
 \contentsline {subsection}{Zastosowania}{144}% 
+\contentsline {chapter}{\chapternumberline {25}17.01.2020, \textit {Wzór Greena, $\Delta \frac {1}{r} = \delta $ }}{145}% 
+\contentsline {subsection}{\color {green}Wzór Greena}{146}% 
