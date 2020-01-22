@@ -13,10 +13,10 @@
     \end{figure}
     \subsubsection{Sprawdzamy jak zmienia się promień krzywizny przy transformacji $f(z)$} (rys \ref{fig:w19-1}).
     \[
-        \frac{1}{s} = \frac{Im(\ddot{z}\overline{\dot{z}})}{\left| \dot{z} \right| ^3}
+        \frac{1}{s} = \frac{Im(\ddot{z}\bar{\dot{z}})}{\left| \dot{z} \right| ^3}
     .\]
 \[
-    \frac{1}{\tilde s} = \frac{Im\left(\left(\frac{d^2}{dt^2}\left( z(t) \right) ^2 \overline{\frac{d}{dt}|z(t)|}\right)\right)}{\left| \frac{d}{dt}\left( z(t) \right) ^2 \right| ^3}
+    \frac{1}{\tilde s} = \frac{Im\left(\left(\frac{d^2}{dt^2}\left( z(t) \right) ^2 \bar{\frac{d}{dt}|z(t)|}\right)\right)}{\left| \frac{d}{dt}\left( z(t) \right) ^2 \right| ^3}
 .\]
 \[
     \tilde z (t) = \left( z(t) \right) ^2
@@ -25,31 +25,31 @@
     \left( \dot{\tilde z}(t) \right)' = \left( 2\left(z(t)\left( \dot{z}(t) \right) \right) \right)' = 2 \dot{z}(t) \dot{z}(t) + 2z(t) \ddot{z}(t)
 .\]
 \[
-    \left( \overline{\tilde z} \right)' = \left( \tilde z(t) \tilde z(t) \right)' = 2 \overline{z}(t) \overline{\dot{z}}(t)
+    \left( \bar{\tilde z} \right)' = \left( \tilde z(t) \tilde z(t) \right)' = 2 \bar{z}(t) \bar{\dot{z}}(t)
 .\]
 \[
-    \ddot{\tilde z} \cdot \overline{\dot{\tilde z}} = \left( 2(\dot{z}(t))^2 + 2z(t)\ddot{z}(t)\right)\left( 2\overline{z}(t)\overline{\dot{z}}(t) \right) = 4\overline{z}(t) \left| \dot{z} \right| ^2 \dot{z}(t) + 4\left| z(t) \right| ^2 \overline{\dot{z}}(t) \cdot \ddot{z}(t)
+    \ddot{\tilde z} \cdot \bar{\dot{\tilde z}} = \left( 2(\dot{z}(t))^2 + 2z(t)\ddot{z}(t)\right)\left( 2\bar{z}(t)\bar{\dot{z}}(t) \right) = 4\bar{z}(t) \left| \dot{z} \right| ^2 \dot{z}(t) + 4\left| z(t) \right| ^2 \bar{\dot{z}}(t) \cdot \ddot{z}(t)
 .\]
 Ale
 \[
-    \frac{Im( \tilde \ddot{z} \overline{\dot{\tilde z}})}{\left| \dot{\tilde z}(t) \right|^3 } = \frac{Im\left| 4\overline{z}(t) \right| (\dot{z}(t))^2 \cdot \dot{z}(t)}{8\left| z(t) \right| ^3 \left| \dot{z}(t) \right| ^3} + \frac{Im(4 \left| z(t) \right| ^2 \overline{\dot{z}}(t) \ddot{z}(t))}{8\left| z(t) \right| ^3 \left| z(t) \right| ^3}
+    \frac{Im( \tilde \ddot{z} \bar{\dot{\tilde z}})}{\left| \dot{\tilde z}(t) \right|^3 } = \frac{Im\left| 4\bar{z}(t) \right| (\dot{z}(t))^2 \cdot \dot{z}(t)}{8\left| z(t) \right| ^3 \left| \dot{z}(t) \right| ^3} + \frac{Im(4 \left| z(t) \right| ^2 \bar{\dot{z}}(t) \ddot{z}(t))}{8\left| z(t) \right| ^3 \left| z(t) \right| ^3}
 .\]
 Zatem
 \[
-    \frac{1}{\tilde s} = \frac{1}{2\left| z(t) \right| }\left( \frac{Im\left( \overline{z}(t)\dot{z}(t) \right) }{\left| z(t) \right| ^2 \left| z(t) \right|} + \frac{1}{s} \right)
+    \frac{1}{\tilde s} = \frac{1}{2\left| z(t) \right| }\left( \frac{Im\left( \bar{z}(t)\dot{z}(t) \right) }{\left| z(t) \right| ^2 \left| z(t) \right|} + \frac{1}{s} \right)
 .\]
 Ale
 \[
-    \overline{z}(t) \dot{z}(t) = \left( x(t) - iy(t) \right) \left( \dot{x}(t) + i\dot{y}(t) \right) = x\dot{x} + y\dot{y} + i\left( x\dot{y} - y\dot{x} \right)
+    \bar{z}(t) \dot{z}(t) = \left( x(t) - iy(t) \right) \left( \dot{x}(t) + i\dot{y}(t) \right) = x\dot{x} + y\dot{y} + i\left( x\dot{y} - y\dot{x} \right)
 .\]
 \[
-    Im\left( \overline{z}(t)\dot{z}(t) \right) = x\dot{y} - y\dot{x} = \begin{bmatrix} x&\dot{x}\\ y&\dot{y} \end{bmatrix} = \left| \overline{z}(t) \right|\cdot \left| \dot{z}(t) \right| \sin(\sphericalangle \dot{z}(t), \overline{z}(t))
+    Im\left( \bar{z}(t)\dot{z}(t) \right) = x\dot{y} - y\dot{x} = \begin{bmatrix} x&\dot{x}\\ y&\dot{y} \end{bmatrix} = \left| \bar{z}(t) \right|\cdot \left| \dot{z}(t) \right| \sin(\sphericalangle \dot{z}(t), \bar{z}(t))
 .\]
 \[
-    \frac{1}{\tilde s} = \frac{1}{2\left| z(t) \right| }\left( \frac{\left| z(t) \right| \left| \dot{z}(t) \right| }{\left| z(t) \right| ^2 \cdot \left| \dot{z}(t) \right| } \sin(\sphericalangle(\dot{z}, \overline{z})) + \frac{1}{s}\right)
+    \frac{1}{\tilde s} = \frac{1}{2\left| z(t) \right| }\left( \frac{\left| z(t) \right| \left| \dot{z}(t) \right| }{\left| z(t) \right| ^2 \cdot \left| \dot{z}(t) \right| } \sin(\sphericalangle(\dot{z}, \bar{z})) + \frac{1}{s}\right)
 .\]
 \[
-    \frac{1}{\tilde s} = \frac{1}{2 \left| z(t) \right| } \left( \frac{\sin(\sphericalangle(\dot{z}, \overline{z}))}{\left| z(t) \right| } + \frac{1}{s} \right)
+    \frac{1}{\tilde s} = \frac{1}{2 \left| z(t) \right| } \left( \frac{\sin(\sphericalangle(\dot{z}, \bar{z}))}{\left| z(t) \right| } + \frac{1}{s} \right)
 .\]
 \subsubsection{Już prawie twierdzenie Kasner-Arnold}
 Rozważmy ruch na $\mathbb{R}^2$, pod wpływem siły $F = -r$, czyli na $\mathbb{C}$
@@ -85,7 +85,7 @@ taką przesuniętą elipsę jak na rys. \ref{fig:w19-2}
 \end{pytanie}
         $\cos\gamma = \frac{F_N}{F},\quad F = \frac{F_N}{\cos\gamma}$, ale $F_N = \frac{v^2(t)}{r_0}$. My wiemy, że czasami zachowany jest moment pędu
         \[
-            \overline{r} \times \overline{v}(t) = r \cdot v \sin(\sphericalangle r, v) = r v \cos\gamma = const = A
+            \bar{r} \times \bar{v}(t) = r \cdot v \sin(\sphericalangle r, v) = r v \cos\gamma = const = A
         .\]
     Czyli
     \[
@@ -117,7 +117,7 @@ Zatem
 .\]
 $A$ i $\tilde A$ się nie przejmujemy, ale za to $r_0$ już tak
 \[
-    \frac{1}{\tilde r_0} = \frac{1}{2 r}\left( \frac{1}{r_0} + \frac{\overset{\sin(\sphericalangle(\dot{z}, \overline{z}))}{\cos\gamma}}{r} \right)
+    \frac{1}{\tilde r_0} = \frac{1}{2 r}\left( \frac{1}{r_0} + \frac{\overset{\sin(\sphericalangle(\dot{z}, \bar{z}))}{\cos\gamma}}{r} \right)
 .\]
 Z tego co wcześniej napisaliśmy, mamy
 \[

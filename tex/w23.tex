@@ -14,15 +14,15 @@
     \begin{enumerate}
         \item $\underset{x\in V}{\forall} \left<x | x \right> \ge 0$, $\left<x | x \right> = 0 \iff x = 0$
         \item $\underset{x,y\in V}{\forall} \quad \underset{\lambda\in \mathbb{C}}{\forall} \left<\lambda x | y \right> = \lambda \left<x|y \right>$
-        \item $\underset{x,y\in V}{\forall} \left<x|y \right> = \overline{\left<y|x \right>}$
+        \item $\underset{x,y\in V}{\forall} \left<x|y \right> = \bar{\left<y|x \right>}$
         \item $\underset{x,y,z\in V}{\forall} \left<x+y|z \right> = \left<x|z \right> + \left<y|z \right>$
     \end{enumerate}
     \textbf{Uwaga:}
     \begin{enumerate}[a)]
-        \item $\left<x | \lambda y \right> = \overline{\left< \lambda y | x \right>} = \overline{\lambda} \overline{\left<y|x \right>} = \overline{\lambda}\left<x|y \right>$
-        \item Niech $f, g\in V$ - klasy $L_2(\mathbb{R})$, wówczas $\left<f|g \right> = \int\limits_{-\infty}^{\infty} f(x)\overline{g(x)}dx $ spełnia warunki 1-4
+        \item $\left<x | \lambda y \right> = \bar{\left< \lambda y | x \right>} = \bar{\lambda} \bar{\left<y|x \right>} = \bar{\lambda}\left<x|y \right>$
+        \item Niech $f, g\in V$ - klasy $L_2(\mathbb{R})$, wówczas $\left<f|g \right> = \int\limits_{-\infty}^{\infty} f(x)\bar{g(x)}dx $ spełnia warunki 1-4
             \[
-                \left<f|f \right> = \int f \overline{f} = \int |f|^2
+                \left<f|f \right> = \int f \bar{f} = \int |f|^2
             .\]
     \item Nierówność Schwarza:
         \[
@@ -45,11 +45,11 @@
     Czy $\mathcal{F}$ jest operatorem unitarnym?\\
         Prawa strona:
         \begin{align*}
-            \int\limits_{-\infty}^{\infty} \left|\left(\mathcal{F}f\right)(\lambda)\right|^2d\lambda &= \int\limits_{-\infty}^{\infty} d\lambda \left( \mathcal{F}f \right) (\lambda)\cdot \overline{(\mathcal{F}f)(\lambda)} =\\
-            &=\int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda} \cdot \overline{\int\limits_{-\infty}^{\infty} ds f(s) e^{-2\pi i s \lambda}} = \\
-            &= \int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda}\int\limits_{-\infty}^{\infty} ds \overline{f(s)}e^{2\pi i s \lambda} = \\
-            &= \int\limits_{-\infty}^{\infty} ds \overline{f(s)}\int\limits_{-\infty}^{\infty} d\lambda (\mathcal{F}f)(\lambda)e^{2\pi i s \lambda} = \\
-            &= \int\limits_{-\infty}^{\infty} ds \overline{f(s)} \mathcal{F}^{-1}(\mathcal{F}f)(s) = \int\limits_{-\infty}^{\infty} ds \overline{f(s)} f(s) = \\
+            \int\limits_{-\infty}^{\infty} \left|\left(\mathcal{F}f\right)(\lambda)\right|^2d\lambda &= \int\limits_{-\infty}^{\infty} d\lambda \left( \mathcal{F}f \right) (\lambda)\cdot \bar{(\mathcal{F}f)(\lambda)} =\\
+            &=\int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda} \cdot \bar{\int\limits_{-\infty}^{\infty} ds f(s) e^{-2\pi i s \lambda}} = \\
+            &= \int\limits_{-\infty}^{\infty} d\lambda \int\limits_{-\infty}^{\infty} dx f(x) e^{-2\pi i x \lambda}\int\limits_{-\infty}^{\infty} ds \bar{f(s)}e^{2\pi i s \lambda} = \\
+            &= \int\limits_{-\infty}^{\infty} ds \bar{f(s)}\int\limits_{-\infty}^{\infty} d\lambda (\mathcal{F}f)(\lambda)e^{2\pi i s \lambda} = \\
+            &= \int\limits_{-\infty}^{\infty} ds \bar{f(s)} \mathcal{F}^{-1}(\mathcal{F}f)(s) = \int\limits_{-\infty}^{\infty} ds \bar{f(s)} f(s) = \\
             &= \int\limits_{-\infty}^{\infty} ds \left| f(s) \right| ^2
         .\end{align*}
     \end{proof}
@@ -74,12 +74,12 @@ Dla $x_{\text{śr}} = 0$, mamy $\int\limits_{-\infty}^{\infty} x^2 \left| \psi(x
         \item $\widehat{f'(\lambda)} = 2\pi i \lambda \widehat{f(\lambda)}$, czyli $\lambda \widehat{f(\lambda)} = \frac{1}{2\pi i }\widehat{f'(\lambda)}$
         \item Jeżeli $z_1, z_2\in \mathbb{C}$, to
              \[
-                 z_1\overline{z_2} + \overline{z_1}z_2 = 2 \Re(z_1\overline{z_2})
+                 z_1\bar{z_2} + \bar{z_1}z_2 = 2 \Re(z_1\bar{z_2})
             .\]
         \begin{align*}
             z_1 &= x_1 + iy_1,\quad z_2 = x_2 + iy_2\\
             &(x_1 + iy_1)(x_2 - iy_2) + (x_1 - iy_1)(x_2 + iy_2) = \\
-            &= 2(x_1x_2 + y_1y_2) = 2 \Re (z_1\overline{z_2})
+            &= 2(x_1x_2 + y_1y_2) = 2 \Re (z_1\bar{z_2})
         .\end{align*}
     \item Jeżeli $z\in \mathbb{C}$, to
          \[
@@ -99,10 +99,10 @@ Dla $x_{\text{śr}} = 0$, mamy $\int\limits_{-\infty}^{\infty} x^2 \left| \psi(x
 .\]
 Jeżeli $xf(x)$ nazwiemy $u$, to cała pierwsza całka, to $\left<u|u \right> = \left\Vert u \right\Vert ^2$. Dalej, druga całka to $\left\Vert v \right\Vert ^2$. Stąd
 \[
-    \frac{1}{(2\pi)^2}\left\Vert u \right\Vert ^2 \left\Vert v \right\Vert ^2 \ge \frac{1}{(2\pi)^2}\underset{\left| \left<u|v \right> \right|^2 }{\left| \int\limits_{-\infty}^{\infty} x f(x) \overline{f'(x)}dx  \right| ^2} \underset{(3)}{\ge} \frac{1}{(2\pi)^2}\left| \int\limits_{-\infty}^{\infty} \Re \left( \underset{z_1}{xf(x)}\underset{z_2}{\overline{f'(x)}} \right) dx  \right| ^2 \underset{(2)}{=}
+    \frac{1}{(2\pi)^2}\left\Vert u \right\Vert ^2 \left\Vert v \right\Vert ^2 \ge \frac{1}{(2\pi)^2}\underset{\left| \left<u|v \right> \right|^2 }{\left| \int\limits_{-\infty}^{\infty} x f(x) \bar{f'(x)}dx  \right| ^2} \underset{(3)}{\ge} \frac{1}{(2\pi)^2}\left| \int\limits_{-\infty}^{\infty} \Re \left( \underset{z_1}{xf(x)}\underset{z_2}{\bar{f'(x)}} \right) dx  \right| ^2 \underset{(2)}{=}
 \]
     \[
-        =\frac{1}{(2\pi)^2}\left|\frac{1}{2} \int\limits_{-\infty}^{\infty} xf(x) \overline{f'(x)} + \overline{xf(x)} f'(x) dx\right|^2 = \frac{1}{16\pi^2} \left| \int\limits_{-\infty}^{\infty} x \frac{d}{dx}\left( f(x)\overline{f(x)} \right)dx\right|^2 =
+        =\frac{1}{(2\pi)^2}\left|\frac{1}{2} \int\limits_{-\infty}^{\infty} xf(x) \bar{f'(x)} + \bar{xf(x)} f'(x) dx\right|^2 = \frac{1}{16\pi^2} \left| \int\limits_{-\infty}^{\infty} x \frac{d}{dx}\left( f(x)\bar{f(x)} \right)dx\right|^2 =
 .\]
 \[
     \underset{\text{przez części}}{=} \frac{1}{16\pi^2}\left| x\left| f(x) \right| ^2 \Big|_{-\infty}^{+\infty} - \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx \right|^2=

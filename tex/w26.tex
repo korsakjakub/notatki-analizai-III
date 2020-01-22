@@ -13,11 +13,11 @@ Z ostatniego odcinka wiemy, że
     \left< \Delta \left( \frac{1}{r} \right) , \varphi \right> = -4 \pi \left<\delta, \varphi \right>
 .\]
 \[
-    \Delta \frac{1}{\left| \overline{r} - \overline{r_0} \right| } = -4 \pi \delta (\overline{r} - \overline{r_0})
+    \Delta \frac{1}{\left| \bar{r} - \bar{r_0} \right| } = -4 \pi \delta (\bar{r} - \bar{r_0})
 .\]
 Były też kiedyś równania Maxwella
 \begin{align*}
-    div(E) &= \rho(\overline{r})\\
+    div(E) &= \rho(\bar{r})\\
     E &= - grad(\varphi)\\
     \varphi : \mathbb{R}^3 &\to \mathbb{R}\\
     rot(E) &= -\frac{\partial B}{\partial t}\\
@@ -31,21 +31,21 @@ Jak to złożymy, to będzie
     \int\limits_{V} \left( U\Delta V - V \Delta U \right) dV = \int\limits_{\partial V}\left( U \frac{\partial V}{\partial n} - V \frac{\partial U}{\partial n}  \right)dS
 .\]
 \[
-    V = \frac{1}{\left| \overline{r} - \overline{r_0} \right| }
+    V = \frac{1}{\left| \bar{r} - \bar{r_0} \right| }
 .\]
 \[
-    U = \varphi(\overline{r})
+    U = \varphi(\bar{r})
 .\]
 Czyli
 \[
-    \int\limits_{V}\varphi(\overline{r}) \Delta \frac{1}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} - \int\limits_{V}\frac{1}{\left| \overline{r} - \overline{r_0} \right| }\Delta \varphi d\overline{r} = \int\int\limits_{\partial V}\left(\varphi(\overline{r})\frac{\partial }{\partial n} \frac{1}{\left| \overline{r} - \overline{r_0} \right|} - \frac{1}{\left| r - r_0 \right|}\frac{\partial \varphi}{\partial n} \right) dS
+    \int\limits_{V}\varphi(\bar{r}) \Delta \frac{1}{\left| \bar{r} - \bar{r_0} \right| }d\bar{r} - \int\limits_{V}\frac{1}{\left| \bar{r} - \bar{r_0} \right| }\Delta \varphi d\bar{r} = \int\int\limits_{\partial V}\left(\varphi(\bar{r})\frac{\partial }{\partial n} \frac{1}{\left| \bar{r} - \bar{r_0} \right|} - \frac{1}{\left| r - r_0 \right|}\frac{\partial \varphi}{\partial n} \right) dS
 .\]
 \[
-    -4\pi \int\limits_V \varphi(r)\delta(\overline{r} - \overline{r_0})d\overline{r} - \int\limits_V \frac{-\rho(\overline{r})}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} = \int\limits_{\partial V}\left(\varphi\left( \overline{r} \right) \frac{\partial }{\partial n} \left( \frac{1}{\left| \overline{r} - \overline{r_0} \right| } \right) - \frac{1}{\left| r-r_0 \right| \frac{\partial \varphi}{\partial n} }\right) dS
+    -4\pi \int\limits_V \varphi(r)\delta(\bar{r} - \bar{r_0})d\bar{r} - \int\limits_V \frac{-\rho(\bar{r})}{\left| \bar{r} - \bar{r_0} \right| }d\bar{r} = \int\limits_{\partial V}\left(\varphi\left( \bar{r} \right) \frac{\partial }{\partial n} \left( \frac{1}{\left| \bar{r} - \bar{r_0} \right| } \right) - \frac{1}{\left| r-r_0 \right| \frac{\partial \varphi}{\partial n} }\right) dS
 .\]
 
 \[
-    \varphi(r_0) = \frac{1}{4\pi}\int\limits_V \frac{\rho(\overline{r})}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} + \frac{1}{4\pi} \int\limits_{\partial V}\frac{1}{\left| \overline{r} - \overline{r_0} \right|} \frac{\partial \varphi}{\partial n} - \varphi(r)\frac{\partial }{\partial n} \left( \frac{1}{\left| \overline{r} - \overline{r_0} \right| } \right)dS
+    \varphi(r_0) = \frac{1}{4\pi}\int\limits_V \frac{\rho(\bar{r})}{\left| \bar{r} - \bar{r_0} \right| }d\bar{r} + \frac{1}{4\pi} \int\limits_{\partial V}\frac{1}{\left| \bar{r} - \bar{r_0} \right|} \frac{\partial \varphi}{\partial n} - \varphi(r)\frac{\partial }{\partial n} \left( \frac{1}{\left| \bar{r} - \bar{r_0} \right| } \right)dS
 .\]
 Druga całka znika czasami w $V\to \infty$ i wtedy zostaje Prawo Coulomba.
 \subsection{Równanie $xT = 0$}

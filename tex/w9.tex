@@ -80,12 +80,12 @@ to możemy zrobić takie coś:
     niech $M\subset\mathbb{R}^2$, $\left<dx, dy \right> = T_p^* M$. Wprowadźmy
     \begin{align*}
         dz &= dx + idy\\
-        d\overline{z} &= dx - idy
+        d\bar{z} &= dx - idy
     .\end{align*}
     Jeżeli $f(x,y): \mathbb{R}^2\to \mathbb{R}^1$, to
     \begin{align*}
-        df &= \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy = \frac{1}{2} \frac{\partial f}{\partial x} \left( dz + d\overline{z} \right) + \frac{1}{2i} \frac{\partial f}{\partial y} \left( dz - d\overline{z} \right) =\\
-        &= \left( \frac{1}{2}\frac{\partial f}{\partial x} + \frac{1}{2i}\frac{\partial f}{\partial y}  \right) dz + \underbrace{\left( \frac{1}{2}\frac{\partial f}{\partial x} - \frac{1}{2i}\frac{\partial f}{\partial y}  \right)}_{\frac{\partial f}{\partial \overline{z}} }d\overline{z}
+        df &= \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy = \frac{1}{2} \frac{\partial f}{\partial x} \left( dz + d\bar{z} \right) + \frac{1}{2i} \frac{\partial f}{\partial y} \left( dz - d\bar{z} \right) =\\
+        &= \left( \frac{1}{2}\frac{\partial f}{\partial x} + \frac{1}{2i}\frac{\partial f}{\partial y}  \right) dz + \underbrace{\left( \frac{1}{2}\frac{\partial f}{\partial x} - \frac{1}{2i}\frac{\partial f}{\partial y}  \right)}_{\frac{\partial f}{\partial \bar{z}} }d\bar{z}
     .\end{align*}
 \textbf{Obserwacja:} niech $f(z) = P(x,y) + i Q(x,y)$, wówczas
 \begin{align*}
@@ -93,18 +93,18 @@ to możemy zrobić takie coś:
 .\end{align*}
 czyli
 \begin{align*}
-    \frac{\partial f}{\partial \overline{z}} &= \frac{1}{2} \left( \frac{\partial f}{\partial x} - \frac{1}{i} \frac{\partial f}{\partial y}  \right) = \\
+    \frac{\partial f}{\partial \bar{z}} &= \frac{1}{2} \left( \frac{\partial f}{\partial x} - \frac{1}{i} \frac{\partial f}{\partial y}  \right) = \\
     &= \frac{1}{2} \left( \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x} - \frac{1}{i}\left( \frac{\partial P}{\partial y} + i \frac{\partial Q}{\partial y}  \right)  \right)  =\\
     &= \frac{1}{2} \left(\left( \frac{\partial P}{\partial x}  - \frac{\partial Q}{\partial y}  \right) + i \left(\frac{\partial Q}{\partial x} + \frac{\partial P}{\partial y}\right)\right)  \\
 .\end{align*}
 \begin{przyklad}
     $f(z) = z^2 = z\cdot z$,\\
     \[
-        \frac{\partial f}{\partial z} = 2z,\quad \frac{\partial f}{\partial \overline{z}} = 0
+        \frac{\partial f}{\partial z} = 2z,\quad \frac{\partial f}{\partial \bar{z}} = 0
     \]
-    a $g(z) = |z|^2 = z\cdot \overline{z}$
+    a $g(z) = |z|^2 = z\cdot \bar{z}$
     \[
-        \frac{\partial g}{\partial \overline{z}} = z \neq 0
+        \frac{\partial g}{\partial \bar{z}} = z \neq 0
     .\] Czyli $g$ - nie jest holomorficzna
 \end{przyklad}
 \begin{przyklad}
@@ -116,13 +116,13 @@ czyli
 \begin{stw}
     Jeżeli $f$ - holomorficzna na $\mathcal{O}$ i $\Omega \subset\mathcal{O}$, to
     \[
-        \int_{\partial \Omega} fdz = \int_\Omega d(fdz) = \int_{\Omega} \frac{\partial f}{\partial d\overline{z}} d\overline{z}\land dz = 0
+        \int_{\partial \Omega} fdz = \int_\Omega d(fdz) = \int_{\Omega} \frac{\partial f}{\partial d\bar{z}} d\bar{z}\land dz = 0
     .\]
 \end{stw}
 \begin{tw}
     (wzór Cauchy)\\
-    Niech $\Omega\subset\mathbb{C}$, $f: \overline{\Omega} \to \mathbb{C}$, niech $\xi \in \Omega$. Wówczas  \[
-        f(\xi) = \frac{1}{2\pi i }\int_{\partial \Omega}\frac{f(z)}{z-\xi}dz + \int_{\Omega} \frac{1}{z - \xi}\frac{\partial f}{\partial \overline{z}} dz\land d\overline{z}
+    Niech $\Omega\subset\mathbb{C}$, $f: \bar{\Omega} \to \mathbb{C}$, niech $\xi \in \Omega$. Wówczas  \[
+        f(\xi) = \frac{1}{2\pi i }\int_{\partial \Omega}\frac{f(z)}{z-\xi}dz + \int_{\Omega} \frac{1}{z - \xi}\frac{\partial f}{\partial \bar{z}} dz\land d\bar{z}
     .\]
 \end{tw}
 \textbf{Obserwacja:} jeżeli $f$ - holomorficzna na $\Omega$, to
@@ -140,20 +140,20 @@ Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $
          \int_{\partial \Omega_\epsilon}g(z) = \int_{\Omega} d g(z)
      .\]
  \[
-     \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz + \int_{\partial K(\xi, \epsilon)} \frac{f(z)}{z - \xi}dz = \int\int\limits_{\Omega_\epsilon}\frac{1}{z-\xi} \frac{\partial f}{\partial \overline{z}} d\overline{z}\land dz
+     \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz + \int_{\partial K(\xi, \epsilon)} \frac{f(z)}{z - \xi}dz = \int\int\limits_{\Omega_\epsilon}\frac{1}{z-\xi} \frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz
  .\]
  \textbf{Pytanie:} co się dzieje, jak przejdziemy z $\epsilon\to 0$ Oznacza to, że chcemy zbadać zachowanie takiej całki
      \[
-         \int\int\limits_{\Omega_{\epsilon}} \frac{1}{z-\xi}\frac{\partial f}{\partial \overline{z}}
+         \int\int\limits_{\Omega_{\epsilon}} \frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}}
      \]
  dla $z = \epsilon e^{i\theta} + \xi$, ale
      \[
          \frac{1}{\epsilon e^{i\theta} + \xi - \xi} = \frac{e^{-i\theta}}{\epsilon}
      ,\]
- a całka $\int\int\limits_{\Omega_\epsilon} d\overline{z}\land dz \approx \underbrace{\epsilon d\epsilon d\theta}_{\text{element powierzchni}}$.
+ a całka $\int\int\limits_{\Omega_\epsilon} d\bar{z}\land dz \approx \underbrace{\epsilon d\epsilon d\theta}_{\text{element powierzchni}}$.
      Oznacza, to że
      \[
-         \frac{1}{z-\xi} d\overline{z}\land dz \overset{\epsilon \to 0}{\approx} \frac{1}{\epsilon} \cdot \epsilon
+         \frac{1}{z-\xi} d\bar{z}\land dz \overset{\epsilon \to 0}{\approx} \frac{1}{\epsilon} \cdot \epsilon
      ,\]
  czyli w $\epsilon = 0$ nie wybuchnie!\\
      Ale
@@ -167,7 +167,7 @@ Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $
  gdzie $c\in \partial K(\xi, \epsilon)$.\\
      Zatem
      \[
-         \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz - \int_{\Omega}\frac{1}{z-\xi}\frac{\partial f}{\partial \overline{z}} d\overline{z}\land dz = 2 \pi i f(\xi)
+         \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz - \int_{\Omega}\frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz = 2 \pi i f(\xi)
      .\]
 \end{proof}
 \begin{tw}

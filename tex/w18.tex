@@ -68,14 +68,14 @@ Wyliczamy z tego $k$:
         .\]
 \end{enumerate}
         \subsubsection{Inna fajna forma}
-        Zauważmy, że $\overline{\dot{z}}(t) \cdot \ddot{z}(t) = \left( \dot{x}(t) - i\dot{y}(t) \right) + \left( \ddot{x}(t) + i\ddot{y}(t) \right) = \ldots + i\left( \dot{x}\ddot{y} - \dot{y}\ddot{x}(t) \right),$ czyli mając $z(t)$, policzymy krzywiznę tak:
+        Zauważmy, że $\bar{\dot{z}}(t) \cdot \ddot{z}(t) = \left( \dot{x}(t) - i\dot{y}(t) \right) + \left( \ddot{x}(t) + i\ddot{y}(t) \right) = \ldots + i\left( \dot{x}\ddot{y} - \dot{y}\ddot{x}(t) \right),$ czyli mając $z(t)$, policzymy krzywiznę tak:
         \[
-            \frac{1}{s} = \frac{Im(\overline{\dot{z}}\ddot{z})}{\left| \dot{z} \right| ^3}
+            \frac{1}{s} = \frac{Im(\bar{\dot{z}}\ddot{z})}{\left| \dot{z} \right| ^3}
         .\]
     \begin{przyklad}
-        Krzywa: $z(t) = 2e^{it}$, $\dot{z}(t) = 2ie^{it} = 2e^{i(t+\frac{\pi}{2})} \implies \overline{\dot{z}}(t) = 2e^{-i(t + \frac{\pi}{2})}$, $\ddot{z}(t) = -2e^{it}$.
+        Krzywa: $z(t) = 2e^{it}$, $\dot{z}(t) = 2ie^{it} = 2e^{i(t+\frac{\pi}{2})} \implies \bar{\dot{z}}(t) = 2e^{-i(t + \frac{\pi}{2})}$, $\ddot{z}(t) = -2e^{it}$.
         \[
-            \overline{\dot{z}}\ddot{z} = -4 e^{i(t-t-\frac{\pi}{2})} = -4 \cdot (-i)
+            \bar{\dot{z}}\ddot{z} = -4 e^{i(t-t-\frac{\pi}{2})} = -4 \cdot (-i)
         .\]
     \[
         \frac{1}{s} = \frac{Im(4i)}{8} = \frac{4}{8} = \frac{1}{2}
@@ -94,7 +94,7 @@ Czyli okrąg o promieniu $2$ ma promień równy $2$.
     ,\]
 gdzie $f(x) : \Omega \to R$, a $R(x)$ - macierz  $n\times n$ taka, że
  \[
-     R(x)^{-1} = \left( \overline{R}(x) \right) ^T,\quad \det R(x) = 1
+     R(x)^{-1} = \left( \bar{R}(x) \right) ^T,\quad \det R(x) = 1
 .\]
     \end{definicja}
     \begin{stw}
@@ -149,7 +149,7 @@ Wówczas
 \[
     F'(x,y) = \begin{bmatrix} \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\ \frac{\partial f}{\partial x} & \frac{\partial f_2}{\partial y}  \end{bmatrix} \overset{\text{C-R}}{=} \begin{bmatrix} \frac{\partial f_1}{\partial x} &-\frac{\partial f_2}{\partial x} \\\frac{\partial f_2}{\partial x} &\frac{\partial f_1}{\partial x}  \end{bmatrix} = \begin{bmatrix} a&-b\\b&a \end{bmatrix}
 .\]
-Jeżeli $R = \begin{bmatrix} a&b\\c&d \end{bmatrix} $ i $R$ - ortogonalna, to znaczy, że $R^{-1} = \overline{R}^{T}$ i $\det R = 1$
+Jeżeli $R = \begin{bmatrix} a&b\\c&d \end{bmatrix} $ i $R$ - ortogonalna, to znaczy, że $R^{-1} = \bar{R}^{T}$ i $\det R = 1$
      \[
          \frac{1}{ad - bc}\begin{bmatrix} d&-b\\ -c&a \end{bmatrix} = \begin{bmatrix} a&c\\b&d \end{bmatrix} \implies d = a \land -b = c
     .\]
