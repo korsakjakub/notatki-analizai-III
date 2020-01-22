@@ -1,6 +1,5 @@
 \documentclass[b5paper]{memoir}
 \usepackage[utf8]{inputenc}
-%\usepackage[margin=1in]{geometry}
 \usepackage{mdframed}
 \usepackage{xcolor}
 \usepackage{subfiles}
@@ -20,6 +19,11 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -127,5 +131,7 @@ Niniejszy dokument zawiera moje notatki z wykładu Analiza III wygłoszonego prz
 \subfile{tex/w24.tex}
 \chapter{17.01.2020, \textit{Wzór Greena, $\Delta \frac{1}{r} = \delta$ }}
 \subfile{tex/w25.tex}
+\chapter{20.01.2020, \textit{Skąd się bierze Prawo Coulumba, Przestrzeń Schwartza, dystrybucje temperowane, dwa daszki to ptaszek}}
+\subfile{tex/w26.tex}
 
 \end{document}

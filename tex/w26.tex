@@ -1,0 +1,240 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+Z ostatniego odcinka wiemy, że
+\[
+    \Delta\left( \frac{1}{r} \right) = - 4\pi \delta
+.\]
+\[
+    \left< \Delta \left( \frac{1}{r} \right) , \varphi \right> = -4 \pi \left<\delta, \varphi \right>
+.\]
+\[
+    \Delta \frac{1}{\left| \overline{r} - \overline{r_0} \right| } = -4 \pi \delta (\overline{r} - \overline{r_0})
+.\]
+Były też kiedyś równania Maxwella
+\begin{align*}
+    div(E) &= \rho(\overline{r})\\
+    E &= - grad(\varphi)\\
+    \varphi : \mathbb{R}^3 &\to \mathbb{R}\\
+    rot(E) &= -\frac{\partial B}{\partial t}\\
+    \frac{\partial B}{\partial t} &= 0
+.\end{align*}
+Jak to złożymy, to będzie
+\[
+    \Delta \varphi = -\rho(x)
+.\]
+\[
+    \int\limits_{V} \left( U\Delta V - V \Delta U \right) dV = \int\limits_{\partial V}\left( U \frac{\partial V}{\partial n} - V \frac{\partial U}{\partial n}  \right)dS
+.\]
+\[
+    V = \frac{1}{\left| \overline{r} - \overline{r_0} \right| }
+.\]
+\[
+    U = \varphi(\overline{r})
+.\]
+Czyli
+\[
+    \int\limits_{V}\varphi(\overline{r}) \Delta \frac{1}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} - \int\limits_{V}\frac{1}{\left| \overline{r} - \overline{r_0} \right| }\Delta \varphi d\overline{r} = \int\int\limits_{\partial V}\left(\varphi(\overline{r})\frac{\partial }{\partial n} \frac{1}{\left| \overline{r} - \overline{r_0} \right|} - \frac{1}{\left| r - r_0 \right|}\frac{\partial \varphi}{\partial n} \right) dS
+.\]
+\[
+    -4\pi \int\limits_V \varphi(r)\delta(\overline{r} - \overline{r_0})d\overline{r} - \int\limits_V \frac{-\rho(\overline{r})}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} = \int\limits_{\partial V}\left(\varphi\left( \overline{r} \right) \frac{\partial }{\partial n} \left( \frac{1}{\left| \overline{r} - \overline{r_0} \right| } \right) - \frac{1}{\left| r-r_0 \right| \frac{\partial \varphi}{\partial n} }\right) dS
+.\]
+
+\[
+    \varphi(r_0) = \frac{1}{4\pi}\int\limits_V \frac{\rho(\overline{r})}{\left| \overline{r} - \overline{r_0} \right| }d\overline{r} + \frac{1}{4\pi} \int\limits_{\partial V}\frac{1}{\left| \overline{r} - \overline{r_0} \right|} \frac{\partial \varphi}{\partial n} - \varphi(r)\frac{\partial }{\partial n} \left( \frac{1}{\left| \overline{r} - \overline{r_0} \right| } \right)dS
+.\]
+Druga całka znika czasami w $V\to \infty$ i wtedy zostaje Prawo Coulomba.
+\subsection{Równanie $xT = 0$}
+ \[
+    x T = 0,\quad T\in D^\star
+.\]
+To znaczy, że
+\[
+    \underset{\varphi\in D}{\forall} \left<xT, \varphi \right> = 0
+.\]
+Zauważmy, że
+\[
+    \left<xT, \varphi \right> = \left<T, x\varphi \right> = 0
+.\]
+Oznacza to, że dystrybucja $T$ zeruje się na wszystkich funkcjach postaci $x\varphi$, $\varphi\in D$.
+\begin{pytanie}
+    Czy oznacza to, że $T$ zeruje się na każdej funkcji, która w $x = 0$ wynosi zero?
+\end{pytanie}
+Załóżmy, że $T$ istnieje i
+\[
+    \underset{\psi\in D}{\exists} \left<T,\psi \right> = 0
+.\]
+Oznacza to, że
+\[
+    \left< xT, \frac{\psi}{x} \right> = 0
+.\]
+Czyli jeżeli $\psi\in D$, to $\frac{\psi}{x}$ też musi należeć do $D$.
+\begin{pytanie}
+    Ile wynosi $\psi(0)$?
+\end{pytanie}
+Gdyby $\psi(0) \neq 0$, to wtedy $\frac{\psi(x)}{x}$ nie byłoby ograniczone w $x = 0$, czyli  $\frac{\psi}{x}\not\in D$
+Zauważmy, że
+\[
+    \frac{\psi(x)}{x} = \int\limits_{0}^{1} \psi'(xt)dt
+.\]
+Czyli jeżeli $\psi\in D$, to znaczy, że $\psi'\in D$.
+Niech  $\varphi(x)$ - dowolne $\in D$ i niech $\alpha(x)$ takie, że $\alpha(0) = 1$, $\alpha\in D$. Wówczas
+\[
+    \varphi(x) = \varphi(x) - \alpha(x)\varphi(0) + \alpha(x)\varphi(0)
+.\]
+Wówczas
+\[
+    \left<T, \varphi \right> = \left<T, \varphi(x) - \alpha(x)\varphi(0) \right> + \left<T, \alpha(x)\varphi(0) \right>
+.\]
+to pierwsze daje zero, bo liczymy $T$ na funkcji, która  w zerze daje zero.
+Zatem
+\[
+    \underset{\varphi\in D}{\forall}\quad \left<T,\varphi \right> = \left<T, \alpha(x) \right>\varphi(0)
+.\]
+Czyli $\left<T,\varphi \right> = C_\alpha \varphi(0) = \left<C_\alpha \delta, \varphi \right>$, czyli $T = C_\alpha \delta$.
+\begin{pytanie}
+    Czy $C_\alpha$ rzeczywiście zależy od wyboru funkcji $\alpha(x)$, czy jest stałą uniwersalną?
+\end{pytanie}
+\subsection{Transformata Fouriera dystrybucji}
+\[
+    \left<\mathcal{F}T, \varphi \right> \overset{\text{def}}{=} \left<T, \mathcal{F}\varphi \right>
+.\]
+\[
+    T\in S^\star, \underset{\varphi\in S}{\forall}
+.\]
+\begin{definicja}
+    (Przestrzeń Schwartza)\\
+    Przestrzenią Schwartza ($S$) nazywamy zbiór takich $\varphi\in C^\infty(\mathbb{R})$, że
+    \begin{enumerate}
+        \item $\underset{L, m \ge 0}{\forall} x^L\varphi^{(m)}$ - ograniczone (w sensie $\left\Vert . \right\Vert $ )
+        \item $\underset{L, m \ge 0}{\forall} \left( x^L \varphi \right)^{(m)} $ jest całkowalna
+    \end{enumerate}
+\end{definicja}
+\textbf{Motywacja:}
+\[
+    \mathcal{F}\left( \varphi' \right)  \sim x \mathcal{F}\varphi
+\]
+\[
+    \mathcal{F}'\left( x\varphi \right) \sim \mathcal{F}'(\varphi)
+.\]
+\begin{definicja}
+    Przestrzeń dualną do $S$ oznaczamy, przez $S^\star$, odwzorowania liniowe z $S^\star$ nazywamy dystrybucjami temperowanymi.
+\end{definicja}
+Policzmy nareszcie $\mathcal{F}\delta$
+\[
+    \left<\mathcal{F}\delta, \varphi \right> = \left<\delta, \mathcal{F}\varphi \right> = \left( \mathcal{F}\varphi \right) (0) = \int\limits_{-\infty}^{\infty} e^{-2\pi i k \cdot 0}\varphi(k)dk = \int\limits_{-\infty}^{\infty} 1\cdot \varphi(k)dk = \left<1, \varphi \right>
+.\]
+Zatem $\mathcal{F}\delta = 1$. A ile wynosi $\mathcal{F}\delta(x-a)$?
+\[
+    \left<\mathcal{F}\delta(x-a), \varphi\right> = \left<\delta(x-a), \mathcal{F}\varphi \right> = \mathcal{F}\varphi(a) = \int\limits_{-\infty}^{\infty} e^{-2\pi i k a}\varphi(k) dk =\left<e^{-2\pi i x a}, \varphi \right>
+.\]
+\textbf{Obserwacja:}
+\[
+    \ddot{f} + \omega^2 f = \delta
+.\]
+\[
+    \mathcal{F}\left( \ddot{f} + \omega^2 f = \delta \right)
+.\]
+\[
+    \left( -2\pi i t \right)^2 \mathcal{F}f + \omega^2 \mathcal{F} f = \mathcal{F} \delta
+.\]
+\[
+    -4\pi^2 t^2 \mathcal{F}f + \omega \mathcal{F}f = 1
+.\]
+\[
+    \hat{f} = \frac{1}{\omega^2 - 4\pi^2t^2}
+.\]
+\begin{pytanie}
+    A ile to $\mathcal{F}1$?
+\end{pytanie}
+\[
+    \mathcal{F}1 = \int\limits_{-\infty}^{\infty} 1\cdot e^{-2\pi i k x}dk = -\frac{1}{2\pi i x}e^{-2\pi i k x}\Big|_{-\infty}^{+\infty} = ????
+.\]
+Tego napisu nie wolno traktować w sensie transformaty funkcji. A dystrybucji?
+\textbf{Wniosek:} $\mathcal{F}1$ należy rozumieć w sensie dystrybucyjnym, czyli
+\[
+    \left<\mathcal{F}1, \varphi \right> = \left<1, \mathcal{F}\varphi \right>
+.\]
+Pamiętamy, że
+\[
+    \mathcal{F}\left( f^{(n)} \right) = \left( 2\pi i x \right)^n \mathcal{F}\left( f \right)
+.\]
+Czyli
+\[
+    \mathcal{F}(f') = 2\pi i x \mathcal{F}(f)
+.\]
+Jeżeli $f = 1$, to
+\[
+    0 = \mathcal{F}(0) = 2\pi i x \mathcal{F}(1)
+.\]
+Czyli $x \hat{1} = 0$. Wiemy, że jeżeli $xT = 0$, to
+\[
+    T = C_\alpha \delta
+.\]
+Czyli
+\[
+    \hat{1} = C_\alpha \delta
+.\]
+Pozostało policzyć ile to jest $C_\alpha$.
+Wiemy, że
+\[
+    \left<\mathcal{F}1, \varphi \right> = \left<1, \mathcal{F}\varphi \right>
+.\]
+\[
+    \left<C_\alpha \delta, \varphi \right> = \left<1, \mathcal{F}\varphi \right>
+.\]
+\[
+    C_\alpha\left<\delta, \varphi \right> = \left<1, \mathcal{F}\varphi \right>
+.\]
+W szczególności dla
+\[
+    \varphi = e^{-ax^2}, \quad \mathcal{F}(\varphi) = e^{-\frac{\pi^2x^2}{a}}\sqrt{\frac{\pi}{a}}
+.\]
+\[
+    \left( \int\limits_{-\infty}^{\infty} e^{-\alpha x^2}dx = \sqrt{\frac{\pi}{\alpha}}   \right)
+.\]
+Jeżeli $\varphi = e^{-x^2}$, $a = 1$,  $\mathcal{F}(\varphi) = e^{-(\pi^2x^2)}\sqrt{\pi} $, to
+\[
+    C_\alpha \left<\delta, e^{-x^2} \right> = \sqrt{\pi} \left<1, e^{-\pi^2x^2} \right>
+.\]
+\[
+    C_\alpha e^0 = \sqrt{\pi} \int\limits_{-\infty}^{\infty} 1\cdot e^{-\pi^2 x^2}dx
+.\]
+\[
+    C_\alpha = \sqrt{\pi} \sqrt{\frac{\pi}{\pi^2}}  = 1
+.\]
+\[
+    \mathcal{F}1 = \delta \implies \mathcal{F}\delta = 1
+.\]
+\begin{definicja}
+    \[
+        \check{f}(x) \overset{\text{def}}{=} f(-x).
+    \]
+\end{definicja}
+\begin{tw}
+    \[
+        \hat{\hat{f}}(x) = \check{f}(x)
+    .\]
+\end{tw}
+\begin{proof}
+\begin{align*}
+    \hat{\hat{f}} &= \int\limits_{-\infty}^{\infty} dk e^{-2\pi i kx}\int\limits_{-\infty}^{\infty} ds e^{-2\pi i s k} f(s) = \int\limits_{-\infty}^{\infty} dk \int\limits_{-\infty}^{\infty} ds e^{-2\pi i k(x+s)}f(s)=\\
+    &= \int\limits_{-\infty}^{\infty} ds f(s) \int\limits_{-\infty}^{\infty} dk e^{-2\pi i k (x+s)} = \int\limits_{-\infty}^{\infty} ds f(s) \left<e^{-2\pi i k (x+s)}, 1 \right> = \\
+    &= \int\limits_{-\infty}^{\infty} ds f(s) \delta(x+s) = f(-x)
+.\end{align*}
+\end{proof}
+\begin{pytanie}
+    A ile to będzie
+    \[
+        \sum_{n=-\infty}^{\infty} e^{-2\pi i x n}
+    ?\]
+\end{pytanie}
+No tyle
+\[
+    T(x) = \sum_{n=-\infty}^{\infty} \hat{\delta}(x-n)
+.\]
+\end{document}
