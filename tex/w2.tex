@@ -25,7 +25,6 @@ Wyszło nam dla $\omega = ydx$, (rys \ref{fig:fig2-1})
     \label{fig:fig2-1}
 \end{figure}
 \begin{przyklad}
-    (rys \ref{fig:fig2-2})
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.3\textwidth]{fig2-2}
@@ -87,7 +86,6 @@ $a < 0$ - zmienia kierunek wektora.
     .\]
 \end{definicja}
 
-\pagebreak
 \begin{definicja}
     Niech $M$ - rozmaitość zorientowana, $\dim M = n$ i \\
     $S = \left\{ [a,b]\times[c,d]\ni (t_1,t_2) \to \varphi(t_1,t_2)\in M \right\}$ - powierzchnia sparametryzowana, $\Lambda^2M\ni\omega$ - dwuforma. Wówczas
@@ -96,7 +94,7 @@ $a < 0$ - zmienia kierunek wektora.
     .\]
 \end{definicja}
 \begin{przyklad}
-    weźmy $\omega = A(x,y)dx + B(x,y)dy$ i obliczmy $\int\int\limits_P d\omega$.
+    weźmy $\omega = A(x,y)dx + B(x,y)dy$ i obliczmy $\iint\limits_P d\omega$.
      \[
          d\omega = \frac{\partial A}{\partial y} dy\land dx + \frac{\partial B}{\partial x} dx\land dy = \left(\frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \right)dx\land dy
     ,\]
@@ -105,22 +103,23 @@ $a < 0$ - zmienia kierunek wektora.
 .\]
 Wtedy mamy
 \begin{align*}
-    \int\int\limits_P d\omega &= \int\int\limits_{[a,b]\times[c,d]} \left<d\omega, \frac{\partial }{\partial x} , \frac{\partial }{\partial y}  \right> = \\
+    \iint\limits_P d\omega &= \iint\limits_{[a,b]\times[c,d]} \left<d\omega, \frac{\partial }{\partial x} , \frac{\partial }{\partial y}  \right> = \\
     &= \int\limits_a^b dx \int\limits_c^d dy\left(\frac{\partial B}{\partial x} - \frac{\partial A}{\partial y} \right) = \int\limits_c^d dy\int\limits_a^b \frac{\partial B(x,y)}{\partial x} dx - \int\limits_a^bdx\int\limits_c^ddy \frac{\partial A}{\partial y} = \\
     &= \int\limits_c^d dy(B(b,y) - B(a,y)) - \left[ \int\limits_a^bdx \left( A(x,d) - A(x,c) \right)  \right] = \\
     &= \int\limits_a^bA(x,c)dx + \int\limits_c^dB(b,y)dy - \int\limits_a^cA(x,d)dx - \int\limits_c^dB(a,y)dy =\\
     &= \int\limits_{L_1}\omega + \int\limits_{L_2}\omega + \int\limits_{L_3}\omega + \int\limits_{l_4}\omega
 .\end{align*}
 Czyli \[
-\int\int\limits_Pd\omega = \int\limits_L \omega
+\iint\limits_Pd\omega = \int\limits_L \omega
 ,\]
 to kiedyś będzie twierdzenie Stokesa
 \end{przyklad}
 \begin{przyklad}
-    niech (sytuacja jak na rys 13) $S = S_1\cup S_2$, gdzie
-    \[
-        S_1 = \left\{ (x,y,z)\in \mathbb{R}^3, x^2 + y^2 + z^2 = 1, z\ge 0 \right\},\quad S_2 = \left\{ (x,y,z)\in \mathbb{R}^3, x^2+y^2 \le 1, z = 0 \right\}
-    ,\]
+    niech (sytuacja jak na rys \ref{fig:fig2-6}) $S = S_1\cup S_2$, gdzie
+\begin{align*}
+        S_1 &= \left\{ (x,y,z)\in \mathbb{R}^3, x^2 + y^2 + z^2 = 1, z\ge 0 \right\},\\
+        S_2 &= \left\{ (x,y,z)\in \mathbb{R}^3, x^2+y^2 \le 1, z = 0 \right\}
+,\end{align*}
 $\alpha\in \Lambda^2M$.
 \[
 \int\limits_S \alpha = \int\limits_{S_1}\alpha + \int\limits_{S_2}\alpha

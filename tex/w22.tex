@@ -68,9 +68,7 @@
     &= \int\limits_{-\infty}^{\infty} dt f(t) \int\limits_{-\infty}^{\infty} dk g(k-t) e^{-2\pi i kx}
     .\end{align*}
     \begin{align*}
-    &k-t = s\\
-    &dk = ds\\
-    &k = s+t\\
+    &k-t = s\quad dk = ds\quad k = s+t\\
     &\implies\int\limits_{-\infty}^{\infty} dt f(t)\int\limits_{-\infty}^{\infty} ds g(s) e^{-2\pi i x(s+t)} = \\
     &= \int\limits_{-\infty}^{\infty} dt f(t) e^{-2\pi i xt} \int\limits_{-\infty}^{\infty} ds g(s) e^{-2\pi i xs} = \\
     &= \hat{f}(x) \hat{g}(x)
@@ -84,7 +82,6 @@
     Kiedy możemy wejść z granicą pod całkę?
 \end{pytanie}
 
-\pagebreak
 \begin{tw}
     Niech
     \begin{enumerate}
@@ -244,8 +241,7 @@ Jeżeli
 \end{itemize}
 to
 \begin{align*}
-    U(x,t) &= \mathcal{F}(\tilde f\cdot \tilde g) = f\star g =\\
-    &= \int\limits_{-\infty}^{\infty} f(s)g(x-s)ds
+    U(x,t) = \mathcal{F}(\tilde f\cdot \tilde g) = f\star g = \int\limits_{-\infty}^{\infty} f(s)g(x-s)ds
 .\end{align*}
 \[
     U(x,t) = \sqrt{\frac{\pi}{(2\pi a)^2t}} \int\limits_{-\infty}^{\infty} ds f(s)\cdot e^{- \frac{(2\pi)^2\cdot (x-s)^2}{(2\pi)^2\cdot 4a^2t}} = \frac{1}{4 \pi a^2 t}\int\limits_{-\infty}^{\infty} ds f(s) e^{-\frac{(x-s)^2}{4a^2 t}}

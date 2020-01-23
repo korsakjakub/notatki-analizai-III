@@ -6,12 +6,9 @@
 
 \begin{document}
     \subsection{Przypomnienie}
-    (rys 1)\\
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.4\textwidth]{fig3-1}
-        \caption{Przypomnienie}
-        \label{fig:fig3-1}
     \end{figure}
     Dla $v\in T_pM$, jest
     \[
@@ -46,17 +43,17 @@ czyli $v = [\sigma] = \frac{d}{dt}\sigma(t)$,
 .\]
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.35\textwidth]{fig3-2}
-    \caption{fig3-2}
+    \includegraphics[width=0.3\textwidth]{fig3-2}
+    \caption{Problem 3D}
     \label{fig:fig3-2}
 \end{figure}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{fig3-3}
-    \caption{fig3-3}
+    \includegraphics[width=0.4\textwidth]{fig3-3}
+    \caption{mapujemy na inny}
     \label{fig:fig3-3}
 \end{figure}
-Te mapy przerzucają (rys 2) na np. (rys 3).\\
+    Te mapy przerzucają (rys \ref{fig:fig3-2}) na np. (rys \ref{fig:fig3-3}).\\
 \begin{align*}
     y &= \sqrt{1-x^2-z^2}\\
     z &= z &(z,x) \to h(z,x) = \begin{bmatrix} z\\ \sqrt{1 - x^2 - z^2} \end{bmatrix}\\
@@ -71,7 +68,7 @@ Te mapy przerzucają (rys 2) na np. (rys 3).\\
 \end{przyklad}
 \begin{przyklad}
     Wstęga Moebiusa zbudowana z walca o wysokości $2L$ i promieniu $R$.
-    (rys 4)\\
+    (rys \ref{fig:fig3-4})\\
     \begin{align*}
         x(\theta, t) &= \left( R - t\sin\left(\frac{\theta}{2}\right)\right)\sin\theta\\
         y(\theta, t) &= \left( R - t\sin\left(\frac{\theta}{2}\right)\right)\cos\theta\\
@@ -84,7 +81,7 @@ Te mapy przerzucają (rys 2) na np. (rys 3).\\
         y'(\theta',t') &= -\left(R - t'\sin\left(\frac{\frac{\pi}{2} + \theta'}{2}\right)\right)\sin\theta'\\
         z'(\theta',t') &= t' \cos\left(\frac{\frac{\pi}{2} + \theta'}{2}\right)
     .\end{align*}
-    Obszary wspólne: (rys 5)
+    Obszary wspólne: (rys \ref{fig:fig3-5})
     \begin{align*}
         W_1 &= \left\{ 0<\theta<\frac{\pi}{2} \right\} = \left\{ \frac{3}{2}\pi < \theta' < 2\pi \right\}\\
         W_2 &= \left\{ \frac{\pi}{2} < \theta < 2\pi \right\} = \left\{ 0 < \theta' < \frac{3}{2}\pi \right\}
@@ -127,11 +124,11 @@ dla $W_2$
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.4\textwidth]{fig3-6}
-        \caption{fig3-6}
+        \caption{Kostka w $\mathbb{R}^2$. Którędy to "na zewnątrz"?}
         \label{fig:fig3-6}
     \end{figure}
     \begin{enumerate}
-        \item Niech $I^n = [0,1]\times[0,1]\times\ldots\times[0.1]\in \mathbb{R}^n$ (np. rys 6)\\
+        \item Niech $I^n = [0,1]\times[0,1]\times\ldots\times[0.1]\in \mathbb{R}^n$ (np. rys \ref{fig:fig3-6})\\
 Wprowadźmy oznaczenia:
 \[
     I^n_{(i,0)} := \left\{ \left( x^1,\ldots,x^{i-1},0,x^{i+1},\ldots,x^n \right) \in \mathbb{R}^n, 0\le x^j\le 1 \right\}
@@ -164,7 +161,8 @@ który nazwiemy brzegiem zorientowanym kostki $I^n$.
         .\]
     Obliczmy
     \begin{align*}
-        \int_{\partial I^n}\omega &= \sum_{j=1}^n\sum_{\alpha = 0,1}(-1)^{j+\alpha} \int_{I^n(j,\alpha)}\Bigg<f(x^1,\ldots,x^n)dx^1\land\ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n,\\
+        \int_{\partial I^n}\omega &= \sum_{j=1}^n\sum_{\alpha = 0,1}(-1)^{j+\alpha} \int_{I^n(j,\alpha)} \\
+        &\Bigg<f(x^1,\ldots,x^n)dx^1\land\ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n,\\
         &\frac{\partial }{\partial x^1} ,\ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n}\Bigg>
         dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n = \\
         &= \delta_{ij}\sum_{j=1}^n \sum_{\alpha = 0,1}(-1)^{j+\alpha}\int_{I^n_{j,\alpha}}f(x^1,\ldots,x^n)dx^1\ldots dx^{j-1}dx^{j+1}\ldots dx^n

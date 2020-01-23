@@ -7,8 +7,9 @@
 \begin{document}
     \subsection{Przypomnienie}
     \begin{figure}[h]
-        \includegraphics[width=0.4\textwidth]{fig1-1}
-        \includegraphics[width=0.4\textwidth]{fig1-2}
+        \includegraphics[width=0.3\textwidth]{fig1-1}
+        \includegraphics[width=0.3\textwidth]{fig1-2}
+        \includegraphics[width=0.3\textwidth]{fig1-3}
         \caption{Przypomnienie}
         \label{fig:fig1-1}
     \end{figure}
@@ -16,12 +17,6 @@
     \[
         \left<\alpha_1\land \alpha_2\land \ldots\alpha_k, v_1, v_2, \ldots, v_k \right> = \left| \begin{bmatrix} \alpha_1(v_1) & \ldots & \alpha_k\\ \vdots & \ddots & \vdots\\ \alpha_1(v_k) & \ldots & \alpha_k(v_k) \end{bmatrix} \right|
     .\]
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{fig1-3}
-        \caption{Przypomnienie c.d.}
-        \label{fig:fig1-3}
-    \end{figure}
     \[
         \left< v | w \right> = [v]^T [g_{ij}] \begin{bmatrix} \\w \\ \\ \end{bmatrix}
     .\]
@@ -77,7 +72,7 @@ $\dim M = 3$, mamy
  \[
 \Lambda^1M\ni F = F^1dx^1 + F^2dx^2 + F^3dx^3
 \]
-oraz krzywą $S$ w $\mathbb{R}^3$ (np. spiralę) (rys \ref{fig:fig1-4}). Chcemy znaleźć pracę związaną z przemieszczeniem z punktu $A$ do $B$.
+oraz krzywą $S$ w $\mathbb{R}^3$ (np. spiralę) (rys \ref{fig:fig1-5}). Chcemy znaleźć pracę związaną z przemieszczeniem z punktu $A$ do $B$.
 \begin{enumerate}
     \item sparametryzujmy kształt $S$, np.
         \[
@@ -87,8 +82,8 @@ oraz krzywą $S$ w $\mathbb{R}^3$ (np. spiralę) (rys \ref{fig:fig1-4}). Chcemy 
     Jeżeli $p = \left.\begin{bmatrix} \cos(t)\\ \sin(t)\\ t \end{bmatrix}\right|_{t = t_0} $, to
         \[
             T_pM = \left.\left<\begin{bmatrix} -\sin(t)\\ \cos(t)\\ 1 \end{bmatrix}  \right>\right|_{t = t_0}
-                .\] (rys \ref{fig:fig1-5})
-        \item Niech $T_pM \ni v = -\sin(t) \frac{\partial }{\partial x} + \cos(t) \frac{\partial }{\partial y} + \frac{\partial }{\partial z}$. (rys \ref{fig:fig1-6})\\
+                .\] (rys \ref{fig:fig1-6})
+        \item Niech $T_pM \ni v = -\sin(t) \frac{\partial }{\partial x} + \cos(t) \frac{\partial }{\partial y} + \frac{\partial }{\partial z}$. (rys \ref{fig:fig1-7})\\
             Możemy policzyć np.
             \begin{align*}
                 \int \left<F, v \right> &= \int\limits_{0}^{4\pi} \left<F, -\sin(t)\frac{\partial }{\partial x} + \cos(t) \frac{\partial }{\partial y} + \frac{\partial }{\partial z}  \right> dt = \\
@@ -109,7 +104,7 @@ oraz krzywą $S$ w $\mathbb{R}^3$ (np. spiralę) (rys \ref{fig:fig1-4}). Chcemy 
 \end{figure}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{fig1-7}
+    \includegraphics[width=0.4\textwidth]{fig1-7}
     \caption{}
     \label{fig:fig1-7}
 \end{figure}
@@ -136,7 +131,7 @@ Całką z jednoformy po krzywej nazywamy wielkość (rys \ref{fig:fig1-7})
  \[
      C_1 = \left\{ (x,y)\in \mathbb{R}^2, \begin{bmatrix} x\\y \end{bmatrix} = \begin{bmatrix} t-1\\2t-1 \end{bmatrix}, 1\le t\le 2 \right\}
 \]
-i
+i forma postaci
     \[
         \omega = ydx = \left( y \frac{\partial }{\partial x}  \right)^\sharp
     .\]

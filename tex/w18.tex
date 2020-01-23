@@ -5,7 +5,7 @@
 }
 
 \begin{document}
-    \subsection{Przygotowanie podłoża do tw (\ldots)}
+    \subsection{Przygotowanie podłoża do tw Kasner-Arnold}
     \subsubsection{Krzywizna}
     \begin{pytanie}
         Jak policzyć przyspieszenie dla nie-okręgów?
@@ -13,7 +13,7 @@
     \textbf{Odpowiedź: }A jaki jest promień tego aktualnego kółka?
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.6\textwidth]{w18-1}
+        \includegraphics[width=0.9\textwidth]{w18-1}
         \caption{Liczymy na chama promień krzywizny}
         \label{fig:w18-1}
     \end{figure}
@@ -38,26 +38,20 @@ Wyliczamy z tego $k$:
     \[
         \frac{-\dot{y}(t_0 + \Delta t)}{\left| \dot{z}(t_0 + \Delta t) \right| }\cdot k + x(t_0 + \Delta t) = \frac{-\dot{y}(t_0)}{\left| \dot{z}(t_0) \right| }\cdot s + x(t_0)
     .\]
-\[
-    \frac{-\dot{y}(t_0 + \Delta t)}{\left| \dot{z}(t_0 + \Delta t) \right| }\cdot \frac{\left|\dot{z}(t_0 + \Delta t)\right|}{\dot{x}(t_0 + \Delta t)}\cdot \left( y(t_0) - y(t_0 + \Delta t) + x(t_0 + \Delta t) - x(t_0) \right) =
-.\]
-\[
-    = s\cdot \left( \frac{-\dot{y}(t_0)}{\left| \dot{z}(t_0) \right| } + \frac{\dot{y}(t_0 + \Delta t)}{\dot{z}(t_0 + \Delta t)}\cdot \frac{\left| \dot{z}(t_0 + \Delta t)\right|}{\dot{x}(t_0 + \Delta t)}\cdot \frac{\dot{x}(t_0)}{\left| \dot{z}(t_0) \right| }  \right)
-.\]
+\begin{align*}
+    &\frac{-\dot{y}(t_0 + \Delta t)}{\left| \dot{z}(t_0 + \Delta t) \right| }\cdot \frac{\left|\dot{z}(t_0 + \Delta t)\right|}{\dot{x}(t_0 + \Delta t)}\cdot \left( y(t_0) - y(t_0 + \Delta t) + x(t_0 + \Delta t) - x(t_0) \right) =\\
+    &= s\cdot \left( \frac{-\dot{y}(t_0)}{\left| \dot{z}(t_0) \right| } + \frac{\dot{y}(t_0 + \Delta t)}{\dot{z}(t_0 + \Delta t)}\cdot \frac{\left| \dot{z}(t_0 + \Delta t)\right|}{\dot{x}(t_0 + \Delta t)}\cdot \frac{\dot{x}(t_0)}{\left| \dot{z}(t_0) \right| }  \right)
+.\end{align*}
 \item Mnożymy wszystko przez $\dot{x}(t_0 + \Delta t)$
-\[
-    -\dot{y}(t_0 + \Delta t)\left( y(t_0) - y(t_0 + \Delta t)\right) + \left(x(t_0 + \Delta t) - x(t_0)\right)\dot{x}(t_0 + \Delta t) =
-\]
-    \[
-           = \frac{s}{\left| \dot{z}(t_0) \right| }\left( -\dot{y}(t_0)(\dot{x}(t_0 + \Delta t) + \dot{y}(t_0 + \Delta t) \cdot x(t_0)\right)
-.\]
+\begin{align*}
+    &-\dot{y}(t_0 + \Delta t)\left( y(t_0) - y(t_0 + \Delta t)\right) + \left(x(t_0 + \Delta t) - x(t_0)\right)\dot{x}(t_0 + \Delta t) =\\
+           &= \frac{s}{\left| \dot{z}(t_0) \right| }\left( -\dot{y}(t_0)(\dot{x}(t_0 + \Delta t) + \dot{y}(t_0 + \Delta t) \cdot x(t_0)\right)
+.\end{align*}
 \item Dalej
-    \[
-        \dot{y}(t_0 + \Delta t)\left( y(t_0 + \Delta t) - y(t_0) \right) + \dot{x}(t_0 + \Delta t) (x(t_0 + \Delta t) - x(t_0)) =
-    \]
-    \[
-        = \frac{s}{\left| \dot{z}(t) \right| }\left( \dot{x}(t_0)\left[ \dot{y}(t_0 + \Delta t) - \dot{y}(t_0) \right] - \dot{y}(t_0) \left[ \dot{x}(t_0 + \Delta t) - \dot{x}(t_0) \right]  \right)
-    .\]
+    \begin{align*}
+        &\dot{y}(t_0 + \Delta t)\left( y(t_0 + \Delta t) - y(t_0) \right) + \dot{x}(t_0 + \Delta t) (x(t_0 + \Delta t) - x(t_0)) =\\
+        &= \frac{s}{\left| \dot{z}(t) \right| }\left( \dot{x}(t_0)\left[ \dot{y}(t_0 + \Delta t) - \dot{y}(t_0) \right] - \dot{y}(t_0) \left[ \dot{x}(t_0 + \Delta t) - \dot{x}(t_0) \right]  \right)
+    .\end{align*}
 \item dzielimy wszystko przez $\Delta t$ i bierzemy granicę $\Delta t \to 0$
     \[
         \dot{y}(t_0) \cdot \dot{y}(t_0) + \dot{x}(t_0) \cdot \dot{x}(t_0) = \frac{s}{\left( \left( \dot{x}(t_0) \right) ^2 + \left( \dot{y}(t_0) \right) ^2 \right)^{\frac{1}{2}}} \left( \dot{x}(t_0) \cdot \ddot{y}(t_0) - \dot{y}(t_0) \cdot \ddot{x}(t_0) \right)

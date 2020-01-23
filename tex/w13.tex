@@ -6,21 +6,13 @@
 
 \begin{document}
 \begin{przyklad}
-    \[
-        U_1 = \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, -\frac{3\pi}{4} < \varphi < \frac{3\pi}{4}\right\}
-    ,\]
-    \[
-        U_2 = \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, \frac{\pi}{4} < \varphi < \frac{5\pi}{4}\right\}
-    ,\]
-    \[
-        U_3 = \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, -\frac{5\pi}{4} < \varphi < -\frac{\pi}{4}\right\}
-    ,\]
-    \[
-        U_1 \cap U_2 = \left\{ z\in\mathbb{C}, z = re^{i\varphi}, \frac{\pi}{4} < \varphi < \frac{3\pi}{4} \right\}
-    ,\]
-    \[
-        U_1 \cap U_3 = \left\{ z\in\mathbb{C}, z = re^{i\varphi}, -\frac{3\pi}{4} < \varphi < -\frac{\pi}{4} \right\}
-    .\]
+    \begin{align*}
+        U_1 &= \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, -\frac{3\pi}{4} < \varphi < \frac{3\pi}{4}\right\}\\
+        U_2 &= \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, \frac{\pi}{4} < \varphi < \frac{5\pi}{4}\right\}\\
+        U_3 &= \left\{ z\in\mathbb{C}, z = re^{i\varphi}, r > 0, -\frac{5\pi}{4} < \varphi < -\frac{\pi}{4}\right\}\\
+        U_1 \cap U_2 &= \left\{ z\in\mathbb{C}, z = re^{i\varphi}, \frac{\pi}{4} < \varphi < \frac{3\pi}{4} \right\}\\
+        U_1 \cap U_3 &= \left\{ z\in\mathbb{C}, z = re^{i\varphi}, -\frac{3\pi}{4} < \varphi < -\frac{\pi}{4} \right\}
+    .\end{align*}
 ($ln(z) = ln(re^{i\varphi}) = ln(r) + i\varphi$)\\
     Niech
     \begin{align*}
@@ -101,7 +93,7 @@ Wyróżniamy trzy przypadki:
 \begin{definicja}
     Liczbę $a_{-1}$ z rozwinięcia funkcji $f(z)$ w szerege Laurenta w pierścieniu $R(z_0, 0, r)$ nazywamy \textbf{residuum} funkcji $f(z)$ w $z_0$ i oznaczamy
     \[
-        a_{-1} \equiv Res\{f(z)\} = \frac{1}{2\pi i} \int\limits_{\substack{K(z_0,r),\\ 0<r<r_1}} f(\xi)d\xi
+        a_{-1} \equiv \Res\{f(z)\} = \frac{1}{2\pi i} \int\limits_{\substack{K(z_0,r),\\ 0<r<r_1}} f(\xi)d\xi
     \]
 \end{definicja}
 \textbf{Uwaga: } mówimy (na razie) o osobliwościach izolowanych
@@ -118,17 +110,20 @@ Zauważmy, że $\sin\left(\frac{\pi}{z}\right) = 0 \iff z_n = \frac{1}{n}$, wię
         \underset{r > 0}{\forall}\quad\underset{n}{\exists}\quad z = \frac{1}{n}\in K(0,r).
     \]
 \end{przyklad}
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=.3\textwidth]{fig13-2}
+    \caption{Setup w Twierdzeniu}
     \label{fig:w13-2}
-    \caption{}
 \end{figure}
 \begin{tw}
-Niech $\Omega$ - otwarty, $D\subset \Omega$, $z_1,\dots,z_k\subset D,\quad z_i\cap \partial D = \{\phi\},\quad i = 1,\dots,k$, $f$ - holomorficzna na $\Omega - \{z_1,\dots,z_k\}$ i $z_i$ - bieguny funkcji $f$.\\
+    Niech $\Omega$ - otwarty (rys. \ref{fig:w13-2}),
+    \[
+        D\subset \Omega,\quad z_1,\dots,z_k\subset D,\quad z_i\cap \partial D = \{\phi\},\quad i = 1,\dots,k
+        ,\] $f$ - holomorficzna na $\Omega - \{z_1,\dots,z_k\}$ i $z_i$ - bieguny funkcji $f$.\\
 Wówczas
     \[
-        \int\limits_{\partial D} f(z)dz = 2 \pi i \sum_{n=0}^k Res_{z = z_n}\{f(z)\}
+        \int\limits_{\partial D} f(z)dz = 2 \pi i \sum_{n=0}^k \underset{z = z_n}{\Res}\{f(z)\}
     \]
 \end{tw}
 \begin{proof}
@@ -139,7 +134,7 @@ Wówczas
     \]
     czyli
     \[
-        \int\limits_{\partial D} f(z) dz = 2 \pi i\sum_{n=1}^k Res_{z = z_k} f(z)
+        \int\limits_{\partial D} f(z) dz = 2 \pi i\sum_{n=1}^k \underset{z = z_k}{\Res} f(z)
     .\]
 \end{proof}
 \textbf{Pytanie:} czy umiemy znaleźć współczynnik $a_{-1}$ bez roz funkcji $f$ w szereg Laurenta?\\
@@ -148,7 +143,7 @@ Wówczas
     f(z) = \sum_{n=0}^\infty a_n(z-z_0)^n + \frac{a_{-1}}{(z-z_0)} + \dots
 \]
 \[
-    Res_{z = z_k}f(z) = \lim\limits_{z\to z_k} \frac{1}{(n+1)!} \frac{d^{n-1}}{dz}\left((z-z_0)^nf(z)\right)
+    \underset{z = z_k}{\Res}f(z) = \lim\limits_{z\to z_k} \frac{1}{(n+1)!} \frac{d^{n-1}}{dz}\left((z-z_0)^nf(z)\right)
 \]
 \begin{przyklad}
     Policzyć całkę

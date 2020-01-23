@@ -6,7 +6,7 @@
 
 \begin{document}
     \[
-        \int\limits_{\partial D}f(z) dz = 2\pi i \sum_{z_k}^{} \Res_{z=z_k}f(z)
+        \int\limits_{\partial D}f(z) dz = 2\pi i \sum_{z_k}^{} \underset{z = z_k}{\Res}f(z)
     .\]
 \begin{przyklad}
     \[
@@ -169,7 +169,14 @@ Albo nawet dd
 \[
     ddU = \left( \frac{\partial }{\partial S} \left( \frac{\partial U}{\partial V}  \right) - \frac{\partial }{\partial V} \left( \frac{\partial U}{\partial S}  \right)  \right) ds\land dv = 0
 .\]
-Można jeszcze dalej, zupgradować którąś pochodną na zmienną niezależną. Niech $\frac{\partial U}{\partial S} = T$. Dostajemy nową funkcję (energia swobodna Helmholtza) $F(V,N,T) = U - T\cdot S$.
+Można jeszcze dalej, zupgradować którąś pochodną na zmienną niezależną. Niech
+    \[
+        \frac{\partial U}{\partial S} = T.
+    \]
+    Dostajemy nową funkcję (energia swobodna Helmholtza)
+    \[
+        F(V,N,T) = U - T\cdot S.
+    \]
 \[
     \frac{\partial U}{\partial V} = -p,\quad H(p,N,S) = U + pV
 .\]

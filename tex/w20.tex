@@ -25,7 +25,7 @@ Wielkość
 \]
 nazywamy residuum funkcji $f$ w nieskończoności.
 \begin{stw}
-    Niech $f$ - holomorficzna na $\mathbb{C}$ z wyjątkiem punktów $z_1,\ldots,z_k$, ale $z_i$ - biegun $p_i$ rzędu (nie ma punktów istotnie osobliwych). Wówczas
+    Niech $f$ - holomorficzna na $\mathbb{C}\setminus \left\{ z_1,\ldots,z_k \right\} $, ale $z_i$ - biegun $p_i$-tego rzędu (nie ma punktów istotnie osobliwych). Wówczas
     \[
     \sum_{\Res f + \Res \infty}f = 0
     .\]
@@ -55,11 +55,11 @@ Zauważmy, że
 .\]
 Zatem
 \[
-    \underset{\infty}{\Res} f(z) = - \underset{0}{\Res} \frac{f\left( \frac{1}{z} \right) }{z^2}
+    \underset{z = \infty}{\Res} f(z) = - \underset{z = 0}{\Res} \frac{f\left( \frac{1}{z} \right) }{z^2}
 .\]
 \begin{przyklad}
     \[
-        \int\limits_{|z| = 2}\frac{dz}{(z^8 + 1)^2} = \sum\limits_{\underset{(-1)}{\Res} \frac{1}{8}} f = - \underset{\infty}{\Res} f(z)
+        \int\limits_{|z| = 2}\frac{dz}{(z^8 + 1)^2} = \sum\limits_{\underset{(z = -1)}{\Res} \frac{1}{8}} f = - \underset{z = \infty}{\Res} f(z)
     .\]
 Ale
 \[
@@ -68,17 +68,17 @@ Ale
 \[
     g(z) = f\left( \frac{1}{z} \right) = \frac{1}{\left( \left( \frac{1}{z} \right) ^8 + 1 \right) ^2} = \frac{z^{16}}{(1 + z^8)^2}
 \]
-    i liczymy $\underset{0}{\Res}\quad \frac{g(z)}{z^2}$
+    i liczymy $\underset{z = 0}{\Res}\quad \frac{g(z)}{z^2}$
     Ale
     \[
         \lim\limits_{z\to 0}\frac{z\cdot z^{14}}{(1+z^8)^2} = 0
     .\]
-Więc całka też $0$.
+Więc całka też jest równa zero.
 \end{przyklad}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{w20-1}
-    \caption{w20-1}
+    \caption{Puszczamy kontur dołem}
     \label{fig:w20-1}
 \end{figure}
 \begin{przyklad}
@@ -146,6 +146,8 @@ Wstawmy $z = e^{ix}$
          \mathcal{F}(f)(x) \equiv \hat{f}(x) = \int\limits_{-\infty}^{+\infty} e^{-i2\pi xt}f(t)dt
      .\]
  \end{definicja}
+
+ \pagebreak
  \textbf{Uwaga: }transformatę Fouriera możemy zdefiniować też tak
  \begin{definicja}
      (inne notacje)

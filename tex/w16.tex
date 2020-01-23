@@ -34,12 +34,10 @@
         Dla  $z\in \Gamma$
         \begin{enumerate}[a)]
             \item Jeżeli $z\in \Gamma_4$ lub $\Gamma_2$, to
-                \[
-                    \Gamma_2 = \left\{ y\in \left[ -N - \frac{1}{2}, N + \frac{1}{2} \right] , z = N + \frac{1}{2} + iy \right\}
-                .\]
-                \[
-                    \Gamma_4 = \left\{ y\in \left[ -N - \frac{1}{2}, N + \frac{1}{2} \right] , z = -(N + \frac{1}{2}) + iy \right\}
-                .\]
+                \begin{align*}
+                    \Gamma_2 &= \left\{ y\in \left[ -N - \frac{1}{2}, N + \frac{1}{2} \right] , z = N + \frac{1}{2} + iy \right\}\\
+                    \Gamma_4 &= \left\{ y\in \left[ -N - \frac{1}{2}, N + \frac{1}{2} \right] , z = -(N + \frac{1}{2}) + iy \right\}
+                .\end{align*}
             \[
                 \left| \ctg(\pi z) \right| = \left| \frac{e^{i\pi z} + e^{-i \pi z}}{e^{i \pi z} - e^{- i \pi z}} \right|\cdot \left| \frac{2i}{2} \right| = \left| \frac{e^{i\pi(N + \frac{1}{2} + iy)} + e^{-i\pi(N + \frac{1}{2} + iy)}}{e^{i\pi(N + \frac{1}{2} + iy)} - e^{-i\pi(N + \frac{1}{2} + iy)}} \right|
             .\]
@@ -58,9 +56,10 @@
                 &\le \frac{2 \left| e^{i\pi(N + \frac{1}{2})} \right|}{\left| e^{i \pi(N + \frac{1}{2})} \cdot e^{-2\pi(N + \frac{1}{2})} + e^{i\pi(N + \frac{1}{2})} \right| } < \text{const}
             .\end{align*}
     \item Analogicznie pokażemy, że $\ctg(\pi z)$ jest ograniczony dla $z\in \Gamma_4, \Gamma_1, \Gamma_3$. Zatem
-        \[
-            \left| \int\limits_{\Gamma}f(z)\ctg(\pi z)dz \right| \le \left| \underset{z\in\Gamma}{\max}f(z)  \right| \cdot \left| 8N + 4 \right| \cdot \text{const} \underset{N > M}{\le} \frac{\text{const}}{N^2} (8N + 4) \cdot \text{const} \underset{N \to + \infty}{\longrightarrow}  0
-        .\]
+        \begin{align*}
+            \left| \int\limits_{\Gamma}f(z)\ctg(\pi z)dz \right| &\le \left| \underset{z\in\Gamma}{\max}f(z)  \right| \cdot \left| 8N + 4 \right| \cdot \text{const} \underset{N > M}{\le}\\
+                &\le \frac{\text{const}}{N^2} (8N + 4) \cdot \text{const} \underset{N \to + \infty}{\longrightarrow}  0
+        .\end{align*}
         \end{enumerate}
     \end{proof}
     \textbf{Wniosek:}\\

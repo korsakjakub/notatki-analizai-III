@@ -30,9 +30,10 @@ Czyli $f$ - klasy $L_1$, $g$ - klasy $L_2$
 \[
     \hat{g}(x) = \int\limits_{-\infty}^{+\infty}g(k) e^{-2\pi i kx}dk
 .\]
-\[
-    \int\limits_{-\infty}^{+\infty}f(x)dx \int\limits_{-\infty}^{+\infty}g(k)e^{-2\pi i kx}dk = \int\limits_{-\infty}^{+\infty}g(k)dk \int\limits_{-\infty}^{+\infty}f(x) e^{-2\pi i kx}dx = \int\limits_{-\infty}^{+\infty}g(k)\hat{f}(k)dk
-.\]
+\begin{align*}
+    \int\limits_{-\infty}^{+\infty}f(x)dx \int\limits_{-\infty}^{+\infty}g(k)e^{-2\pi i kx}dk &= \int\limits_{-\infty}^{+\infty}g(k)dk \int\limits_{-\infty}^{+\infty}f(x) e^{-2\pi i kx}dx =\\
+    &= \int\limits_{-\infty}^{+\infty}g(k)\hat{f}(k)dk
+.\end{align*}
 \end{proof}
 \textbf{Obserwacja:} chcemy rozwiązać równanie:
 \[
@@ -71,7 +72,13 @@ Ale wiemy, że
 \[
     \int\limits_{-\infty}^{+\infty}f'(k)e^{-2\pi i kx}dk = \left. f(k)e^{-2 \pi i kx} \right|_{-\infty}^{+\infty} - \left( -2\pi i x \right) \underbrace{\int\limits_{-\infty}^{+\infty}f(k)e^{-2\pi i kx}dk}_{\mathcal{F}(f)}
 .\]
-Zauważmy, że jeżeli $\int_{-\infty}^{+\infty}|f| < +\infty$, to znaczy, że $\lim_{x \to \infty}f(x) = 0$ i $\lim_{x \to -\infty}f(x) = 0$, oraz skoro $f'$ - klasy $L_1$, to
+\begin{proof}
+
+Zauważmy, że jeżeli $\int_{-\infty}^{+\infty}|f| < +\infty$, to znaczy, że
+\[
+    \lim_{x \to \infty}f(x) = 0,\quad \lim_{x \to -\infty}f(x) = 0
+\]
+oraz skoro $f'$ - klasy $L_1$, to
 \[
     f(x) - f(0) = \int\limits_{0}^x f'(k)dk
 .\]
@@ -79,8 +86,9 @@ Skoro $f'$ - klasy $L_1$, to znaczy, że
 \[
     \lim_{x \to \infty}\left| f(x) - f(0) \right| \le \left| \int\limits_{0}^{+\infty}f'(k)dk \right| \le M
 .\]
-Widzimy zatem, że $\lim_{x \to +\infty}\left| f(x) \right| \le M$ znaczy, że jeżeli $\int_{-\infty}^{+\infty}|f(x)| < +\infty$, to znaczy, że
-\[\lim_{x \to \infty}f(x) = 0\quad \Box\]
+Widzimy zatem, że $\lim\limits_{x \to +\infty}\left| f(x) \right| \le M$ znaczy, że jeżeli $\int_{-\infty}^{+\infty}|f(x)| < +\infty$, to znaczy, że
+\[\lim_{x \to \infty}f(x) = 0\]
+\end{proof}
 Zatem
 \[
     \mathcal{F}\left( f' \right) (x) = (2\pi i x)(\mathcal{F}f)(x)
@@ -107,8 +115,9 @@ Zatem dalej mamy
 .\]
 \end{proof}
 \subsection{Transformata odwrotna}
-\begin{enumerate}
-    \item policzmy $\int_{-\infty}^{+\infty}\left( \mathcal{F}f \right) (x)dx$
+\begin{proof}
+
+    Policzmy $\int_{-\infty}^{+\infty}\left( \mathcal{F}f \right) (x)dx$
         \[
             I = \int\limits_{-\infty}^{+\infty}dx\int\limits_{-\infty}^{+\infty}f(k)e^{-2\pi i k x}dk
         .\]
@@ -156,6 +165,6 @@ Czyli
 \[
     f(L) = \int\limits_{-\infty}^{+\infty}\hat{f}e^{2\pi i L}dL
 .\]
-\end{enumerate}
 Mamy wzór na transformatę odwrotną, czyli wiemy, że jeżeli $\hat{f}(x) = \int_{-\infty}^{+\infty}f(k)e^{-2\pi i kx}dk$, to $f(x) = \int_{-\infty}^{+\infty}\hat{f}(k) e^{2\pi i kx}dk$
+\end{proof}
 \end{document}

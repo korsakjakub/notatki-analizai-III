@@ -96,13 +96,15 @@ Niech
     \]
     - pierścień otwarty o środku $2i$ i promieniach $1$ i $3$.\\
     Dla $|z+2i| < 1$,
-     \[
-         \frac{1}{z+i} = \frac{1}{z+2i-i} = -\frac{1}{i} \cdot \frac{1}{1 - \frac{z+2i}{i}} = -\frac{1}{i} \cdot \sum_{n=0}^{\infty} \left(\frac{z+2i}{i}\right)^n = -\sum_{n=0}^{\infty} \frac{1}{(i)^{n+1}}\frac{(z+2i)^n}{1}
-    .\]
+    \begin{align*}
+        \frac{1}{z+i} &= \frac{1}{z+2i-i} = -\frac{1}{i} \cdot \frac{1}{1 - \frac{z+2i}{i}} =\\
+        &= -\frac{1}{i} \cdot \sum_{n=0}^{\infty} \left(\frac{z+2i}{i}\right)^n = -\sum_{n=0}^{\infty} \frac{1}{(i)^{n+1}}\frac{(z+2i)^n}{1}
+    .\end{align*}
 Zatem dla $z\in R(-2i, 0, 1)$,
-\[
-    f(z) = \frac{z+1}{z^2 + 1} = \frac{1+i}{2}\cdot \sum_{n=0}^{\infty} \frac{1}{(i)^{n+1}}(z+2i)^n - \frac{1-i}{2}\cdot \sum_{n=0}^{\infty} \frac{1}{(3i)^{n+1}}\cdot (z+2i)^n = \sum_{k = 0}^{\infty}d_k \left( z+2i \right) ^k
-,\]
+\begin{align*}
+    f(z) &= \frac{z+1}{z^2 + 1} = \frac{1+i}{2}\cdot \sum_{n=0}^{\infty} \frac{1}{(i)^{n+1}}(z+2i)^n -\\
+    &- \frac{1-i}{2}\cdot \sum_{n=0}^{\infty} \frac{1}{(3i)^{n+1}}\cdot (z+2i)^n = \sum_{k = 0}^{\infty}d_k \left( z+2i \right) ^k
+,\end{align*}
 gdzie
 \[
     d_k = -\frac{1+i}{2}\cdot \frac{1}{(i)^{n+1}} - \frac{1-i}{2}\cdot \frac{1}{(3i)^{n+1}}
@@ -110,7 +112,8 @@ gdzie
 dla $|z+2i| > 3$
 \begin{align*}
     \frac{1}{z-i} &= \frac{1}{z+2i-3i} = \frac{1}{z+2i}\cdot \frac{1}{1 - \frac{3i}{z+2i}} =\\
-    &= \frac{1}{z+2i}\cdot \sum_{n=0}^{\infty} (3i)^n\cdot \frac{1}{(z+2i)^n} = \sum_{n=0}^{\infty} \frac{(3i)^n}{(z+2i)^{n+1}} = \sum_{n=1}^{\infty} \frac{(3i)^{n-1}}{(z+2i)^n}
+    &= \frac{1}{z+2i}\cdot \sum_{n=0}^{\infty} (3i)^n\cdot \frac{1}{(z+2i)^n} =\\
+    &= \sum_{n=0}^{\infty} \frac{(3i)^n}{(z+2i)^{n+1}} = \sum_{n=1}^{\infty} \frac{(3i)^{n-1}}{(z+2i)^n}
 .\end{align*}
 I wtedy dla $z\in R(-2i,3,+\infty)$, jest
 \[
@@ -135,7 +138,10 @@ $r_1<r<r_2$
 \end{tw}
 \begin{proof}
     Zauważmy, że
-        $\underset{z\in R(z_0,r_1,r_2)}{\forall}$ znajdziemy takie $r_1' > r_1$ i $r_2' < r_2$, że $z\in R(z_0,r_1',r_2')$. Ze wzoru Cauchy wiemy, że
+        \[
+            \underset{z\in R(z_0,r_1,r_2)}{\forall}\quad \underset{r_1' > r_1}{\exists}\quad \underset{r_2' < r_2}{\exists} z\in R(z_0,r_1',r_2').
+        \]
+        Ze wzoru Cauchy wiemy, że
         \[
             f(z) = \frac{1}{2\pi i } \int\limits_{\partial R(z_0,r_1',r_2')}\frac{f(\xi)}{\xi-z}d\xi = \frac{1}{2\pi i}\left[\int\limits_{\partial K(z_0,r_2')}\frac{f(\xi)}{\xi - z}d\xi \quad- \int\limits_{\partial K(z_0,r_1')} \frac{f(\xi)}{\xi - z}d\xi\right]
         .\]

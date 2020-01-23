@@ -15,17 +15,18 @@ mamy definicję ścianki:
 dla $I^n\subset\mathbb{R}^n$, $\omega\in \Lambda^{n-1}(M)$, $\omega = f(x^1, \ldots, x^n) = dx^1\land \ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n$. Wtedy dla $x = (x^1,\ldots,x^n)$ i $d\tilde x = dx^1\ldots dx^{i-1}dx^{i+1}\ldots dx^n$
 
 \begin{align*}
-    &\int_{I(j,\alpha)}\left<f(x) d\tilde x, \frac{\partial }{\partial x^1}, \ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n} \right> = \\
-    &= \delta_{ij} \int_{I(i,\alpha)}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots x^n)d\tilde x =\\
-    &= \int_0^1 dx^1 \ldots \int_0^1 dx^{i-1} \int_0^1 dx^{i+1} \ldots \int_0^1 dx^n f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n) \overset{(\star)}{=}\\
-        &\overset{(\star)}{=} \int_0^1dx^1\ldots\int_0^1dx^n f(x^1,\ldots, x^{i-1},\alpha, x^{i+1}, \ldots, x^n) = \int_{I^n}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n)
+    &\int\limits_{I(j,\alpha)}\left<f(x) d\tilde x, \frac{\partial }{\partial x^1}, \ldots, \frac{\partial }{\partial x^{j-1}}, \frac{\partial }{\partial x^{j+1}}, \ldots, \frac{\partial }{\partial x^n} \right> = \\
+    &= \delta_{ij} \int\limits_{I(i,\alpha)}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots x^n)d\tilde x =\\
+    &= \int\limits_0^1 dx^1 \ldots \int\limits_0^1 dx^{i-1} \int\limits_0^1 dx^{i+1} \ldots \int\limits_0^1 dx^n f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n) \overset{(\star)}{=}\\
+        &\overset{(\star)}{=} \int\limits_0^1dx^1\ldots\int\limits_0^1dx^n f(x^1,\ldots, x^{i-1},\alpha, x^{i+1}, \ldots, x^n) =\\
+        &=\int\limits_{I^n}f(x^1,\ldots,x^{i-1},\alpha, x^{i+1}, \ldots, x^n)
 .\end{align*}
 Przechodzimy do sumy
 \begin{align*}
-    \int_{\partial I}\omega &= \sum_{j=1}^{n} \sum_{\alpha = 0,1} (-1)^{\alpha+j}\int_{I(j,\alpha)}\omega =\\
-    &= \sum_{\alpha = 0,1}(-1)^{\alpha + i}\int_{I^n}f(x^1,\ldots,x^{i-1},\alpha,x^{j+1},\ldots,x^n) =\\
-    &= (-1)^{i+0}\int_{I^n}f(x^1,\ldots,x^{i-1}, 0, x^{i+1},\ldots,x^n) + \\
-    &+ (-1)^{i+1}\int_{I^n}f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n)
+    \int\limits_{\partial I}\omega &= \sum_{j=1}^{n} \sum_{\alpha = 0,1} (-1)^{\alpha+j}\int\limits_{I(j,\alpha)}\omega =\\
+    &= \sum_{\alpha = 0,1}(-1)^{\alpha + i}\int\limits_{I^n}f(x^1,\ldots,x^{i-1},\alpha,x^{j+1},\ldots,x^n) =\\
+    &= (-1)^{i+0}\int\limits_{I^n}f(x^1,\ldots,x^{i-1}, 0, x^{i+1},\ldots,x^n) + \\
+    &+ (-1)^{i+1}\int\limits_{I^n}f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n)
 .\end{align*}
 \begin{align*}
     d\omega &= \frac{\partial f}{\partial x^i} dx^i\land dx^1\land \ldots\land dx^{i-1}\land dx^{i+1}\land \ldots\land dx^n = \\
@@ -33,13 +34,13 @@ Przechodzimy do sumy
 .\end{align*}
 Stąd
 \begin{align*}
-    &(-1)^{i+1} \int_{I^n}\left< \frac{\partial f}{\partial x^1} dx^1,\ldots,dx^n, \frac{\partial }{\partial x^1} , \ldots, \frac{\partial }{\partial x^n}  \right> = \\
-    &= (-1)^{i+1} \int_0^1dx^1\ldots\int_0^1 dx^i\ldots\int_0^1dx^n \frac{\partial f}{\partial x^i} (x) =\\
-    &= (-1)^{i+1} \int_0^1dx^1\ldots\int_0^1dx^{i-1}\int_0^1dx^{i+1}\ldots\int_0^1dx^n\cdot  \\
+    &(-1)^{i+1} \int\limits_{I^n}\left< \frac{\partial f}{\partial x^1} dx^1,\ldots,dx^n, \frac{\partial }{\partial x^1} , \ldots, \frac{\partial }{\partial x^n}  \right> = \\
+    &= (-1)^{i+1} \int\limits_0^1dx^1\ldots\int\limits_0^1 dx^i\ldots\int\limits_0^1dx^n \frac{\partial f}{\partial x^i} (x) =\\
+    &= (-1)^{i+1} \int\limits_0^1dx^1\ldots\int\limits_0^1dx^{i-1}\int\limits_0^1dx^{i+1}\ldots\int\limits_0^1dx^n\cdot  \\
     &\cdot \left[ f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n) - f(x^1,\ldots,x^{i-1}, 0, x^{i+1}, \ldots, x^n) \right]  \\
-    &= (-1)^{i+1}\int_0^1dx^1\ldots\int_0^1dx^i\ldots\int_0^1dx^n\cdot \\
+    &= (-1)^{i+1}\int\limits_0^1dx^1\ldots\int\limits_0^1dx^i\ldots\int\limits_0^1dx^n\cdot \\
     &\cdot \left[ f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n) - f(x^1,\ldots,x^{i-1}, 0, x^{i+1}, \ldots, x^n) \right] = \\
-    &= (-1)^{i+1} \int_{I^n}\left[ f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n) - f(x^1,\ldots,x^{i-1},0,x^{i+1},\ldots,x^n) \right]
+    &= (-1)^{i+1} \int\limits_{I^n}\left[ f(x^1,\ldots,x^{i-1},1,x^{i+1},\ldots,x^n) - f(x^1,\ldots,x^{i-1},0,x^{i+1},\ldots,x^n) \right]
 .\end{align*}
 \[
 LHS = RHS
@@ -49,27 +50,27 @@ LHS = RHS
 \begin{przyklad}
     Niech $[a,b]\in \mathbb{R}^1$ i $f\in \Lambda^0\left( [a,b] \right) $. Wtedy twierdzenie Stokesa wygląda tak (xD):
     \[
-        \int_{\partial[a,b]} f= \int_{[a,b]} df = \int_a^b \left<\frac{\partial f}{\partial x}dx , \frac{\partial }{\partial x}  \right>dx = \int_a^b \frac{\partial f}{\partial x} dx = f(b) - f(a)
+        \int\limits_{\partial[a,b]} f= \int\limits_{[a,b]} df = \int\limits_a^b \left<\frac{\partial f}{\partial x}dx , \frac{\partial }{\partial x}  \right>dx = \int\limits_a^b \frac{\partial f}{\partial x} dx = f(b) - f(a)
     .\]
 \end{przyklad}
 \begin{przyklad}
     Niech $\gamma$ - krzywa na $M$, $\dim M = 3$, $f \in \Lambda^0M$.
      \[
-         \int_\gamma df= \int_{\partial \gamma} f = f(B) - f(A)
+         \int\limits_\gamma df= \int\limits_{\partial \gamma} f = f(B) - f(A)
     .\]
 \end{przyklad}
 \begin{przyklad}
-    $\dim M = 2$, niech $\alpha = xydx + x^2dy$. Policzmy $\int_{\partial S}\alpha$.
+    $\dim M = 2$, niech $\alpha = xydx + x^2dy$. Policzmy $\int\limits_{\partial S}\alpha$.
     \[
-    \int_{\partial S}\alpha = \int_{C_1}\alpha + \int_{C_2}\alpha + \int_{C_3}\alpha
+    \int\limits_{\partial S}\alpha = \int\limits_{C_1}\alpha + \int\limits_{C_2}\alpha + \int\limits_{C_3}\alpha
     ,\]
 ale
     \[
-        \int_{C_1}\left<\varphi^\star\alpha, \frac{\partial }{\partial x}  \right> = 0
+        \int\limits_{C_1}\left<\varphi^\star\alpha, \frac{\partial }{\partial x}  \right> = 0
     ,\]
 $\varphi$ - parametryzacja $C_1$. Jeżeli weźmiemy sobie
 \[
-\int_{C_3}\left<\varphi_3^\star\alpha, - \frac{\partial }{\partial y}  \right> = 0
+\int\limits_{C_3}\left<\varphi_3^\star\alpha, - \frac{\partial }{\partial y}  \right> = 0
 ,\]
 $\varphi_3$ - parametryzacja $C_3$.
 \[
@@ -80,27 +81,28 @@ zatem $\varphi_2^\star\alpha$ przy $x = \cos\theta \implies dx = -\sin\theta d\t
     \varphi_2^\star \alpha = \cos\theta \sin\theta(-\sin\theta d\theta) + (\cos^2\theta)\cos\theta d\theta = \cos\theta(\cos^2\theta - \sin^2\theta)d\theta
 .\]
 \[
-    \int_{\partial S}\alpha = \int_0^{\frac{\pi}{2}}d\theta \left<\cos\theta(\cos^2\theta - \sin^2\theta)d\theta, \frac{\partial }{\partial \theta}  \right>
+    \int\limits_{\partial S}\alpha = \int\limits_0^{\frac{\pi}{2}}d\theta \left<\cos\theta(\cos^2\theta - \sin^2\theta)d\theta, \frac{\partial }{\partial \theta}  \right>
 ,\]
-ale np. tw. Stokesa: $\int_{\partial S}\alpha = \int_S d\alpha$.
+ale np. tw. Stokesa: $\int\limits_{\partial S}\alpha = \int\limits_S d\alpha$.
 \[
 d\alpha = xdy\land dx + 2xdx\land dy = xdx\land dy
 .\]
-\[
-    \int_{\Box}\left<xdx\land dy, \frac{\partial }{\partial x} , \frac{\partial }{\partial y}  \right> = \int_0^1dx\int_0^{\sqrt{1-x^2} } x = \int_0^1dx \cdot x\sqrt{1-x^2} = \left.\frac{2}{3}(1-x^2)^{\frac{3}{2}}\frac{(-1)}{2}\right|_0^1 = \frac{1}{3}
-.\]
+\begin{align*}
+    \int\limits_{\Box}\left<xdx\land dy, \frac{\partial }{\partial x} , \frac{\partial }{\partial y}  \right> &= \int\limits_0^1dx\int\limits_0^{\sqrt{1-x^2} } x = \int\limits_0^1dx \cdot x\sqrt{1-x^2} =\\
+    &= \left.\frac{2}{3}(1-x^2)^{\frac{3}{2}}\frac{(-1)}{2}\right|_0^1 = \frac{1}{3}
+.\end{align*}
 \end{przyklad}
 \begin{przyklad}
     Niech $\alpha = \frac{-y}{x^2+y^2}dx + \frac{x}{x^2+y^2}dy\in \Lambda^1(M)$, $\partial K = \left\{ \begin{bmatrix} \cos\theta\\ \sin\theta \end{bmatrix} , 0\le \theta, 2\pi \right\} $
     \[
-        \int_{\partial K}\alpha = \int_0^{2\pi}\left<\varphi^\star\alpha, \frac{\partial }{\partial \theta} \right>d\theta
+        \int\limits_{\partial K}\alpha = \int\limits_0^{2\pi}\left<\varphi^\star\alpha, \frac{\partial }{\partial \theta} \right>d\theta
     .\]
 \[
     \varphi^\star \alpha = -\sin\theta(-\sin\theta)d\theta + \cos\theta\cos\theta d\theta = d\theta
 .\]
 Czyli mamy
 \[
-\int_{\partial K}\alpha = \int_0^{2\pi}d\theta = 2\pi
+\int\limits_{\partial K}\alpha = \int\limits_0^{2\pi}d\theta = 2\pi
 .\]
 Ale z drugiej strony dla
     \begin{align*}
@@ -111,7 +113,7 @@ Ale z drugiej strony dla
 \end{przyklad}
 Wiemy, że
 \[
-    \int_{\gamma}df = \int_{\partial\gamma}f = f(B) - f(A)
+    \int\limits_{\gamma}df = \int\limits_{\partial\gamma}f = f(B) - f(A)
 .\]
 Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
 \[
@@ -119,7 +121,7 @@ Niech $\alpha = x^2dx + xydy + 2dz$. $\alpha$ jest potencjalna, jeżeli
 ,\]
 (rotacja gradientu równa zero)
 \[
-    \int_{\gamma}\alpha = \int_{\gamma}d\eta = \eta(B) - \eta(A)
+    \int\limits_{\gamma}\alpha = \int\limits_{\gamma}d\eta = \eta(B) - \eta(A)
 .\]
 
 \pagebreak
@@ -158,6 +160,6 @@ j = e \frac{\partial }{\partial t} + ev^x \frac{\partial }{\partial x}  + ev^y \
 .\]
 \[
     j \lrcorner  F = ?
-.\]
+\]
 \end{przyklad}
 \end{document}

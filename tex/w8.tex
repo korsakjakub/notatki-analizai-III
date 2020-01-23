@@ -7,13 +7,13 @@
 \begin{document}
     \subsection{W ostatnim odcinku}
     \[
-        \int_\gamma \alpha = \int_\gamma \vec{A}\cdot \underbrace{\vec{t}_{st}dL}_{\vec{dL}}
+        \int\limits_\gamma \alpha = \int\limits_\gamma \vec{A}\cdot \underbrace{\vec{t}_{st}dL}_{\vec{dL}}
     .\]
 \[
     dA^\sharp = \left( \overbrace{\left( . \right) , - \left( . \right)}^{D_1}  \right)dx^2\land dx^3 + \ldots
 .\]
 \[
-    \int_S dA^\sharp = \int D^1\left<dx^2\land dx^3, \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right>dx^2dx^3 + \int D^2 dx^{3} dx^{1} + \int D^3 dx^{1} dx^{2}
+    \int\limits_S dA^\sharp = \int\limits D^1\left<dx^2\land dx^3, \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3}  \right>dx^2dx^3 + \int\limits D^2 dx^{3} dx^{1} + \int\limits D^3 dx^{1} dx^{2}
 .\]
 
 Przypomnijmy sobie czym jest rotacja wektora (takiego fizycznego)
@@ -44,26 +44,26 @@ ale $rot(\vec{A})\cdot \vec{n} = D^1 \frac{1}{g_{22}g_{33}}$, ale
 ,\]
 zatem
 \[
-    \int_S dA^\sharp = \int_S (rot \vec{A}) \cdot \vec{n}  ds
+    \int\limits_S dA^\sharp = \int\limits_S (rot \vec{A}) \cdot \vec{n}  ds
 .\]
 Czyli teraz mamy tak
 \[
-    \int_\gamma A^\sharp = \int_\gamma \vec{A}\cdot \vec{t}_{st}dL
+    \int\limits_\gamma A^\sharp = \int\limits_\gamma \vec{A}\cdot \vec{t}_{st}dL
 .\]
 \[
-\int_S dA^\sharp = \int_{\partial S}A^\sharp
+\int\limits_S dA^\sharp = \int\limits_{\partial S}A^\sharp
 .\]
 \[
-    \int_S\left( rot \vec{A} \right) \cdot \vec{n} ds = \int_{\partial S}\vec{A} \cdot \vec{t}_{st}dL
+    \int\limits_S\left( rot \vec{A} \right) \cdot \vec{n} ds = \int\limits_{\partial S}\vec{A} \cdot \vec{t}_{st}dL
 .\]
 \begin{przyklad}
     $\dim M = 3$, $V \subset M$, $\dim V = 3$
      \[
-    \int_{\partial V}\star A^\sharp = \int_V d\star A^\sharp
+    \int\limits_{\partial V}\star A^\sharp = \int\limits_V d\star A^\sharp
     .\]
 \end{przyklad}
 \begin{pytanie}
-czym jest $\int_{\partial V}\star A^\sharp$?
+czym jest $\int\limits_{\partial V}\star A^\sharp$?
 \end{pytanie}
 \[
     \star(dx^{1})\sqrt{g}g^{11}  dx^{2}\land dx^{3}
@@ -85,8 +85,8 @@ A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} \land dx^{3}  + A^2 \sqrt{g_{11}g_{33}} \qua
 .\]
 Całka z tego interesu:
 \begin{align*}
-    \int_{\partial V}\star A^\sharp &= \int A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} dx^{3} + \int A^2 \sqrt{g_{11}g_{33}}\quad dx^{3} dx^{1} + \\
-&+ \int A^3 \sqrt{g_{11}g_{22}} \quad dx^{1}  dx^{2}
+    \int\limits_{\partial V}\star A^\sharp &= \int\limits A^1 \sqrt{g_{22}g_{33}}\quad dx^{2} dx^{3} + \int\limits A^2 \sqrt{g_{11}g_{33}}\quad dx^{3} dx^{1} + \\
+&+ \int\limits A^3 \sqrt{g_{11}g_{22}} \quad dx^{1}  dx^{2}
 ,\end{align*}
 ale
 \[
@@ -94,14 +94,14 @@ ale
 .\]
 Czyli ostatecznie
 \[
-    \int_{\partial V}\star A^\sharp = \int_{\partial V}\vec{A}\cdot \vec{n}ds
+    \int\limits_{\partial V}\star A^\sharp = \int\limits_{\partial V}\vec{A}\cdot \vec{n}ds
 .\]
 \begin{pytanie}
-Jak wygląda $\int_Vd\star A^\sharp$?
+Jak wygląda $\int\limits_Vd\star A^\sharp$?
 \end{pytanie}
 \begin{align*}
-    \int_{V}d\star A^\sharp &=\\
-    &= \int_{V} \Bigg< \left( A^1\sqrt{g_{22}g_{33}} \right)_{,1} + \left( A^2\sqrt{g_{11}g_{33}}  \right) _{,2} +\\
+    \int\limits_{V}d\star A^\sharp &=\\
+    &= \int\limits_{V} \Bigg< \left( A^1\sqrt{g_{22}g_{33}} \right)_{,1} + \left( A^2\sqrt{g_{11}g_{33}}  \right) _{,2} +\\
     &+ \left( A^3\sqrt{g_{11}g_{22}}  \right) _{,3}, dx^{1} \land dx^{2} \land dx^{3} , \frac{\partial }{\partial x^1} , \frac{\partial }{\partial x^2} , \frac{\partial }{\partial x^3} \Bigg> dx^{1} dx^{2} dx^{3}
 .\end{align*}
 Dywergencja to było coś takiego:
@@ -118,11 +118,11 @@ więc
 .\]
 Zatem ze zdania
 \[
-\int_{\partial V}\star A^\sharp = \int_V d\star A^\sharp
+\int\limits_{\partial V}\star A^\sharp = \int\limits_V d\star A^\sharp
 \]
 wiemy, że
 \[
-    \int_{\partial V}\vec{A}\cdot \vec{n} ds = \int_V div \vec{A} \quad dV
+    \int\limits_{\partial V}\vec{A}\cdot \vec{n} ds = \int\limits_V div \vec{A} \quad dV
 .\]
 
 \subsection{Analiza Zespolona}

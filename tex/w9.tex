@@ -89,7 +89,7 @@ to możemy zrobić takie coś:
     .\end{align*}
 \textbf{Obserwacja:} niech $f(z) = P(x,y) + i Q(x,y)$, wówczas
 \begin{align*}
-    \frac{\partial f}{\partial x} = \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x} \\ \frac{\partial f}{\partial y} = \frac{\partial P}{\partial y} + i \frac{\partial Q}{\partial y}
+    \frac{\partial f}{\partial x} &= \frac{\partial P}{\partial x} + i \frac{\partial Q}{\partial x} \\ \frac{\partial f}{\partial y} &= \frac{\partial P}{\partial y} + i \frac{\partial Q}{\partial y}
 .\end{align*}
 czyli
 \begin{align*}
@@ -110,26 +110,26 @@ czyli
 \begin{przyklad}
     Obliczmy całkę:
     \[
-        \int_{\partial K(0,r)} \frac{dz}{z} = \begin{vmatrix} z = re^{i\theta}\\ dz = rie^{i\theta}d\theta \end{vmatrix} = \int_0^{2\pi} \frac{rie^{i\theta}d\theta}{re^{i\theta}} = i \int_0^{2\pi}d\theta = 2\pi i
+        \int\limits_{\partial K(0,r)} \frac{dz}{z} = \begin{vmatrix} z = re^{i\theta}\\ dz = rie^{i\theta}d\theta \end{vmatrix} = \int\limits_0^{2\pi} \frac{rie^{i\theta}d\theta}{re^{i\theta}} = i \int\limits_0^{2\pi}d\theta = 2\pi i
     .\]
 \end{przyklad}
 \begin{stw}
     Jeżeli $f$ - holomorficzna na $\mathcal{O}$ i $\Omega \subset\mathcal{O}$, to
     \[
-        \int_{\partial \Omega} fdz = \int_\Omega d(fdz) = \int_{\Omega} \frac{\partial f}{\partial d\bar{z}} d\bar{z}\land dz = 0
+        \int\limits_{\partial \Omega} fdz = \int\limits_\Omega d(fdz) = \int\limits_{\Omega} \frac{\partial f}{\partial d\bar{z}} d\bar{z}\land dz = 0
     .\]
 \end{stw}
 \begin{tw}
     (wzór Cauchy)\\
     Niech $\Omega\subset\mathbb{C}$, $f: \bar{\Omega} \to \mathbb{C}$, niech $\xi \in \Omega$. Wówczas  \[
-        f(\xi) = \frac{1}{2\pi i }\int_{\partial \Omega}\frac{f(z)}{z-\xi}dz + \int_{\Omega} \frac{1}{z - \xi}\frac{\partial f}{\partial \bar{z}} dz\land d\bar{z}
+        f(\xi) = \frac{1}{2\pi i }\int\limits_{\partial \Omega}\frac{f(z)}{z-\xi}dz + \int\limits_{\Omega} \frac{1}{z - \xi}\frac{\partial f}{\partial \bar{z}} dz\land d\bar{z}
     .\]
 \end{tw}
 \textbf{Obserwacja:} jeżeli $f$ - holomorficzna na $\Omega$, to
 \[
-    f(\xi) = \frac{1}{2\pi i} \int_{\partial \Omega}\frac{f(z)}{z - \xi} dz
+    f(\xi) = \frac{1}{2\pi i} \int\limits_{\partial \Omega}\frac{f(z)}{z - \xi} dz
 .\]
-Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $\xi = 0$ i $f(z) = 1$
+Wynik $\frac{1}{2\pi i }\int\limits_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $\xi = 0$ i $f(z) = 1$
  \begin{proof}
      niech
      \[
@@ -137,20 +137,20 @@ Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $
      .\]
      zatem wiemy, że
      \[
-         \int_{\partial \Omega_\epsilon}g(z) = \int_{\Omega} d g(z)
+         \int\limits_{\partial \Omega_\epsilon}g(z) = \int\limits_{\Omega} d g(z)
      .\]
  \[
-     \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz + \int_{\partial K(\xi, \epsilon)} \frac{f(z)}{z - \xi}dz = \int\int\limits_{\Omega_\epsilon}\frac{1}{z-\xi} \frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz
+     \int\limits_{\partial \Omega} \frac{f(z)}{z - \xi}dz + \int\limits_{\partial K(\xi, \epsilon)} \frac{f(z)}{z - \xi}dz = \iint\limits_{\Omega_\epsilon}\frac{1}{z-\xi} \frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz
  .\]
  \textbf{Pytanie:} co się dzieje, jak przejdziemy z $\epsilon\to 0$ Oznacza to, że chcemy zbadać zachowanie takiej całki
      \[
-         \int\int\limits_{\Omega_{\epsilon}} \frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}}
+         \iint\limits_{\Omega_{\epsilon}} \frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}}
      \]
  dla $z = \epsilon e^{i\theta} + \xi$, ale
      \[
          \frac{1}{\epsilon e^{i\theta} + \xi - \xi} = \frac{e^{-i\theta}}{\epsilon}
      ,\]
- a całka $\int\int\limits_{\Omega_\epsilon} d\bar{z}\land dz \approx \underbrace{\epsilon d\epsilon d\theta}_{\text{element powierzchni}}$.
+ a całka $\iint\limits_{\Omega_\epsilon} d\bar{z}\land dz \approx \underbrace{\epsilon d\epsilon d\theta}_{\text{element powierzchni}}$.
      Oznacza, to że
      \[
          \frac{1}{z-\xi} d\bar{z}\land dz \overset{\epsilon \to 0}{\approx} \frac{1}{\epsilon} \cdot \epsilon
@@ -158,16 +158,16 @@ Wynik $\frac{1}{2\pi i }\int_{\partial K(0,r)} \frac{dz}{z} = 1$ otrzymamy dla $
  czyli w $\epsilon = 0$ nie wybuchnie!\\
      Ale
      \[
-         \int_{\partial K(\xi, \epsilon)} \frac{f(z)}{z-\xi} dz = - \int_0^{2\pi} \frac{f(\xi + \epsilon e^{i\theta})}{\epsilon e^{i\theta}} \epsilon i e^{i\theta} d\theta =
+         \int\limits_{\partial K(\xi, \epsilon)} \frac{f(z)}{z-\xi} dz = - \int\limits_0^{2\pi} \frac{f(\xi + \epsilon e^{i\theta})}{\epsilon e^{i\theta}} \epsilon i e^{i\theta} d\theta =
      .\]
  Trzeba wrzucić twierdzenie o wartości średniej
      \[
-         = i f(c) \cdot \int_{0}^{2\pi}d\theta = 2 \pi i f(c) \underset{\epsilon \to 0}{\longrightarrow}-2\pi i f(\xi)
+         = i f(c) \cdot \int\limits_{0}^{2\pi}d\theta = 2 \pi i f(c) \underset{\epsilon \to 0}{\longrightarrow}-2\pi i f(\xi)
      ,\]
  gdzie $c\in \partial K(\xi, \epsilon)$.\\
      Zatem
      \[
-         \int_{\partial \Omega} \frac{f(z)}{z - \xi}dz - \int_{\Omega}\frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz = 2 \pi i f(\xi)
+         \int\limits_{\partial \Omega} \frac{f(z)}{z - \xi}dz - \int\limits_{\Omega}\frac{1}{z-\xi}\frac{\partial f}{\partial \bar{z}} d\bar{z}\land dz = 2 \pi i f(\xi)
      .\]
 \end{proof}
 \begin{tw}
