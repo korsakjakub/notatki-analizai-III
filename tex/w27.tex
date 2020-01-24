@@ -1,0 +1,220 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+    \[
+        \widehat{\delta(x-a)} = e^{-2\pi i k a}
+    .\]
+\[
+    T(x) = \sum_{n=-\infty}^{\infty} \widehat{\delta(x-n)} = \sum_{n=-\infty}^{\infty} e^{-2 \pi i n x} \iff \left<T(x), \varphi \right> = \left<\sum_{n=-\infty}^{\infty} e^{-2\pi i n x}, \varphi \right>
+.\]
+Policzmy $T(x)$ w inny sposób. Zauważmy, że jeżeli $T(x)$ jest postaci
+\[
+    T(x) = \sum_{n=-\infty}^{\infty} e^{-2\pi i n x}
+,\]
+to wtedy
+\[
+    e^{-2\pi i x}\cdot T(x) = \sum_{n=-\infty}^{\infty} e^{-2\pi i (n+1) x} = T(x)
+.\]
+Czyli mamy napis
+\[
+    T(x+1) = e^{-2\pi i x}\cdot T(x) = T(x)
+.\]
+W związku z tym, $T$ jest okresowa z okresem jeden ($T(x) = T(x+1)$). Co się stanie jak spróbujemy to rozwiązać?
+ \[
+     \left( e^{-2\pi i x} - 1 \right) T(x) = 0
+.\]
+Oba czynniki mają okres równy jeden, czyli nasze rozwiązanie musi być niezmiennicze względem translacji o jeden. Pierwszy czynnik można przepisać inaczej
+\[
+    e^{-2\pi i x} - 1 = \cos(2\pi x) - 1 - i \sin(2 \pi x)
+.\]
+Teraz dla $x = 0$ mamy
+\[
+    e^{-2\pi i \cdot 0} - 1 = 0
+,\]
+czyli mamy już równanie i warunek początkowy
+\[
+    f(x)T(x) = 0,\quad f(0) = 0
+.\]
+Rozwiążemy problem dla $x \in ]-1,1[$. Wiemy narazie tylko jak rozwiązać podobne coś:  $xT = 0$. Analogicznie
+ \[
+     \left<\left(e^{-2\pi i x} - 1\right)T, \varphi \right> = 0
+.\]
+Jeżeli
+\[
+    \underset{\psi}{\exists} \left<T, \psi \right> = 0
+,\]
+to wtedy wiemy, że (analogicznie do $xT =0$)
+\[
+    \left<\left( e^{-2\pi i x} - 1 \right) T, \frac{\psi}{e^{-2\pi i x} - 1} \right> = 0
+.\]
+Oznacza to, że
+\begin{equation}
+    \label{eqn:eq27-1}
+    \psi\in S \implies \frac{\psi}{e^{-2\pi i x} - 1}\in S
+.\end{equation}
+Żeby \eqref{eqn:eq27-1} był prawdziwy, to musi być spełnione
+\[
+    \psi(x) = 0 \iff \mathbb{Z} \ni x = 0
+.\]
+($\frac{\psi(x)}{\cos(2\pi x) - 1}$ - wyrażenie regularne).
+Można przedstawić $T$ następująco
+\[
+    T(x) \underset{x\in ]n-1,n+1[}{=}  \sum_{n=-\infty}^{\infty} c_{\alpha_n}\delta(x-n)
+.\]
+Skoro $T$ - okresowa, to
+\[
+    T(x+1) = T(x) \implies T(x) = c \cdot \sum_{n=-\infty}^{\infty} \delta(x-n)
+.\]
+Trzeba wyliczyć $c$.
+\[
+    T(x) = \sum_{n=-\infty}^{\infty} \hat{\delta}(x-n) = c \sum_{n=-\infty}^{\infty} \delta(x-n)
+.\]
+Czyli piszemy
+\[
+    c \left<\sum_{n=-\infty}^{\infty} \delta(x-n), \varphi \right> = \left<\sum_{n=-\infty}^{\infty} \hat{\delta}(x-n), \varphi \right> = \left<\sum_{n=-\infty}^{\infty} \delta(x-n), \hat{\varphi} \right>
+.\]
+Kiedyś policzyliśmy
+\[
+    \mathcal{F}\left( e^{-\pi x^2} \right) = e^{-\pi x^2}
+.\]
+Czyli bierzemy takie $\varphi$, które znamy.
+\[
+    c \left<\sum_{n=-\infty}^{\infty} \delta(x-n), e^{-\pi x^2} \right> = \left<\sum_{n=-\infty}^{\infty} \delta(x-n), e^{-\pi x^2} \right>
+.\]
+Zatem $c = 1$. Otrzymaliśmy
+\subsection{Wzór sumacyjny Poissona}
+Skoro mamy
+\begin{equation}
+    \label{eqn:eq27-2}
+     \sum_{n=-\infty}^{\infty} \delta(x-n) = \sum_{n=-\infty}^{\infty} \hat{\delta}(x-n)
+,\end{equation}
+to mamy też
+\[
+    \sum_{n=-\infty}^{\infty} \varphi(n) = \sum_{n=-\infty}^{\infty} \hat{\varphi}(n) \impliedby \varphi \in S
+.\]
+Wcześniej wyliczyliśmy
+\[
+    \int\limits_{-\infty}^{\infty} \left| f(x) \right| ^2 dx = \int\limits_{-\infty}^{\infty} |\hat{f}(x)|^2 dx
+,\]
+więc była spora promocja jak widać.
+\textbf{Uwaga:} z racji obecności $\delta$ i $\hat{\delta}$, równość \eqref{eqn:eq27-2} może być stosowana na dziedzinie szerszej niż $S$.
+\subsection{Szeregi Fouriera}
+Wiemy, że
+\[
+    \hat{f}(x) = \int\limits_{-\infty}^{\infty} f(k) e^{-2\pi i k x}dk
+,\]
+\[
+    \left( \mathcal{F}^{-1}f \right) (x) = \int\limits_{-\infty}^{\infty} f(k) e^{2\pi i k x}dk
+,\]
+czyli, że
+\begin{equation}
+    \label{eqn:eq27-3}
+    f(x) = \int\limits_{-\infty}^{\infty} \hat{f}(k)e^{2\pi i k x}dk
+\end{equation}
+\begin{pytanie}
+    Czy istnieją jakieś $c_k$ i $d_k$ takie, że
+    \begin{align*}
+        f(x) &= \sum_{k=-\infty}^{\infty} c_k e^{2\pi i kx}\\
+        \hat{f}(x) &= \sum_{k=-\infty}^{\infty} d_k e^{-2\pi i k x}
+    ?\end{align*}
+\end{pytanie}
+Zauważmy, że
+\[
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i x (m-n)}dx = \begin{cases}
+        1 & m=n\\
+        0  & m\neq n
+    \end{cases}
+.\]
+Fajniejsza wersja:
+\[
+    \int\limits_{-\frac{a}{2}}^{\frac{a}{2}} e^{2\pi i \frac{(m-n)x}{a}}dx = \begin{cases}
+        a & m = n\\
+        0 & m \neq n
+    \end{cases}
+.\]
+Można by też stwierdzić, że obiekty $e ^{2\pi i xm}$ i $e ^{2\pi i xn}$ tworzą bazę ortonormalną i dlatego
+\[
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i x m}\left(e^{2\pi i x n}\right)^\star dx = \left<e^{2\pi i xm}, e^{2\pi i xn} \right> = \delta_{mn}
+.\]
+Zatem
+\[
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} dx e^{-2\pi i n x}\left( \sum_{k=-\infty}^{\infty} c_k e^{2\pi i k x} \right) \underset{\text{wolno?}}{=}  \sum_{k = -\infty}^{\infty} c_k \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i x(k-n)}dx
+.\]
+Wolno tak zrobić np. jak szereg jest zbieżny jednostajnie. W takim razie cały ten napis jest równy $c_n$, bo
+\[
+    \sum c_k \delta_{kn} = c_n
+.\]
+Dokładnie ten sam rachunek możemy odpalić dla $\hat{f}$! Wtedy
+\[
+    d_n = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \hat{f}(x) e^{2\pi i k x}dx
+.\]
+Dostajemy dlatego wzorki:
+\begin{align}
+    \label{eqn:eq27-4}
+    f(x) &= \sum_{k=-\infty}^{\infty} c_k e^{2\pi i n x}\\
+    \label{eqn:eq27-5}
+    \hat{f}(x) &= \sum_{k=-\infty}^{\infty} d_k e^{-2\pi i k x}
+.\end{align}
+\textbf{Obserwacja:} zauważmy, że $\hat{f}(\lambda)$ takie, że ma nośnik zwarty, czyli
+\[
+    |\lambda| > \frac{1}{2} \implies \hat{f}(\lambda) = 0
+.\]
+Wtedy
+\[
+    d_n = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \hat{f}(x)e^{2\pi i n x}dx = \int\limits_{-\infty}^{\infty} \hat{f}(x) e^{2\pi i nx}dx \overset{\eqref{eqn:eq27-3}}{=}  f(n)
+.\]
+Czyli jak to wsadzimy do \eqref{eqn:eq27-5}, to dostaniemy
+\begin{equation}
+    \label{eqn:eq27-6}
+    \hat{f}(x) = \sum_{k=-\infty}^{\infty} f(k)e^{-2\pi i k x}
+\end{equation}
+\subsection{Twierdzenie Shannona o próbkowaniu}
+\begin{definicja}
+    \[
+        \sinc(x) = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{+2\pi i x \lambda}d\lambda
+    .\]
+\end{definicja}
+\begin{tw}
+    Jeżeli $f$ - taka, że \ldots,
+    \[
+        |\lambda| > \frac{1}{2} \implies \hat{f}(\lambda) = 0
+    ,\]
+to szereg
+\[
+    S_N(t) = \sum_{n=-N}^{N} f(n) \sinc(t-n) \overset{\textbf{jednostajnie}}{\longrightarrow}  f(t)
+.\]
+\end{tw}
+Oznacza to, że możemy z dowolną dokładnością odtworzyć kształt funkcji $f(t)$ przy pomocy \textbf{skończonej} ilości wyrazów.\\
+\begin{pytanie}
+    Co to znaczy, że $\hat{f}$ ma zwarty nośnik?
+\end{pytanie}
+To znaczy, że jak mamy sygnał, to bierzemy tylko te częstotliwości, które słyszymy.
+\begin{proof}
+    Chcemy pokazać, że
+    \[
+        \underset{t\in A}{\sup} \left| \sum_{n=-N}^{N} f(n) \sinc(t-n) - f(t) \right| \underset{N\to\infty}{\longrightarrow} 0
+    .\]
+Ale
+\begin{align*}
+    &\left| \sum_{n=-N}^{N} f(n) \sinc(t-n) - f(t) \right| = \left| \sum_{n=-N}^{N} f(n) \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i \lambda (t-n)}d\lambda - \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \hat{f}(\lambda)e^{2\pi i \lambda t} d\lambda \right| = \\
+    &= \left| \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \left( \sum_{n=-N}^{N} f(n)e^{2\pi i (t - n)\lambda} - \hat{f}(\lambda)e^{2\pi i \lambda t}\right)   \right| = \\
+    &= \left| \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \left( \sum_{n=-N}^{N} f(n)e^{- 2\pi i \lambda n} - \hat{f}(\lambda) \right) e^{2\pi i \lambda t}  \right| = \\
+    & \overset{\eqref{eqn:eq27-6}}{=} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \left( \sum_{n=-\infty}^{\infty} f(n) e^{-2pi i \lambda n} - \hat{f}(\lambda) - \sum_{|n| \ge N + 1} f(n) e^{-2\pi i \lambda n} \right) = \\
+    &= \left| S_N(t) - f(t) \right| \le \left| \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \sum_{|n| \ge N + 1} f(n)e^{-2\pi i \lambda n}  \right| \le\\
+    &\le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \sum_{|n| \ge N + 1} \left| f(n) e^{-2\pi i \lambda n} \right| \le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} d\lambda \sum_{|n| \ge N + 1} \left| f(n) \right| =\\
+    &= 1 \cdot \sum_{|n| \ge N + 1}\left| f(n) \right| = (\star\star\star)
+.\end{align*}
+Zauważmy, że
+\[
+    \hat{f}(0) = \sum_{k = -\infty}^{\infty} f(k) e^{-2\pi i k \cdot 0}= \sum_{k = -\infty}^{\infty} f(k) \to \lim_{k \to \infty}f(k) = 0
+.\]
+Czyli
+\[
+    (\star\star\star) \underset{N\to \infty}{\longrightarrow} 0
+.\]
+\end{proof}
+\end{document}

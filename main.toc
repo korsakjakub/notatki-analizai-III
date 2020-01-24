@@ -67,4 +67,8 @@
 \contentsline {chapter}{\chapternumberline {26}20.01.2020, \textit {Skąd się bierze Prawo Coulumba, Przestrzeń Schwartza, dystrybucje temperowane, dwa daszki to ptaszek}}{130}{chapter.26}% 
 \contentsline {subsection}{Równanie $xT = 0$}{131}{subsection*.90}% 
 \contentsline {subsection}{Transformata Fouriera dystrybucji}{132}{subsection*.91}% 
-\contentsline {part}{\partnumberline {II}\textbf {Dodatek:} Pytania egzaminacyjne}{136}{part.2}% 
+\contentsline {chapter}{\chapternumberline {27}24.01.2020, \textit {Wzór sumacyjny Poissona, Szeregi Fouriera, Twierdzenie Shannona o próbkowaniu}}{136}{chapter.27}% 
+\contentsline {subsection}{Wzór sumacyjny Poissona}{138}{subsection*.92}% 
+\contentsline {subsection}{Szeregi Fouriera}{138}{subsection*.93}% 
+\contentsline {subsection}{Twierdzenie Shannona o próbkowaniu}{140}{subsection*.94}% 
+\contentsline {part}{\partnumberline {II}\textbf {Dodatek:} Pytania egzaminacyjne}{142}{part.2}% 
