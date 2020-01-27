@@ -1,0 +1,195 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{
+    {"../img/"}
+    {"img/"}
+}
+
+\begin{document}
+\subsection{Zbieżność szeregów Fouriera}
+    Rozważmy szereg
+    \[
+        \sum_{n=-\infty}^{\infty} c_n e^{2\pi i n x}
+    ,\]
+gdzie
+\[
+    c_n = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx
+.\]
+Niech
+\[
+    S_N(x) = \sum_{n=-N}^{N} c_n e^{2\pi i n x}
+.\]
+\begin{pytanie}
+    W jaki sposób $S_N(x)$ zbiega do $f(x)$?
+\end{pytanie}
+Mamy do rozważenia dwa przypadki
+\begin{enumerate}[a)]
+    \item $\underset{x\in A}{\forall} S_N(x) \to f(x)$
+    \item $\lim\limits_{N \to \infty}\underset{x\in A}{\sup} \left| S_N(x) - f(x) \right| \to 0$
+\end{enumerate}
+\textbf{Obserwacja: }Niech $f \in \mathcal{C}^2(A)$. Wówczas $S_N(x)\to f(x)$ jednostronnie na $A$.
+\begin{proof}
+    Wiemy, że
+    \begin{equation}
+        \label{eqn:eq28-1}
+        c_n = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx \tag{$\star$}
+    \end{equation}
+Chcemy zcałkować to przez części.
+\[
+    \eqref{eqn:eq28-1} = -f(x) \frac{1}{2\pi i n}e^{-2\pi i n x}\Bigg|_{-\frac{1}{2}}^{+\frac{1}{2}} + \frac{1}{2\pi i n}\int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f'(x) e^{-2\pi i n x}dx
+.\]
+Czyli mamy coś takiego:
+\begin{align*}
+    c_n(f) &= \frac{1}{(2\pi i n)}c_n(f')\\
+    c_n(f') &= \frac{1}{(2\pi i n)} c_n (f'')\\
+    c_n(f) &= \frac{1}{(2\pi i n)^2}c_n(f'')
+.\end{align*}
+    Wychodzi na to że $c_n(f'')$ - ograniczony, bo $f\in \mathcal{C}^2 \implies \exists M: \left| c_n(f'') < M \right|  $, czyli
+    \[
+        \left| c_n(f) \right| \le \frac{M}{4\pi^2 n^2}
+    .\]
+Wrzucamy to w ten szereg
+\[
+    \sum_{n=-\infty}^{\infty} \left| c_n e^{2\pi i n x} \right| \le \frac{1}{(4\pi)^2} \sum_{n=-\infty}^{\infty} \frac{1}{n^2}
+.\]
+Mamy majorantę, więc $S_N(x)$ jest zbieżny jednostajnie.
+    Nie pokazaliśmy jeszcze, że $S_N(x)\to f(x)$!
+\end{proof}
+\begin{tw}
+    (Nierówność Bessela)\\
+    Niech $f\in L^2(-\frac{1}{2}, \frac{1}{2})$. Wówczas
+    \[
+        \sum_{n=-\infty}^{\infty} \left\Vert c_n \right\Vert^2 \le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left| f(x) \right|^2 dx
+    .\]
+\end{tw}
+\textbf{Wniosek: }Szereg  $\sum_{-\infty}^{+\infty} |c_n|^2$ jest zbieżny, czyli też $\lim\limits_{n \to \infty}c_n = 0$.\\
+\textbf{Obserwacja:} Nierówność nie oznacza zbieżności jednostajnej, bo sam fakt, że
+\[
+    \sum_{n=-\infty}^{\infty} \left\Vert c_n e^{2\pi i n x} \right\Vert < M
+\]
+\textbf{nie} oznacza automatycznie istnienia majoranty.
+\begin{proof}
+    (Bessel)\\
+    Niech
+    \[
+        S_N(x) = \sum_{n=-N}^{N} c_n e^{2\pi i n x}
+    ,\]
+\[
+    c_n = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx
+.\]
+Chcemy pokazać, że
+\begin{align}
+    0 &\le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \underbrace{\left\Vert S_N(x) - f(x) \right\Vert^2}_{\text{norma w sensie zespolonym}} dx =\nonumber \\
+    & \underset{\left\Vert z \right\Vert^2 = z\cdot \bar{z}}{=} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left( S_N(x) - f(x) \right) \left( \overline{S_N}(x) - \overline{f}(x)  \right)dx =\nonumber \\
+    \label{eqn:eq28-2}
+    &= \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left( S_N(x)\overline{S_N} (x) - S_N(x) \overline{f} (x) - f(x) \overline{S_N} (x) + f(x)\overline{f}(x) \right)  dx \tag{$\star\star$}
+.\end{align}
+Ale
+\begin{align*}
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) \overline{S_N} (x) dx &= \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) \sum_{n=-N}^{N} \overline{c_n e^{2\pi i n x}} dx =\\
+    &= \sum_{n=-N}^{N} \bar{c_n}\cdot \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx =\\
+    &= \sum_{n=-N}^{N} \bar{c}_n c_n
+.\end{align*}
+Pierwszy obiekt zabezpieczony.
+\begin{align*}
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \sum_{n=-N}^{N} c_n e^{2\pi i n x}\bar{f}(x) dx &= \sum_{n=-N}^{N} c_n \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i n x}dx = \\
+    &= \sum_{n=-N}^{N} c_n \overline{c_n}
+.\end{align*}
+    (mamy taki fakt tutaj: $\int \overline{\Box} dx = \overline{\int \Box dx} $ ).\\
+    Teraz rozprawiamy się z pierwszym składnikiem
+    \begin{align*}
+        \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} S_N(x) \overline{S_N} (x) dx &= \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left( \sum_{n=-N}^{N} c_n e^{2\pi i n x} \right) \left( \sum_{m=-N}^{N} \overline{c_m}e^{\overline{2\pi i m x} }  \right)dx =\\
+        &=\sum_{n=-N}^{N} \sum_{m = -N}^{N} c_n \bar{c_m} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i x (n-m)} dx = \sum_{n=-N}^{N} c_n \bar{c_n}
+    .\end{align*}
+    Pamiętamy, że
+    \[
+        \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} e^{2\pi i x(n-m}dx = \delta_{mn}
+    .\]
+Teraz nasze \eqref{eqn:eq28-2} przyjmuje postać
+\[
+    0 \le \sum_{n=-N}^{N} \left\Vert c_n \right\Vert^2 - \sum_{n=-N}^{N} \left\Vert c_n \right\Vert ^2 - \sum_{n=-N}^{N} \left\Vert c_n \right\Vert ^2 + \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left\Vert f \right\Vert^2
+,\]
+czyli
+\[
+    \sum_{n=-N}^{N} \left\Vert c_n \right\Vert ^2 \le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left\Vert f(x) \right\Vert ^2 dx
+.\]
+Jak przejdziemy z $n\to \infty$, to mamy
+\[
+    \sum_{n=-\infty}^{\infty} \left\Vert c_n \right\Vert ^2 \le \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \left\Vert f(x) \right\Vert^2 dx
+.\]
+\end{proof}
+
+\pagebreak
+\begin{tw}
+    Niech $f$ - funkcja o okresie jeden taka, że w przedziale $[-\frac{1}{2}, \frac{1}{2}]$ ma skończoną ilość nieciągłości, jest klasy $L^2(-\frac{1}{2}, \frac{1}{2})$, a jej pochodna jest ograniczona i ciągła w punktach nieciągłości. Wówczas
+    \[
+        S_N(x) = \sum_{n=-N}^{N} c_n e^{2\pi i n x}
+    ,\]
+\[
+    \lim_{N \to \infty}S_N(x) \to \begin{cases}
+        f(x) & \text{gdy $f$ - ciągła w $x$ }\\
+        \frac{f(x^-) + f(x^+)}{2}& \text{w punkcie nieciągłości}
+    \end{cases}
+\]
+i zbieżność ta jest zbieżnością punktową.
+\end{tw}
+\begin{proof}
+    \textbf{Obserwacja: }
+    \begin{align}
+        S_N(x) &= \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x) e^{-2\pi i k n} e^{2\pi i n x} dk =\nonumber \\
+        &= \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(k) e^{2\pi i n(x-k)}dk =\nonumber \\
+        &x - k = - \xi, dk = d\xi\nonumber\\
+        &\text{teraz spróbujmy tego nie schrzanić}\nonumber\\
+        \label{eqn:eq28-3}
+        &= \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2} - x}^{\frac{1}{2}-x}f(x+\xi)e^{-2\pi i n \xi}d\xi \tag{$\star\nabla\star$}
+    .\end{align}
+    Zauważmy, że \eqref{eqn:eq28-3} jest funkcją o okresie jeden. Oznacza to, że całka
+    \[
+        \int\limits_{-\frac{1}{2}-x}^{\frac{1}{2}-x} \eqref{eqn:eq28-3} = \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} \eqref{eqn:eq28-3}
+    .\]
+Oznacza to, że
+\[
+    S_N(x) = \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x+\xi) e^{-2\pi i n \xi}d\xi
+.\]
+Wprowadzamy funkcję (jądro Dirichleta)
+\[
+    D_N(\xi) = \sum_{n=-N}^{N} e^{-2\pi i n \xi}
+.\]
+\textbf{Obserwacja: } Jeżeli sobie je po prostu ładnie pogrupujemy parami, to dostaniemy cosinusy
+\[
+    D_N(\xi) = 1 + e^{-2\pi i N \xi} + e^{2\pi i N \xi} + e^{-2\pi i (N-1)\xi} + e^{2\pi i (N-1)\xi} + \ldots
+.\]
+Ale wtedy całka tego to zawiera dużo cosinusów po okresie
+\[
+    \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} D_N(\xi)d\xi = 1 + 0 + 0 + \ldots
+.\]
+Z drugiej strony $D_N(x)$ możemy zapisać fajnie dla $q = e^{-2\pi i \xi}$
+\begin{equation}
+    \label{eqn:eq28-4}
+    \left( \frac{1}{q} \right) ^N + \left( \frac{1}{q} \right) ^{N-1} + \ldots + \frac{1}{q} + 1 + q + q^2 + \ldots + q^N \tag{$\nabla\star\nabla$}
+\end{equation}
+Wywalamy $\frac{1}{q^N}$ przed nawias
+\[
+    \eqref{eqn:eq28-4} = \frac{1}{q^N}\left( 1 + q + \ldots + q^{2N} \right) = \frac{1}{q^N}\frac{1-q^{2N + 1}}{1-q} = \frac{q^{-N} - q^{N+1}}{1-q}
+.\]
+Czyli
+\[
+    D_N(\xi) = \frac{e^{2\pi i \xi N} - e^{-2\pi i \xi (N + 1)}}{1 - e^{-2\pi i \xi}}
+.\]
+Tym razem zaczynamy już na serio ten dowód
+\begin{align}
+    S_N(x) - \frac{f(x^-)}{2} - \frac{f(x^+)}{2} &= \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{\frac{1}{2}} f(x+\xi) e^{-2\pi i n \xi} - \frac{f(x^-)}{2} - \frac{f(x^+)}{2} =\nonumber \\
+    &= \sum_{n=-N}^{N} \int\limits_{0}^{\frac{1}{2}} f(x+\xi) e^{-2\pi i n \xi} - \frac{1}{2} f(x^+) +\nonumber \\
+    \label{eqn:eq28-5}
+    &+ \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{0} f(x+\xi)e^{-2\pi i n \xi} - \frac{1}{2} f(x^-) \tag{$\Delta \star \Delta$}
+.\end{align}
+    Ale $\int\limits_{0}^{\frac{1}{2}} D_N(\xi)  = \frac{1}{2} = \int\limits_{-\frac{1}{2}}^{0} D_N(\xi)$. Wsadzimy to tam przed $f(x^{\pm})$.
+    \begin{align*}
+        \eqref{eqn:eq28-5} &= \int\limits_{0}^{\frac{1}{2}} \sum_{n=-N}^{N} \left( f(x+\xi)e^{-2\pi i n \xi} - f(x^+) \frac{e^{2\pi i N \xi} - e^{-2\pi i \xi (N+1)}}{1-e^{-2\pi i \xi}}\right) + \\
+        &+ \int\limits_{-\frac{1}{2}}^{0} \sum_{n=-N}^{N}\left( f(x+\xi) e^{-2\pi i n \xi} - f(x^-) \frac{e^{2\pi i N\xi} - e^{-2\pi i \xi(N+1)}}{1-e^{-2\pi i \xi}}\right) =\\
+        &= \sum_{n=-N}^{N} \int\limits_{0}^{\frac{1}{2}} \left( f(x+\xi) - f(x^+) \right) e^{-2\pi i n \xi}d\xi +\\
+        &+ \sum_{n=-N}^{N} \int\limits_{-\frac{1}{2}}^{0} \left( f(x+\xi) - f(x^-) \right) e^{-2\pi i n \xi}d\xi
+    .\end{align*}
+    ($a_n$) dalszy nastąpi (Analiza IV).
+
+\end{proof}
+\end{document}

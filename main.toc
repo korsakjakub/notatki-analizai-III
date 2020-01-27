@@ -1,5 +1,5 @@
 \contentsline {chapter}{Spis tre\'sci}{ii}{section*.1}% 
-\contentsline {chapter}{Wstęp}{iv}{chapter*.2}% 
+\contentsline {chapter}{Wstęp}{v}{chapter*.2}% 
 \contentsline {part}{\partnumberline {I}No dobrze... Weźmy się do pracy.}{1}{part.1}% 
 \contentsline {chapter}{\chapternumberline {1}04.10.2019, \textit {przypomnienie i całka z jednoformy}}{2}{chapter.1}% 
 \contentsline {subsection}{Przypomnienie}{2}{subsection*.4}% 
@@ -71,4 +71,6 @@
 \contentsline {subsection}{Wzór sumacyjny Poissona}{138}{subsection*.92}% 
 \contentsline {subsection}{Szeregi Fouriera}{138}{subsection*.93}% 
 \contentsline {subsection}{Twierdzenie Shannona o próbkowaniu}{140}{subsection*.94}% 
-\contentsline {part}{\partnumberline {II}\textbf {Dodatek:} Pytania egzaminacyjne}{142}{part.2}% 
+\contentsline {chapter}{\chapternumberline {28}27.01.2020, \textit {Zbieżność szeregów Fouriera}}{142}{chapter.28}% 
+\contentsline {subsection}{Zbieżność szeregów Fouriera}{142}{subsection*.95}% 
+\contentsline {part}{\partnumberline {II}\textbf {Dodatek:} Pytania egzaminacyjne}{149}{part.2}% 
